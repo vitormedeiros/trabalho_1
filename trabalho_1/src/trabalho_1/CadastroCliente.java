@@ -64,45 +64,67 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         jLabelrg.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelrg.setText("RG");
+        jLabelrg.setEnabled(false);
+
+        jTextFieldrg.setEnabled(false);
 
         jLabelcpf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelcpf.setText("CPF");
+        jLabelcpf.setEnabled(false);
+
+        jTextFieldcpf.setEnabled(false);
 
         jLabeltelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabeltelefone.setText("Telefone");
+        jLabeltelefone.setEnabled(false);
+
+        jTextFieldtelefone.setEnabled(false);
 
         jLabelendereco.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelendereco.setText("Endereço");
+        jLabelendereco.setEnabled(false);
 
         jTextAreaendereco.setColumns(20);
         jTextAreaendereco.setRows(5);
+        jTextAreaendereco.setEnabled(false);
         jScrollPane1.setViewportView(jTextAreaendereco);
 
         jLabelstatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelstatus.setText("Status");
+        jLabelstatus.setEnabled(false);
 
         buttonGroup1.add(jRadioButtonstatusativo);
         jRadioButtonstatusativo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonstatusativo.setText("Ativo");
+        jRadioButtonstatusativo.setEnabled(false);
 
         buttonGroup1.add(jRadioButtonstatusinativo);
         jRadioButtonstatusinativo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonstatusinativo.setText("Inativo");
+        jRadioButtonstatusinativo.setEnabled(false);
 
         jButtonnovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonnovo.setText("Novo");
+        jButtonnovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonnovoActionPerformed(evt);
+            }
+        });
 
         jButtoneditar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtoneditar.setText("Editar");
+        jButtoneditar.setEnabled(false);
 
         jButtonsalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonsalvar.setText("Salvar");
+        jButtonsalvar.setEnabled(false);
 
         jButtonsair.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonsair.setText("Sair");
 
         jButtonexcluir.setForeground(new java.awt.Color(255, 51, 51));
         jButtonexcluir.setText("Excluir");
+        jButtonexcluir.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -206,6 +228,10 @@ public class CadastroCliente extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(663, 557));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnovoActionPerformed
+        
+    }//GEN-LAST:event_jButtonnovoActionPerformed
 
     /**
      * @param args the command line arguments
