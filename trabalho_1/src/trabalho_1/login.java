@@ -1,9 +1,41 @@
 package trabalho_1;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 public class login extends javax.swing.JFrame {
 
     public login() {
         initComponents();
+        jButtonentrar.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent ae) {
+                String usuariotxt = jTextFieldlogin.getText();
+                String senhatxt = jPasswordFieldsenha.getText();
+                if ("admin".equals(usuariotxt)) {
+                    if ("admin".equals(senhatxt)) {
+                        new jPrincipal().setVisible(true);
+                        setVisible(false); // Aqui temos que implementar o DISPOSE ainda!
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
+                }
+            }
+        });
+        jButtoncancelar.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent ae) {
+                System.exit(0);
+            }
+        });
+        jButtoninformacao.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null, "Desenvolvido por: qwerty");
+            }
+        });
+
     }
 
     @SuppressWarnings("unchecked")
@@ -117,9 +149,6 @@ public class login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtoncancelar;
@@ -133,4 +162,5 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordFieldsenha;
     private javax.swing.JTextField jTextFieldlogin;
     // End of variables declaration//GEN-END:variables
+
 }
