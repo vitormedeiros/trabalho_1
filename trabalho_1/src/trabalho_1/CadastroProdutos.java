@@ -51,6 +51,11 @@ public class CadastroProdutos extends javax.swing.JInternalFrame {
         jLabelcodbarras.setText("Código de barras");
 
         jButtonpesquisa.setText("...");
+        jButtonpesquisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonpesquisaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -287,6 +292,10 @@ public class CadastroProdutos extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonpesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpesquisaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonpesquisaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
