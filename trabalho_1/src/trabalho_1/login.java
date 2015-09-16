@@ -67,6 +67,11 @@ public class login extends javax.swing.JFrame {
         jButtoncancelar.setText("Cancelar");
 
         jButtonentrar.setText("Entrar");
+        jButtonentrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonentrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPaneltelaloginLayout = new javax.swing.GroupLayout(jPaneltelalogin);
         jPaneltelalogin.setLayout(jPaneltelaloginLayout);
@@ -148,6 +153,10 @@ public class login extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(621, 287));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonentrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonentrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
