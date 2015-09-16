@@ -34,6 +34,8 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         jButtoncancelar = new javax.swing.JButton();
         jButtonexcluir = new javax.swing.JButton();
 
+        setTitle("Cadastro Cliente");
+
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.setEnabled(false);
 
