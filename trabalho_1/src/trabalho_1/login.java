@@ -2,6 +2,7 @@ package trabalho_1;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 public class login extends javax.swing.JFrame {
@@ -63,6 +64,12 @@ public class login extends javax.swing.JFrame {
         jLabellogin.setText("Login");
 
         jLabelsenha.setText("Senha");
+
+        jPasswordFieldsenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordFieldsenhaKeyPressed(evt);
+            }
+        });
 
         jButtoncancelar.setText("Cancelar");
 
@@ -157,6 +164,21 @@ public class login extends javax.swing.JFrame {
     private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonentrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonentrarActionPerformed
+    // Submete o usuário e senha pressionando a tecla Enter
+    private void jPasswordFieldsenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            String usuariotxt = jTextFieldlogin.getText();
+            String senhatxt = jPasswordFieldsenha.getText();
+            if ("admin".equals(usuariotxt)) {
+                if ("admin".equals(senhatxt)) {
+                    new jPrincipal().setVisible(true);
+                    setVisible(false); // Aqui temos que implementar o DISPOSE ainda!
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
+            }
+        }
+    }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
