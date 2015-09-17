@@ -1,5 +1,5 @@
 package trabalho_1;
-
+/*testando*/
 public class jPrincipal extends javax.swing.JFrame {
 
     public jPrincipal() {
@@ -22,10 +22,16 @@ public class jPrincipal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Principal");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Menu"));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalho_1/cadastro.jpg"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Verificar");
 
@@ -133,6 +139,10 @@ public class jPrincipal extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         new CadastroProdutos().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
