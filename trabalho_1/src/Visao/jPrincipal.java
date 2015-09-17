@@ -1,4 +1,7 @@
-package trabalho_1;
+package Visao;
+
+import Visao.CadastroProdutos;
+
 /*testando*/
 public class jPrincipal extends javax.swing.JFrame {
 
@@ -24,7 +27,6 @@ public class jPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Principal");
-        setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Menu"));
 

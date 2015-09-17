@@ -1,5 +1,6 @@
 package trabalho_1;
 
+import Visao.jPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
