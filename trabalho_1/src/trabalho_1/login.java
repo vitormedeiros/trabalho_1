@@ -65,6 +65,11 @@ public class login extends javax.swing.JFrame {
 
         jLabelsenha.setText("Senha");
 
+        jPasswordFieldsenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordFieldsenhaActionPerformed(evt);
+            }
+        });
         jPasswordFieldsenha.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jPasswordFieldsenhaKeyPressed(evt);
@@ -179,6 +184,10 @@ public class login extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
+
+    private void jPasswordFieldsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordFieldsenhaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
