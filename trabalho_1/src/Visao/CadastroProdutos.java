@@ -1,4 +1,4 @@
-package trabalho_1;
+package Visao;
 public class CadastroProdutos extends javax.swing.JInternalFrame {
 
     public CadastroProdutos() {

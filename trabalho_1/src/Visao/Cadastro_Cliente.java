@@ -1,4 +1,4 @@
-package trabalho_1;
+package Visao;
 public class Cadastro_Cliente extends javax.swing.JInternalFrame {
       public Cadastro_Cliente() {
         initComponents();
