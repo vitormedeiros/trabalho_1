@@ -6,7 +6,7 @@ public class Trabalho_1 {
         Botao botoes = new Botao();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new LoginJFrame().setVisible(true);
             }
         });
 

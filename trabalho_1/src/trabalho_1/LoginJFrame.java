@@ -1,43 +1,15 @@
 package trabalho_1;
 
 import Visao.jPrincipal;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
-public class login extends javax.swing.JFrame {
-
-    public login() {
+public class LoginJFrame extends javax.swing.JFrame {
+    
+    private BotaoListener listener = new BotaoListener(this);
+    
+    public LoginJFrame() {
         initComponents();
-        jButtonentrar.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent ae) {
-                String usuariotxt = jTextFieldlogin.getText();
-                String senhatxt = jPasswordFieldsenha.getText();
-                if ("admin".equals(usuariotxt)) {
-                    if ("admin".equals(senhatxt)) {
-                        new jPrincipal().setVisible(true);
-                        setVisible(false); // Aqui temos que implementar o DISPOSE ainda!
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
-                }
-            }
-        });
-        jButtoncancelar.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent ae) {
-                System.exit(0);
-            }
-        });
-        jButtoninformacoes.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent ae) {
-                
-            }
-        });
-
     }
 
     @SuppressWarnings("unchecked")
@@ -78,13 +50,18 @@ public class login extends javax.swing.JFrame {
         });
 
         jButtoncancelar.setText("Cancelar");
+        jButtoncancelar.addActionListener(listener);
 
         jButtonentrar.setText("Entrar");
+        jButtonentrar.setActionCommand("entrar");
+        /*
         jButtonentrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonentrarActionPerformed(evt);
             }
         });
+        */
+        jButtonentrar.addActionListener(listener);
 
         javax.swing.GroupLayout jPaneltelaloginLayout = new javax.swing.GroupLayout(jPaneltelalogin);
         jPaneltelalogin.setLayout(jPaneltelaloginLayout);
@@ -213,5 +190,13 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordFieldsenha;
     private javax.swing.JTextField jTextFieldlogin;
     // End of variables declaration//GEN-END:variables
-
+    
+    public String getUsuario(){
+        return jTextFieldlogin.getText();
+    }
+    
+    public String getSenha(){
+        return new String(jPasswordFieldsenha.getPassword());
+    }
+    
 }
