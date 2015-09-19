@@ -31,10 +31,10 @@ public class login extends javax.swing.JFrame {
                 System.exit(0);
             }
         });
-        jButtoninformacao.addActionListener(new ActionListener() {
+        jButtoninformacoes.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent ae) {
-                JOptionPane.showMessageDialog(null, "Desenvolvido por: qwerty");
+                
             }
         });
 
@@ -52,8 +52,8 @@ public class login extends javax.swing.JFrame {
         jButtoncancelar = new javax.swing.JButton();
         jButtonentrar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButtoninformacao = new javax.swing.JButton();
         jLabelIcone = new javax.swing.JLabel();
+        jButtoninformacoes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Login");
@@ -91,21 +91,22 @@ public class login extends javax.swing.JFrame {
         jPaneltelaloginLayout.setHorizontalGroup(
             jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneltelaloginLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabellogin)
-                    .addComponent(jLabelsenha))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPasswordFieldsenha)
-                    .addComponent(jTextFieldlogin))
+                .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPaneltelaloginLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jButtoncancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonentrar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPaneltelaloginLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabellogin)
+                            .addComponent(jLabelsenha))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPasswordFieldsenha)
+                            .addComponent(jTextFieldlogin))))
                 .addGap(24, 24, 24))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneltelaloginLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jButtoncancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonentrar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         jPaneltelaloginLayout.setVerticalGroup(
             jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,9 +128,14 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setText("CiaSoftware direitos reservados ®");
 
-        jButtoninformacao.setText("Informação");
-
         jLabelIcone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Tela de login.jpg"))); // NOI18N
+
+        jButtoninformacoes.setText("Informações");
+        jButtoninformacoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtoninformacoesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,9 +147,9 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jLabelIcone)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(16, 16, 16)
-                        .addComponent(jButtoninformacao, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(283, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jButtoninformacoes)))
+                .addContainerGap(294, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPaneltelalogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -156,20 +162,16 @@ public class login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelIcone)
                     .addComponent(jPaneltelalogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jButtoninformacao))
+                    .addComponent(jButtoninformacoes))
                 .addContainerGap())
         );
 
         setSize(new java.awt.Dimension(621, 301));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonentrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonentrarActionPerformed
     // Submete o usuário e senha pressionando a tecla Enter
     private void jPasswordFieldsenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -190,11 +192,19 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldsenhaActionPerformed
 
+    private void jButtonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonentrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonentrarActionPerformed
+
+    private void jButtoninformacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoninformacoesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtoninformacoesActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtoncancelar;
     private javax.swing.JButton jButtonentrar;
-    private javax.swing.JButton jButtoninformacao;
+    private javax.swing.JButton jButtoninformacoes;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelIcone;
     private javax.swing.JLabel jLabellogin;
