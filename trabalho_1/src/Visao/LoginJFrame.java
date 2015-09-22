@@ -4,7 +4,12 @@ import Controle.BotaoListener;
 import Visao.jPrincipal;
 import java.awt.Dialog;
 import java.awt.event.KeyEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class LoginJFrame extends javax.swing.JFrame {
     
@@ -12,6 +17,7 @@ public class LoginJFrame extends javax.swing.JFrame {
     
     public LoginJFrame() {
         initComponents();
+        colocarTema();
     }
 
     @SuppressWarnings("unchecked")
@@ -232,7 +238,24 @@ public class LoginJFrame extends javax.swing.JFrame {
     private void jButtonLogar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogar1ActionPerformed
         dispose();
     }//GEN-LAST:event_jButtonLogar1ActionPerformed
+    
+         private void colocarTema() {
+        String lookName = com.sun.java.swing.plaf.windows.WindowsLookAndFeel.class.getName();
+        try {
+            UIManager.setLookAndFeel(lookName);
+            SwingUtilities.updateComponentTreeUI(this);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(LoginJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(LoginJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(LoginJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(LoginJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLogar;
     private javax.swing.JButton jButtonLogar1;
