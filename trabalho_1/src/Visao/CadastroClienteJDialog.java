@@ -55,6 +55,7 @@ public class CadastroClienteJDialog extends javax.swing.JDialog {
         jButtoneditar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Cliente");
 
         jButtonsalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonsalvar.setText("Salvar");
@@ -68,7 +69,7 @@ public class CadastroClienteJDialog extends javax.swing.JDialog {
         jButtonsair.setText("Sair");
         jButtonsair.setEnabled(false);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EndereÃ§o", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Endereço", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
         jPanel3.setEnabled(false);
 
         jTextAreaendereco.setColumns(20);

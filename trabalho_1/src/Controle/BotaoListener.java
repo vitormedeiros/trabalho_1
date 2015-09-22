@@ -22,7 +22,7 @@ public class BotaoListener implements ActionListener {
               frame.getUsuario();
               JOptionPane.showMessageDialog(frame, "ola");
         }else{
-             JOptionPane.showMessageDialog(frame, "Não entrou no if");
+             JOptionPane.showMessageDialog(frame, "N?o entrou no if");
         }
     }
 }

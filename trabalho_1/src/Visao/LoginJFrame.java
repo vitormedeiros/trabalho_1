@@ -118,7 +118,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         jButtoninformacoes.setFont(new java.awt.Font("Segoe UI Light", 0, 11)); // NOI18N
-        jButtoninformacoes.setText("InformaÃ§Ãµes");
+        jButtoninformacoes.setText("Informaçoes");
         jButtoninformacoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtoninformacoesActionPerformed(evt);
@@ -126,7 +126,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 11)); // NOI18N
-        jLabel2.setText("CiaSoftware direitos reservados Â®");
+        jLabel2.setText("CiaSoftware direitos reservados  ®");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

@@ -56,6 +56,7 @@ public class CadastroProdutosJDialog extends javax.swing.JDialog {
         jComboBoxproduto = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro do Produtos");
 
         jButtoneditar.setText("Editar");
         jButtoneditar.setEnabled(false);
@@ -63,16 +64,16 @@ public class CadastroProdutosJDialog extends javax.swing.JDialog {
         jButtonsalvar.setText("Salvar");
         jButtonsalvar.setEnabled(false);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "InformaÃ§Ãµes do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informaç?es do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
 
         jLabeldescricao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabeldescricao.setText("DescriÃ§Ã£o");
+        jLabeldescricao.setText("Descriç?o");
         jLabeldescricao.setEnabled(false);
 
         jTextFielddescricao.setEnabled(false);
 
         jLabelcodbarras.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelcodbarras.setText("CÃ³digo de barras");
+        jLabelcodbarras.setText("Código de barras");
 
         jButtonpesquisa.setText("...");
         jButtonpesquisa.addActionListener(new java.awt.event.ActionListener() {
@@ -140,17 +141,17 @@ public class CadastroProdutosJDialog extends javax.swing.JDialog {
 
         jButtonnovo.setText("Novo");
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PreÃ§os", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preços", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
         jPanel2.setEnabled(false);
 
         jLabelprecovenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelprecovenda.setText("PreÃ§o de venda");
+        jLabelprecovenda.setText("Preço de venda");
         jLabelprecovenda.setEnabled(false);
 
         jTextFieldprecovenda.setEnabled(false);
 
         jLabelprecocusto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelprecocusto.setText("PreÃ§o de custo");
+        jLabelprecocusto.setText("Preço de custo");
         jLabelprecocusto.setEnabled(false);
 
         jTextFieldprecocusto.setEnabled(false);

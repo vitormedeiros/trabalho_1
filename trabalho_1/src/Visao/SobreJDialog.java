@@ -77,13 +77,13 @@ public class SobreJDialog extends javax.swing.JDialog {
                 .addComponent(jLabel2))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Versão", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 10))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Vers?o", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 10))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel3.setText("Sistema de Gestao - V 1.0");
+        jLabel3.setText("Sistema de Gest?o - V 1.0");
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel4.setText("Data última atualização: 20/09/2015");
+        jLabel4.setText("Data �ltima atualiza�?o: 20/09/2015");
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel5.setText("Sistema Free");
