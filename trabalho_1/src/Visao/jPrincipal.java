@@ -1,9 +1,7 @@
 package Visao;
 
 import java.awt.Dialog;
-import javax.swing.JDialog;
 
-/*testando*/
 public class jPrincipal extends javax.swing.JFrame {
 
     public jPrincipal() {
@@ -143,25 +141,25 @@ public class jPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrosActionPerformed
-      jInternalFrameCadastros.setVisible(true);
+        jInternalFrameCadastros.setVisible(true);
     }//GEN-LAST:event_jButtonCadastrosActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       jInternalFrameCadastros.setVisible(false);
+        jInternalFrameCadastros.setVisible(false);
         Dialog jd = new CadastroProdutosJDialog(this, true);
         jd.setLocationRelativeTo(null);
         jd.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       jInternalFrameCadastros.setVisible(false);
+        jInternalFrameCadastros.setVisible(false);
         Dialog jd = new CadastroClienteJDialog(this, true);
         jd.setLocationRelativeTo(null);
         jd.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -170,9 +168,6 @@ public class jPrincipal extends javax.swing.JFrame {
         jd.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

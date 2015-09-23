@@ -1,7 +1,6 @@
 package Visao;
 
 import Controle.BotaoListener;
-import Visao.jPrincipal;
 import java.awt.Dialog;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
@@ -12,9 +11,9 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class LoginJFrame extends javax.swing.JFrame {
-    
+
     private BotaoListener listener = new BotaoListener(this);
-    
+
     public LoginJFrame() {
         initComponents();
         colocarTema();
@@ -210,12 +209,12 @@ public class LoginJFrame extends javax.swing.JFrame {
             String senhatxt = new String(jPasswordFieldsenha.getPassword());
             if ("".equals(usuariotxt)) {
                 if ("".equals(senhatxt)) {
-                   new jPrincipal().setVisible(true);
+                    new jPrincipal().setVisible(true);
                     dispose();
-                   setVisible(false); // Aqui temos que implementar o DISPOSE ainda!
+                    setVisible(false);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "O Nome de usu√°rio ou senha incorretos.");
+                JOptionPane.showMessageDialog(null, "O Nome de usu·rio ou senha incorretos.");
             }
         }
     }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
@@ -238,8 +237,8 @@ public class LoginJFrame extends javax.swing.JFrame {
     private void jButtonLogar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogar1ActionPerformed
         dispose();
     }//GEN-LAST:event_jButtonLogar1ActionPerformed
-    
-         private void colocarTema() {
+
+    private void colocarTema() {
         String lookName = com.sun.java.swing.plaf.windows.WindowsLookAndFeel.class.getName();
         try {
             UIManager.setLookAndFeel(lookName);
@@ -255,7 +254,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         }
     }
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLogar;
     private javax.swing.JButton jButtonLogar1;
@@ -271,13 +270,13 @@ public class LoginJFrame extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordFieldsenha;
     private javax.swing.JTextField jTextFieldlogin;
     // End of variables declaration//GEN-END:variables
-    
-     public String getUsuario(){
+
+    public String getUsuario() {
         return jTextFieldlogin.getText();
     }
-    
-    public String getSenha(){
+
+    public String getSenha() {
         return new String(jPasswordFieldsenha.getPassword());
     }
-    
+
 }

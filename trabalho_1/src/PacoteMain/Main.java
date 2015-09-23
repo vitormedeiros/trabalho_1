@@ -1,8 +1,8 @@
-package trabalho_1;
+package PacoteMain;
 
 import Visao.LoginJFrame;
 
-public class Trabalho_1 {
+public class Main {
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
