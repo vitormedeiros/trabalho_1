@@ -1,18 +1,15 @@
 package Visao;
 
-import Controle.BotaoListener;
-import java.awt.Dialog;
-import java.awt.event.KeyEvent;
+import Controle.LoginListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class LoginJFrame extends javax.swing.JFrame {
 
-    private BotaoListener listener = new BotaoListener(this);
+    private LoginListener listener = new LoginListener(this);
 
     public LoginJFrame() {
         initComponents();
@@ -50,6 +47,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         jLabelsenha.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         jLabelsenha.setText("Senha");
 
+        /*
         jPasswordFieldsenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordFieldsenhaActionPerformed(evt);
@@ -60,11 +58,13 @@ public class LoginJFrame extends javax.swing.JFrame {
                 jPasswordFieldsenhaKeyPressed(evt);
             }
         });
+        */
 
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/next.png"))); // NOI18N
         jButtonEntrar.setToolTipText("Logar");
         jButtonEntrar.setActionCommand("Entrar");
-        jButtonEntrar.addActionListener(listener);
+        jButtonEntrar.setActionCommand("entrar");
+
         /*
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +117,8 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jButtonEntrar.addActionListener(listener);
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
@@ -206,7 +208,8 @@ public class LoginJFrame extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(621, 370));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    // Submete o usuário e senha pressionando a tecla Enter
+
+    /*
     private void jPasswordFieldsenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             String usuariotxt = jTextFieldlogin.getText();
@@ -222,16 +225,13 @@ public class LoginJFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
-
+*/
     private void jPasswordFieldsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldsenhaActionPerformed
 
     private void jButtoninformacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoninformacoesActionPerformed
 
-        Dialog jd = new SobreJDialog(this, true);
-        jd.setLocationRelativeTo(null);
-        jd.setVisible(true);
     }//GEN-LAST:event_jButtoninformacoesActionPerformed
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed

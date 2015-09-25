@@ -3,23 +3,25 @@ package Controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Visao.LoginJFrame;
+import Visao.jPrincipal;
 import javax.swing.JOptionPane;
 
-public class BotaoListener implements ActionListener {
+public class LoginListener implements ActionListener {
 
     private LoginJFrame frame;
 
-    public BotaoListener(LoginJFrame frame) {
+    public LoginListener(LoginJFrame frame) {
         this.frame = frame;
     }
 
     public void actionPerformed(ActionEvent evento) {
-        if ("Entrar".equals(evento.getActionCommand())) {
+        if ("entrar".equals(evento.getActionCommand())) {
             frame.getSenha();
             frame.getUsuario();
-            JOptionPane.showMessageDialog(frame, "ola");
+            new jPrincipal().setVisible(true);
+            JOptionPane.showMessageDialog(frame, "Bem Vindo !!!");
         } else {
-            JOptionPane.showMessageDialog(frame, "Nao entrou no if");
+            JOptionPane.showMessageDialog(frame, "teste");
         }
     }
 }

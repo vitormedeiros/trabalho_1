@@ -1,10 +1,8 @@
 package Visao;
 
-import Controle.BotaoListener;
-
 public class jPrincipal extends javax.swing.JFrame {
     
-private BotaoListener listener = new BotaoListener(this);
+//private LoginListener listener = new LoginListener(this);
 
     public jPrincipal() {
         initComponents();
@@ -36,7 +34,7 @@ private BotaoListener listener = new BotaoListener(this);
         jButtonCadastros.setBackground(new java.awt.Color(153, 204, 255));
         jButtonCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/avaliacao.png"))); // NOI18N
         jButtonCadastros.setToolTipText("Cadastros");
-        jButtonCadastros.addActionListener(listener);
+        jButtonCadastros.setActionCommand("cadastros");
 
         /*
         jButtonCadastros.addActionListener(new java.awt.event.ActionListener() {

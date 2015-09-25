@@ -141,6 +141,10 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordFieldsenhaActionPerformed"/>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jPasswordFieldsenhaKeyPressed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonEntrar">
           <Properties>
@@ -153,7 +157,8 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEntrarActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonEntrar.setActionCommand(&quot;Entrar&quot;);&#xa;jButtonEntrar.addActionListener(listener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButtonEntrar.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonEntrar.setActionCommand(&quot;Entrar&quot;);&#xa;jButtonEntrar.setActionCommand(&quot;entrar&quot;);&#xa;&#xa;/*"/>
             <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
           </AuxValues>
         </Component>

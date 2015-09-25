@@ -83,7 +83,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCadastrosActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonCadastros.addActionListener(listener);&#xa;&#xa;/*"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonCadastros.setActionCommand(&quot;cadastros&quot;);&#xa;&#xa;&#xa;/*"/>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
               </AuxValues>
             </Component>
