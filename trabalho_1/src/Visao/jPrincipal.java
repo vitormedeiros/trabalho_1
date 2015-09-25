@@ -21,8 +21,10 @@ public class jPrincipal extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jToolBar1 = new javax.swing.JToolBar();
         jButtonCadastros = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JToolBar.Separator();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jInternalFrameEstoqueTeste = new javax.swing.JInternalFrame();
 
@@ -79,6 +81,32 @@ public class jPrincipal extends javax.swing.JFrame {
         });
         jToolBar1.add(jButtonCadastros);
 
+        jButton4.setBackground(new java.awt.Color(153, 204, 255));
+        jButton4.setToolTipText("Estoque Teste");
+        jButton4.setFocusable(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton4);
+
+        jButton5.setBackground(new java.awt.Color(153, 204, 255));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/versao.png"))); // NOI18N
+        jButton5.setToolTipText("Estoque");
+        jButton5.setFocusable(false);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton5);
+        jToolBar1.add(jSeparator1);
+
         jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/info.png"))); // NOI18N
         jButton1.setToolTipText("Informação");
@@ -91,19 +119,6 @@ public class jPrincipal extends javax.swing.JFrame {
             }
         });
         jToolBar1.add(jButton1);
-
-        jButton4.setBackground(new java.awt.Color(153, 204, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\Users\\Maicon\\Downloads\\estoque_png.png")); // NOI18N
-        jButton4.setToolTipText("Estoque Teste");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(jButton4);
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
@@ -122,7 +137,7 @@ public class jPrincipal extends javax.swing.JFrame {
         jInternalFrameEstoqueTeste.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         jInternalFrameEstoqueTeste.setIconifiable(true);
         jInternalFrameEstoqueTeste.setResizable(true);
-        jInternalFrameEstoqueTeste.setTitle("Internal Teste");
+        jInternalFrameEstoqueTeste.setTitle("Estoque");
         jInternalFrameEstoqueTeste.setFocusable(false);
         jInternalFrameEstoqueTeste.setPreferredSize(new java.awt.Dimension(673, 451));
         jInternalFrameEstoqueTeste.setVisible(true);
@@ -135,7 +150,7 @@ public class jPrincipal extends javax.swing.JFrame {
         );
         jInternalFrameEstoqueTesteLayout.setVerticalGroup(
             jInternalFrameEstoqueTesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 503, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
@@ -215,6 +230,10 @@ public class jPrincipal extends javax.swing.JFrame {
         jInternalFrameEstoqueTeste.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        jInternalFrameEstoqueTeste.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -252,11 +271,13 @@ public class jPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonCadastros;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JInternalFrame jInternalFrameCadastros;
     private javax.swing.JInternalFrame jInternalFrameEstoqueTeste;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 }
