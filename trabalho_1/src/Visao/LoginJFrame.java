@@ -28,8 +28,8 @@ public class LoginJFrame extends javax.swing.JFrame {
         jLabelsenha = new javax.swing.JLabel();
         jTextFieldlogin = new javax.swing.JTextField();
         jPasswordFieldsenha = new javax.swing.JPasswordField();
-        jButtonLogar = new javax.swing.JButton();
-        jButtonLogar1 = new javax.swing.JButton();
+        jButtonEntrar = new javax.swing.JButton();
+        jButtonCancelar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButtoninformacoes = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -61,19 +61,23 @@ public class LoginJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonLogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/next.png"))); // NOI18N
-        jButtonLogar.setToolTipText("Logar");
-        jButtonLogar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/next.png"))); // NOI18N
+        jButtonEntrar.setToolTipText("Logar");
+        jButtonEntrar.setActionCommand("Entrar");
+        jButtonEntrar.addActionListener(listener);
+        /*
+        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLogarActionPerformed(evt);
+                jButtonEntrarActionPerformed(evt);
             }
         });
+        */
 
-        jButtonLogar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close.png"))); // NOI18N
-        jButtonLogar1.setToolTipText("Sair");
-        jButtonLogar1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close.png"))); // NOI18N
+        jButtonCancelar.setToolTipText("Sair");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLogar1ActionPerformed(evt);
+                jButtonCancelarActionPerformed(evt);
             }
         });
 
@@ -89,9 +93,9 @@ public class LoginJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPaneltelaloginLayout.createSequentialGroup()
-                        .addComponent(jButtonLogar)
+                        .addComponent(jButtonEntrar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonLogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPasswordFieldsenha, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                     .addComponent(jTextFieldlogin))
                 .addGap(24, 24, 24))
@@ -109,8 +113,8 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addComponent(jPasswordFieldsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonLogar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonLogar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -230,13 +234,13 @@ public class LoginJFrame extends javax.swing.JFrame {
         jd.setVisible(true);
     }//GEN-LAST:event_jButtoninformacoesActionPerformed
 
-    private void jButtonLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogarActionPerformed
-        listener.actionPerformed(evt);
-    }//GEN-LAST:event_jButtonLogarActionPerformed
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
+        
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
 
-    private void jButtonLogar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogar1ActionPerformed
-        dispose();
-    }//GEN-LAST:event_jButtonLogar1ActionPerformed
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void colocarTema() {
         String lookName = com.sun.java.swing.plaf.windows.WindowsLookAndFeel.class.getName();
@@ -256,8 +260,8 @@ public class LoginJFrame extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonLogar;
-    private javax.swing.JButton jButtonLogar1;
+    private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JButton jButtonEntrar;
     private javax.swing.JButton jButtoninformacoes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

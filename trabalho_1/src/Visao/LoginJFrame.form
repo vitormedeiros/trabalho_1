@@ -83,9 +83,9 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jButtonLogar" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonEntrar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButtonLogar1" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="jButtonCancelar" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPasswordFieldsenha" pref="199" max="32767" attributes="0"/>
                       <Component id="jTextFieldlogin" max="32767" attributes="0"/>
@@ -109,8 +109,8 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButtonLogar" max="32767" attributes="0"/>
-                      <Component id="jButtonLogar1" max="32767" attributes="0"/>
+                      <Component id="jButtonEntrar" max="32767" attributes="0"/>
+                      <Component id="jButtonCancelar" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -142,7 +142,7 @@
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jPasswordFieldsenhaKeyPressed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonLogar">
+        <Component class="javax.swing.JButton" name="jButtonEntrar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icones/next.png"/>
@@ -150,10 +150,14 @@
             <Property name="toolTipText" type="java.lang.String" value="Logar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLogarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEntrarActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonEntrar.setActionCommand(&quot;Entrar&quot;);&#xa;jButtonEntrar.addActionListener(listener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonLogar1">
+        <Component class="javax.swing.JButton" name="jButtonCancelar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icones/close.png"/>
@@ -161,7 +165,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLogar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

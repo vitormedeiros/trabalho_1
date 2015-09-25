@@ -14,7 +14,7 @@ public class BotaoListener implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent evento) {
-        if ("entrar".equals(evento.getActionCommand())) {
+        if ("Entrar".equals(evento.getActionCommand())) {
             frame.getSenha();
             frame.getUsuario();
             JOptionPane.showMessageDialog(frame, "ola");

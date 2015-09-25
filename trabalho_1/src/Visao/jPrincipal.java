@@ -1,14 +1,15 @@
 package Visao;
 
-import java.awt.Dialog;
+import Controle.BotaoListener;
 
 public class jPrincipal extends javax.swing.JFrame {
+    
+private BotaoListener listener = new BotaoListener(this);
 
     public jPrincipal() {
         initComponents();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        jInternalFrameCadastros.setVisible(false);
-        jInternalFrameEstoqueTeste.setVisible(false);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -16,57 +17,18 @@ public class jPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jInternalFrameCadastros = new javax.swing.JInternalFrame();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jToolBar1 = new javax.swing.JToolBar();
         jButtonCadastros = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButtonEstoque = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JToolBar.Separator();
-        jButton1 = new javax.swing.JButton();
+        jButtonInformacao = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jInternalFrameEstoqueTeste = new javax.swing.JInternalFrame();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Principal");
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jInternalFrameCadastros.setTitle("CADASTROS");
-        jInternalFrameCadastros.setPreferredSize(new java.awt.Dimension(126, 186));
-        jInternalFrameCadastros.setVisible(true);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/gnome_dev_media_cf.png"))); // NOI18N
-        jButton2.setToolTipText("Produtos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/users.png"))); // NOI18N
-        jButton3.setToolTipText("Clientes");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jInternalFrameCadastrosLayout = new javax.swing.GroupLayout(jInternalFrameCadastros.getContentPane());
-        jInternalFrameCadastros.getContentPane().setLayout(jInternalFrameCadastrosLayout);
-        jInternalFrameCadastrosLayout.setHorizontalGroup(
-            jInternalFrameCadastrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jInternalFrameCadastrosLayout.setVerticalGroup(
-            jInternalFrameCadastrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrameCadastrosLayout.createSequentialGroup()
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3))
-        );
 
         jToolBar1.setBackground(new java.awt.Color(153, 204, 255));
         jToolBar1.setRollover(true);
@@ -74,11 +36,15 @@ public class jPrincipal extends javax.swing.JFrame {
         jButtonCadastros.setBackground(new java.awt.Color(153, 204, 255));
         jButtonCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/avaliacao.png"))); // NOI18N
         jButtonCadastros.setToolTipText("Cadastros");
+        jButtonCadastros.addActionListener(listener);
+
+        /*
         jButtonCadastros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCadastrosActionPerformed(evt);
             }
         });
+        */
         jToolBar1.add(jButtonCadastros);
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
@@ -93,32 +59,32 @@ public class jPrincipal extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton4);
 
-        jButton5.setBackground(new java.awt.Color(153, 204, 255));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/versao.png"))); // NOI18N
-        jButton5.setToolTipText("Estoque");
-        jButton5.setFocusable(false);
-        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEstoque.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/versao.png"))); // NOI18N
+        jButtonEstoque.setToolTipText("Estoque");
+        jButtonEstoque.setFocusable(false);
+        jButtonEstoque.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonEstoque.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButtonEstoqueActionPerformed(evt);
             }
         });
-        jToolBar1.add(jButton5);
+        jToolBar1.add(jButtonEstoque);
         jToolBar1.add(jSeparator1);
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/info.png"))); // NOI18N
-        jButton1.setToolTipText("Informação");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonInformacao.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonInformacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/info.png"))); // NOI18N
+        jButtonInformacao.setToolTipText("Informação");
+        jButtonInformacao.setFocusable(false);
+        jButtonInformacao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonInformacao.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonInformacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonInformacaoActionPerformed(evt);
             }
         });
-        jToolBar1.add(jButton1);
+        jToolBar1.add(jButtonInformacao);
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
@@ -133,55 +99,22 @@ public class jPrincipal extends javax.swing.JFrame {
             .addGap(0, 34, Short.MAX_VALUE)
         );
 
-        jInternalFrameEstoqueTeste.setClosable(true);
-        jInternalFrameEstoqueTeste.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        jInternalFrameEstoqueTeste.setIconifiable(true);
-        jInternalFrameEstoqueTeste.setResizable(true);
-        jInternalFrameEstoqueTeste.setTitle("Estoque");
-        jInternalFrameEstoqueTeste.setFocusable(false);
-        jInternalFrameEstoqueTeste.setPreferredSize(new java.awt.Dimension(673, 451));
-        jInternalFrameEstoqueTeste.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrameEstoqueTesteLayout = new javax.swing.GroupLayout(jInternalFrameEstoqueTeste.getContentPane());
-        jInternalFrameEstoqueTeste.getContentPane().setLayout(jInternalFrameEstoqueTesteLayout);
-        jInternalFrameEstoqueTesteLayout.setHorizontalGroup(
-            jInternalFrameEstoqueTesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 657, Short.MAX_VALUE)
-        );
-        jInternalFrameEstoqueTesteLayout.setVerticalGroup(
-            jInternalFrameEstoqueTesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addComponent(jInternalFrameCadastros, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jInternalFrameEstoqueTeste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(jInternalFrameCadastros, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 384, Short.MAX_VALUE))
-                    .addComponent(jInternalFrameEstoqueTeste, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 545, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jDesktopPane1.setLayer(jInternalFrameCadastros, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jToolBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jInternalFrameEstoqueTeste, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,40 +132,20 @@ public class jPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrosActionPerformed
-        jInternalFrameCadastros.setVisible(true);
+        
     }//GEN-LAST:event_jButtonCadastrosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jInternalFrameCadastros.setVisible(false);
-        Dialog jd = new CadastroProdutosJDialog(this, true);
-        jd.setLocationRelativeTo(null);
-        jd.setVisible(true);
-
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jInternalFrameCadastros.setVisible(false);
-        Dialog jd = new CadastroClienteJDialog(this, true);
-        jd.setLocationRelativeTo(null);
-        jd.setVisible(true);
-
-
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Dialog jd = new SobreJDialog(this, true);
-        jd.setLocationRelativeTo(null);
-        jd.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButtonInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInformacaoActionPerformed
+        
+    }//GEN-LAST:event_jButtonInformacaoActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        jInternalFrameEstoqueTeste.setVisible(true);
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        jInternalFrameEstoqueTeste.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void jButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstoqueActionPerformed
+        
+    }//GEN-LAST:event_jButtonEstoqueActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -267,15 +180,11 @@ public class jPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonCadastros;
+    private javax.swing.JButton jButtonEstoque;
+    private javax.swing.JButton jButtonInformacao;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JInternalFrame jInternalFrameCadastros;
-    private javax.swing.JInternalFrame jInternalFrameEstoqueTeste;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
