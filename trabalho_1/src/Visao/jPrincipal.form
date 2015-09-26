@@ -161,6 +161,11 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInformacaoActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/*"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jButtonInformacao.setActionCommand(&quot;sobre&quot;);&#xa;jButtonInformacao.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

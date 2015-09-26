@@ -102,17 +102,21 @@ public PrincipalListener listener = new PrincipalListener(this);
         jToolBar1.add(jButtonEstoque);
         jToolBar1.add(jSeparator1);
 
+        jButtonInformacao.setActionCommand("sobre");
+        jButtonInformacao.addActionListener(listener);
         jButtonInformacao.setBackground(new java.awt.Color(153, 204, 255));
         jButtonInformacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/info.png"))); // NOI18N
         jButtonInformacao.setToolTipText("Informação");
         jButtonInformacao.setFocusable(false);
         jButtonInformacao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonInformacao.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        /*
         jButtonInformacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInformacaoActionPerformed(evt);
             }
         });
+        */
         jToolBar1.add(jButtonInformacao);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

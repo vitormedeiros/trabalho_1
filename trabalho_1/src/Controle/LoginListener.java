@@ -19,8 +19,7 @@ public class LoginListener implements ActionListener {
             frame.getSenha();
             frame.getUsuario();
             new jPrincipal().setVisible(true);
-            JOptionPane.showMessageDialog(frame, "Bem Vindo !!!");
-            
+            frame.dispose();
         } else {
             JOptionPane.showMessageDialog(frame, "teste");
         }

@@ -18,6 +18,7 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jButtonsalvar = new javax.swing.JButton();
         jButtoncancelar = new javax.swing.JButton();
         jButtonnovo = new javax.swing.JButton();
@@ -67,9 +68,11 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Status", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
+        buttonGroup1.add(jRadioButtonstatusativo);
         jRadioButtonstatusativo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonstatusativo.setText("Ativo");
 
+        buttonGroup1.add(jRadioButtonstatusinativo);
         jRadioButtonstatusinativo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonstatusinativo.setText("Inativo");
 
@@ -281,6 +284,7 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButtoncancelar;
     private javax.swing.JButton jButtoneditar;
     private javax.swing.JButton jButtonexcluir;

@@ -62,8 +62,8 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/next.png"))); // NOI18N
         jButtonEntrar.setToolTipText("Logar");
-        jButtonEntrar.setActionCommand("Entrar");
         jButtonEntrar.setActionCommand("entrar");
+        jButtonEntrar.addActionListener(listener);
 
         /*
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -117,8 +117,6 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jButtonEntrar.addActionListener(listener);
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
