@@ -49,13 +49,13 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("CadastroCliente");
 
-        jButtonsalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonsalvar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonsalvar.setText("Salvar");
 
-        jButtoncancelar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtoncancelar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoncancelar.setText("Cancelar");
 
-        jButtonnovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonnovo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonnovo.setText("Novo");
         jButtonnovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,17 +63,17 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
             }
         });
 
-        jButtoneditar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtoneditar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoneditar.setText("Editar");
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Status", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Status", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
         buttonGroup1.add(jRadioButtonstatusativo);
-        jRadioButtonstatusativo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonstatusativo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jRadioButtonstatusativo.setText("Ativo");
 
         buttonGroup1.add(jRadioButtonstatusinativo);
-        jRadioButtonstatusinativo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonstatusinativo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jRadioButtonstatusinativo.setText("Inativo");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -99,10 +99,10 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabelcod.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelcod.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelcod.setText("Cod.");
 
-        jLabelnome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelnome.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelnome.setText("Nome");
 
         jButtonpesquisa.setText("...");
@@ -142,10 +142,10 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                 .addGap(0, 20, Short.MAX_VALUE))
         );
 
-        jButtonsair.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonsair.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonsair.setText("Sair");
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Endereço", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Endereço", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
         jTextAreaendereco.setColumns(20);
         jTextAreaendereco.setRows(5);
@@ -169,19 +169,19 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jButtonexcluir.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButtonexcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jButtonexcluir.setForeground(new java.awt.Color(255, 0, 51));
         jButtonexcluir.setText("Excluir");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabelrg.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelrg.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelrg.setText("RG");
 
-        jLabelcpf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelcpf.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelcpf.setText("CPF");
 
-        jLabeltelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabeltelefone.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabeltelefone.setText("Telefone");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

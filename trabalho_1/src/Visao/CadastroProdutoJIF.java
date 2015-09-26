@@ -54,22 +54,26 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         jPanel4 = new javax.swing.JPanel();
         jComboBoxcategoria = new javax.swing.JComboBox();
 
+        setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
         setClosable(true);
         setIconifiable(true);
         setTitle("CadastroProduto");
 
+        jButtonexcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonexcluir.setText("Excluir");
 
+        jButtoncancelar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoncancelar.setText("Cancelar");
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
-        jLabelquantidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelquantidade.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelquantidade.setText("Quantidade");
 
-        jLabellocal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabellocal.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabellocal.setText("Local");
 
+        jComboBoxproduto.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         jComboBoxproduto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "UN", "KG" }));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -104,7 +108,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fornecedor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -117,20 +121,24 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
             .addComponent(jTextFieldfornecedor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jButtoneditar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoneditar.setText("Editar");
 
+        jButtonsalvar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonsalvar.setText("Salvar");
 
+        jButtonnovo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonnovo.setText("Novo");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
-        jLabeldescricao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabeldescricao.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabeldescricao.setText("Descrição");
 
-        jLabelcodbarras.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelcodbarras.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelcodbarras.setText("Código de barras");
 
+        jButtonpesquisa.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonpesquisa.setText("...");
         jButtonpesquisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,12 +181,12 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preços", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
-        jLabelprecovenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelprecovenda.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelprecovenda.setText("Preço de venda");
 
-        jLabelprecocusto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelprecocusto.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelprecocusto.setText("Preço de custo");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -210,8 +218,9 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Categoria", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
 
+        jComboBoxcategoria.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jComboBoxcategoria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Multifuncional", "Impressora", "Limpeza", "Outros" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -279,7 +288,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                     .addComponent(jButtonnovo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonexcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtoncancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         setBounds(160, 30, 689, 428);
