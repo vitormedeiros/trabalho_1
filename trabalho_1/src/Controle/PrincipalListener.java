@@ -16,7 +16,10 @@ public class PrincipalListener implements ActionListener {
    
    public void actionPerformed(ActionEvent evento) {
        if("cadastroCliente".equals(evento.getActionCommand())){
-         new CadastroCliente().setVisible(true);
+         CadastroCliente c = new CadastroCliente();
+         c.setVisible(true);
+           frame.getjDesktopPane1().add(c);
+                //.setVisible(true);
            JOptionPane.showMessageDialog(null, "OII");
        }
    }

@@ -54,6 +54,8 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         jPanel4 = new javax.swing.JPanel();
         jComboBoxcategoria = new javax.swing.JComboBox();
 
+        setClosable(true);
+        setIconifiable(true);
         setTitle("CadastroProduto");
 
         jButtonexcluir.setText("Excluir");

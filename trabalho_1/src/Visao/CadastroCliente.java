@@ -4,7 +4,7 @@ package Visao;
 
 public class CadastroCliente extends javax.swing.JInternalFrame {
 
-    CadastroCliente cadastroCliente = new CadastroCliente();
+    
     public CadastroCliente() {
         initComponents();
     }
@@ -44,6 +44,8 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         jTextFieldcpf = new javax.swing.JTextField();
         jTextFieldtelefone = new javax.swing.JTextField();
 
+        setClosable(true);
+        setIconifiable(true);
         setTitle("CadastroCliente");
 
         jButtonsalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
