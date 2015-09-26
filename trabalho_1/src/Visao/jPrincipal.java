@@ -20,11 +20,13 @@ public PrincipalListener listener = new PrincipalListener(this);
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         jToolBar1 = new javax.swing.JToolBar();
-        jButtoncadastroCliente = new javax.swing.JButton();
+        jButtonCadastroCliente = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButtonCadEstoque = new javax.swing.JButton();
         jButtonEstoque = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JToolBar.Separator();
         jButtonInformacao = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Principal");
@@ -61,20 +63,20 @@ public PrincipalListener listener = new PrincipalListener(this);
         jToolBar1.setBackground(new java.awt.Color(153, 204, 255));
         jToolBar1.setRollover(true);
 
-        jButtoncadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
-        jButtoncadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/avaliacao.png"))); // NOI18N
-        jButtoncadastroCliente.setToolTipText("Cadastros");
-        jButtoncadastroCliente.setActionCommand("cadastroCliente");
+        jButtonCadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonCadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/user_group_new.png"))); // NOI18N
+        jButtonCadastroCliente.setToolTipText("Cadastro de cliente");
+        jButtonCadastroCliente.setActionCommand("cadastroCliente");
 
         /*
-        jButtoncadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtoncadastroClienteActionPerformed(evt);
+                jButtonCadastroClienteActionPerformed(evt);
             }
         });
         */
-        jButtoncadastroCliente.addActionListener(listener);
-        jToolBar1.add(jButtoncadastroCliente);
+        jButtonCadastroCliente.addActionListener(listener);
+        jToolBar1.add(jButtonCadastroCliente);
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
         jButton4.setToolTipText("Estoque Teste");
@@ -88,17 +90,38 @@ public PrincipalListener listener = new PrincipalListener(this);
         });
         jToolBar1.add(jButton4);
 
+        jButtonCadEstoque.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonCadEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/gnome_dev_media_cf.png"))); // NOI18N
+        jButtonCadEstoque.setToolTipText("Cadastro de produtos");
+        jButtonCadEstoque.setFocusable(false);
+        jButtonCadEstoque.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonCadEstoque.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonCadEstoque.setActionCommand("cadastroProduto");
+        jButtonCadEstoque.addActionListener(listener);
+        /*
+        jButtonCadEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadEstoqueActionPerformed(evt);
+            }
+        });
+        */
+        jToolBar1.add(jButtonCadEstoque);
+
         jButtonEstoque.setBackground(new java.awt.Color(153, 204, 255));
         jButtonEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/versao.png"))); // NOI18N
         jButtonEstoque.setToolTipText("Estoque");
         jButtonEstoque.setFocusable(false);
         jButtonEstoque.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEstoque.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonEstoque.setActionCommand("estoque");
+        jButtonEstoque.addActionListener(listener);
+        /*
         jButtonEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEstoqueActionPerformed(evt);
             }
         });
+        */
         jToolBar1.add(jButtonEstoque);
         jToolBar1.add(jSeparator1);
 
@@ -119,6 +142,16 @@ public PrincipalListener listener = new PrincipalListener(this);
         */
         jToolBar1.add(jButtonInformacao);
 
+        jButton1.setBackground(new java.awt.Color(153, 204, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close2.png"))); // NOI18N
+        jButton1.setToolTipText("Fechar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -138,9 +171,9 @@ public PrincipalListener listener = new PrincipalListener(this);
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtoncadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoncadastroClienteActionPerformed
+    private void jButtonCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroClienteActionPerformed
         
-    }//GEN-LAST:event_jButtoncadastroClienteActionPerformed
+    }//GEN-LAST:event_jButtonCadastroClienteActionPerformed
 
     private void jButtonInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInformacaoActionPerformed
         
@@ -153,6 +186,14 @@ public PrincipalListener listener = new PrincipalListener(this);
     private void jButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstoqueActionPerformed
         
     }//GEN-LAST:event_jButtonEstoqueActionPerformed
+
+    private void jButtonCadEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadEstoqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCadEstoqueActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -193,10 +234,12 @@ public PrincipalListener listener = new PrincipalListener(this);
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonCadEstoque;
+    private javax.swing.JButton jButtonCadastroCliente;
     private javax.swing.JButton jButtonEstoque;
     private javax.swing.JButton jButtonInformacao;
-    private javax.swing.JButton jButtoncadastroCliente;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar.Separator jSeparator1;

@@ -282,7 +282,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        pack();
+        setBounds(160, 30, 689, 428);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonpesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpesquisaActionPerformed

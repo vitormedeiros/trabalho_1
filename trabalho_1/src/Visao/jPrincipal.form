@@ -94,22 +94,22 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButtoncadastroCliente">
+        <Component class="javax.swing.JButton" name="jButtonCadastroCliente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="99" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icones/avaliacao.png"/>
+              <Image iconType="3" name="/icones/user_group_new.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Cadastros"/>
+            <Property name="toolTipText" type="java.lang.String" value="Cadastro de cliente"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtoncadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCadastroClienteActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtoncadastroCliente.setActionCommand(&quot;cadastroCliente&quot;);&#xa;&#xa;&#xa;/*"/>
-            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/&#xa;jButtoncadastroCliente.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonCadastroCliente.setActionCommand(&quot;cadastroCliente&quot;);&#xa;&#xa;&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/&#xa;jButtonCadastroCliente.addActionListener(listener);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
@@ -125,6 +125,27 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonCadEstoque">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="99" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/icones/gnome_dev_media_cf.png"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Cadastro de produtos"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCadEstoqueActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonCadEstoque.setActionCommand(&quot;cadastroProduto&quot;);&#xa;jButtonCadEstoque.addActionListener(listener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonEstoque">
           <Properties>
@@ -142,6 +163,10 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEstoqueActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonEstoque.setActionCommand(&quot;estoque&quot;);&#xa;jButtonEstoque.addActionListener(listener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JToolBar$Separator" name="jSeparator1">
         </Component>
@@ -166,6 +191,20 @@
             <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jButtonInformacao.setActionCommand(&quot;sobre&quot;);&#xa;jButtonInformacao.addActionListener(listener);"/>
             <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="99" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/icones/close2.png"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Fechar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -9,12 +9,12 @@ package Visao;
  *
  * @author Maicon
  */
-public class Estoque extends javax.swing.JInternalFrame {
+public class EstoqueJIF extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Estoque
      */
-    public Estoque() {
+    public EstoqueJIF() {
         initComponents();
     }
 
@@ -27,20 +27,22 @@ public class Estoque extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setClosable(true);
+        setIconifiable(true);
         setTitle("Estoque");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 543, Short.MAX_VALUE)
+            .addGap(0, 690, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
+            .addGap(0, 460, Short.MAX_VALUE)
         );
 
-        pack();
+        setBounds(155, 20, 706, 489);
     }// </editor-fold>//GEN-END:initComponents
 
 

@@ -2,10 +2,10 @@
 package Visao;
 
 
-public class CadastroCliente extends javax.swing.JInternalFrame {
+public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
     
-    public CadastroCliente() {
+    public CadastroClienteJIF() {
         initComponents();
     }
 
@@ -275,7 +275,7 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
                 .addGap(62, 62, 62))
         );
 
-        pack();
+        setBounds(175, 5, 659, 524);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnovoActionPerformed
