@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Visao;
 
-/**
- *
- * @author Maicon
- */
+
 public class CadastroCliente extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form CadastroDeCliente
-     */
+    CadastroCliente cadastroCliente = new CadastroCliente();
     public CadastroCliente() {
         initComponents();
     }

@@ -1,8 +1,10 @@
 package Visao;
 
+import Controle.PrincipalListener;
+
 public class jPrincipal extends javax.swing.JFrame {
     
-//private LoginListener listener = new LoginListener(this);
+public PrincipalListener listener = new PrincipalListener(this);
 
     public jPrincipal() {
         initComponents();
@@ -16,7 +18,7 @@ public class jPrincipal extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jToolBar1 = new javax.swing.JToolBar();
-        jButtonCadastros = new javax.swing.JButton();
+        jButtoncadastroCliente = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButtonEstoque = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JToolBar.Separator();
@@ -31,19 +33,20 @@ public class jPrincipal extends javax.swing.JFrame {
         jToolBar1.setBackground(new java.awt.Color(153, 204, 255));
         jToolBar1.setRollover(true);
 
-        jButtonCadastros.setBackground(new java.awt.Color(153, 204, 255));
-        jButtonCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/avaliacao.png"))); // NOI18N
-        jButtonCadastros.setToolTipText("Cadastros");
-        jButtonCadastros.setActionCommand("cadastros");
+        jButtoncadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
+        jButtoncadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/avaliacao.png"))); // NOI18N
+        jButtoncadastroCliente.setToolTipText("Cadastros");
+        jButtoncadastroCliente.setActionCommand("cadastroCliente");
 
         /*
-        jButtonCadastros.addActionListener(new java.awt.event.ActionListener() {
+        jButtoncadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCadastrosActionPerformed(evt);
+                jButtoncadastroClienteActionPerformed(evt);
             }
         });
         */
-        jToolBar1.add(jButtonCadastros);
+        jButtoncadastroCliente.addActionListener(listener);
+        jToolBar1.add(jButtoncadastroCliente);
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
         jButton4.setToolTipText("Estoque Teste");
@@ -129,9 +132,9 @@ public class jPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrosActionPerformed
+    private void jButtoncadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoncadastroClienteActionPerformed
         
-    }//GEN-LAST:event_jButtonCadastrosActionPerformed
+    }//GEN-LAST:event_jButtoncadastroClienteActionPerformed
 
     private void jButtonInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInformacaoActionPerformed
         
@@ -179,9 +182,9 @@ public class jPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButtonCadastros;
     private javax.swing.JButton jButtonEstoque;
     private javax.swing.JButton jButtonInformacao;
+    private javax.swing.JButton jButtoncadastroCliente;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar.Separator jSeparator1;
