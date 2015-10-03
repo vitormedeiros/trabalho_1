@@ -56,25 +56,34 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
         setClosable(true);
-        setIconifiable(true);
         setTitle("CadastroProduto");
 
         jButtonexcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonexcluir.setText("Excluir");
+        jButtonexcluir.setEnabled(false);
 
         jButtoncancelar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoncancelar.setText("Cancelar");
+        jButtoncancelar.setEnabled(false);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
+        jPanel3.setEnabled(false);
 
         jLabelquantidade.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelquantidade.setText("Quantidade");
+        jLabelquantidade.setEnabled(false);
 
         jLabellocal.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabellocal.setText("Local");
+        jLabellocal.setEnabled(false);
+
+        jTextFieldquantidade.setEnabled(false);
+
+        jTextFieldlocal.setEnabled(false);
 
         jComboBoxproduto.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         jComboBoxproduto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "UN", "KG" }));
+        jComboBoxproduto.setEnabled(false);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -109,6 +118,9 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
+        jPanel5.setEnabled(false);
+
+        jTextFieldfornecedor.setEnabled(false);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -123,9 +135,11 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         jButtoneditar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoneditar.setText("Editar");
+        jButtoneditar.setEnabled(false);
 
         jButtonsalvar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonsalvar.setText("Salvar");
+        jButtonsalvar.setEnabled(false);
 
         jButtonnovo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonnovo.setText("Novo");
@@ -134,6 +148,9 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         jLabeldescricao.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabeldescricao.setText("Descrição");
+        jLabeldescricao.setEnabled(false);
+
+        jTextFielddescricao.setEnabled(false);
 
         jLabelcodbarras.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelcodbarras.setText("Código de barras");
@@ -182,12 +199,19 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
+        jPanel2.setEnabled(false);
 
         jLabelprecovenda.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelprecovenda.setText("Preço de venda");
+        jLabelprecovenda.setEnabled(false);
+
+        jTextFieldprecovenda.setEnabled(false);
 
         jLabelprecocusto.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelprecocusto.setText("Preço de custo");
+        jLabelprecocusto.setEnabled(false);
+
+        jTextFieldprecocusto.setEnabled(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -219,9 +243,11 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
+        jPanel4.setEnabled(false);
 
         jComboBoxcategoria.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jComboBoxcategoria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Multifuncional", "Impressora", "Limpeza", "Outros" }));
+        jComboBoxcategoria.setEnabled(false);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -291,7 +317,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        setBounds(160, 30, 689, 428);
+        setBounds(160, 30, 675, 428);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonpesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpesquisaActionPerformed

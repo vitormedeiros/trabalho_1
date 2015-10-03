@@ -10,7 +10,7 @@ public PrincipalListener listener = new PrincipalListener(this);
     public jPrincipal() {
         initComponents();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+        this.setExtendedState(MAXIMIZED_BOTH);
     } 
 
     @SuppressWarnings("unchecked")
@@ -19,13 +19,18 @@ public PrincipalListener listener = new PrincipalListener(this);
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         jButtonCadastroCliente = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jButtonCadEstoque = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jButtonEstoque = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JToolBar.Separator();
+        jLabel6 = new javax.swing.JLabel();
         jButtonInformacao = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,15 +40,31 @@ public PrincipalListener listener = new PrincipalListener(this);
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel1.setText("ImpSoftware direitos reservados  ®");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
+        jLabel2.setText("Contato (48) 3433 - 3333");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
@@ -55,12 +76,13 @@ public PrincipalListener listener = new PrincipalListener(this);
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(539, Short.MAX_VALUE)
+                .addContainerGap(507, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jToolBar1.setBackground(new java.awt.Color(153, 204, 255));
+        jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
         jButtonCadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
@@ -90,6 +112,11 @@ public PrincipalListener listener = new PrincipalListener(this);
         });
         jToolBar1.add(jButton4);
 
+        jLabel4.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel4.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel4.setText("jLabel4");
+        jToolBar1.add(jLabel4);
+
         jButtonCadEstoque.setBackground(new java.awt.Color(153, 204, 255));
         jButtonCadEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/gnome_dev_media_cf.png"))); // NOI18N
         jButtonCadEstoque.setToolTipText("Cadastro de produtos");
@@ -107,6 +134,11 @@ public PrincipalListener listener = new PrincipalListener(this);
         */
         jToolBar1.add(jButtonCadEstoque);
 
+        jLabel5.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel5.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel5.setText("jLabel5");
+        jToolBar1.add(jLabel5);
+
         jButtonEstoque.setBackground(new java.awt.Color(153, 204, 255));
         jButtonEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/versao.png"))); // NOI18N
         jButtonEstoque.setToolTipText("Estoque");
@@ -123,7 +155,11 @@ public PrincipalListener listener = new PrincipalListener(this);
         });
         */
         jToolBar1.add(jButtonEstoque);
-        jToolBar1.add(jSeparator1);
+
+        jLabel6.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel6.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel6.setText("jLabel6");
+        jToolBar1.add(jLabel6);
 
         jButtonInformacao.setActionCommand("sobre");
         jButtonInformacao.addActionListener(listener);
@@ -141,6 +177,11 @@ public PrincipalListener listener = new PrincipalListener(this);
         });
         */
         jToolBar1.add(jButtonInformacao);
+
+        jLabel7.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel7.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel7.setText("jLabel7");
+        jToolBar1.add(jLabel7);
 
         jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close2.png"))); // NOI18N
@@ -241,8 +282,13 @@ public PrincipalListener listener = new PrincipalListener(this);
     private javax.swing.JButton jButtonEstoque;
     private javax.swing.JButton jButtonInformacao;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 }

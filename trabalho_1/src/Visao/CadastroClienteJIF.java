@@ -2,14 +2,7 @@
 package Visao;
 
 import Controle.CadastroClienteListener;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import javax.swing.JOptionPane;
 
 
 public class CadastroClienteJIF extends javax.swing.JInternalFrame {
@@ -17,225 +10,8 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     public CadastroClienteListener listener = new CadastroClienteListener(this);
     public CadastroClienteJIF() {
         initComponents();
+        jButtonexcluir.setEnabled(true);
     }
-
-    public CadastroClienteListener getListener() {
-        return listener;
-    }
-
-    public void setListener(CadastroClienteListener listener) {
-        this.listener = listener;
-    }
-
-    public ButtonGroup getButtonGroup1() {
-        return buttonGroup1;
-    }
-
-    public void setButtonGroup1(ButtonGroup buttonGroup1) {
-        this.buttonGroup1 = buttonGroup1;
-    }
-
-    public JButton getjButtoncancelar() {
-        return jButtoncancelar;
-    }
-
-    public void setjButtoncancelar(JButton jButtoncancelar) {
-        this.jButtoncancelar = jButtoncancelar;
-    }
-
-    public JButton getjButtoneditar() {
-        return jButtoneditar;
-    }
-
-    public void setjButtoneditar(JButton jButtoneditar) {
-        this.jButtoneditar = jButtoneditar;
-    }
-
-    public JButton getjButtonexcluir() {
-        return jButtonexcluir;
-    }
-
-    public void setjButtonexcluir(JButton jButtonexcluir) {
-        this.jButtonexcluir = jButtonexcluir;
-    }
-
-    public JButton getjButtonnovo() {
-        return jButtonnovo;
-    }
-
-    public void setjButtonnovo(JButton jButtonnovo) {
-        this.jButtonnovo = jButtonnovo;
-    }
-
-    public JButton getjButtonpesquisa() {
-        return jButtonpesquisa;
-    }
-
-    public void setjButtonpesquisa(JButton jButtonpesquisa) {
-        this.jButtonpesquisa = jButtonpesquisa;
-    }
-
-    public JButton getjButtonsair() {
-        return jButtonsair;
-    }
-
-    public void setjButtonsair(JButton jButtonsair) {
-        this.jButtonsair = jButtonsair;
-    }
-
-    public JButton getjButtonsalvar() {
-        return jButtonsalvar;
-    }
-
-    public void setjButtonsalvar(JButton jButtonsalvar) {
-        this.jButtonsalvar = jButtonsalvar;
-    }
-
-    public JLabel getjLabelcod() {
-        return jLabelcod;
-    }
-
-    public void setjLabelcod(JLabel jLabelcod) {
-        this.jLabelcod = jLabelcod;
-    }
-
-    public JLabel getjLabelcpf() {
-        return jLabelcpf;
-    }
-
-    public void setjLabelcpf(JLabel jLabelcpf) {
-        this.jLabelcpf = jLabelcpf;
-    }
-
-    public JLabel getjLabelnome() {
-        return jLabelnome;
-    }
-
-    public void setjLabelnome(JLabel jLabelnome) {
-        this.jLabelnome = jLabelnome;
-    }
-
-    public JLabel getjLabelrg() {
-        return jLabelrg;
-    }
-
-    public void setjLabelrg(JLabel jLabelrg) {
-        this.jLabelrg = jLabelrg;
-    }
-
-    public JLabel getjLabeltelefone() {
-        return jLabeltelefone;
-    }
-
-    public void setjLabeltelefone(JLabel jLabeltelefone) {
-        this.jLabeltelefone = jLabeltelefone;
-    }
-
-    public JPanel getjPanel1() {
-        return jPanel1;
-    }
-
-    public void setjPanel1(JPanel jPanel1) {
-        this.jPanel1 = jPanel1;
-    }
-
-    public JPanel getjPanel2() {
-        return jPanel2;
-    }
-
-    public void setjPanel2(JPanel jPanel2) {
-        this.jPanel2 = jPanel2;
-    }
-
-    public JPanel getjPanel3() {
-        return jPanel3;
-    }
-
-    public void setjPanel3(JPanel jPanel3) {
-        this.jPanel3 = jPanel3;
-    }
-
-    public JPanel getjPanel4() {
-        return jPanel4;
-    }
-
-    public void setjPanel4(JPanel jPanel4) {
-        this.jPanel4 = jPanel4;
-    }
-
-    public JRadioButton getjRadioButtonstatusativo() {
-        return jRadioButtonstatusativo;
-    }
-
-    public void setjRadioButtonstatusativo(JRadioButton jRadioButtonstatusativo) {
-        this.jRadioButtonstatusativo = jRadioButtonstatusativo;
-    }
-
-    public JRadioButton getjRadioButtonstatusinativo() {
-        return jRadioButtonstatusinativo;
-    }
-
-    public void setjRadioButtonstatusinativo(JRadioButton jRadioButtonstatusinativo) {
-        this.jRadioButtonstatusinativo = jRadioButtonstatusinativo;
-    }
-
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
-    }
-
-    public void setjScrollPane1(JScrollPane jScrollPane1) {
-        this.jScrollPane1 = jScrollPane1;
-    }
-
-    public JTextArea getjTextAreaendereco() {
-        return jTextAreaendereco;
-    }
-
-    public void setjTextAreaendereco(JTextArea jTextAreaendereco) {
-        this.jTextAreaendereco = jTextAreaendereco;
-    }
-
-    public JTextField getjTextFieldcod() {
-        return jTextFieldcod;
-    }
-
-    public void setjTextFieldcod(JTextField jTextFieldcod) {
-        this.jTextFieldcod = jTextFieldcod;
-    }
-
-    public JTextField getjTextFieldcpf() {
-        return jTextFieldcpf;
-    }
-
-    public void setjTextFieldcpf(JTextField jTextFieldcpf) {
-        this.jTextFieldcpf = jTextFieldcpf;
-    }
-
-    public JTextField getjTextFieldnome() {
-        return jTextFieldnome;
-    }
-
-    public void setjTextFieldnome(JTextField jTextFieldnome) {
-        this.jTextFieldnome = jTextFieldnome;
-    }
-
-    public JTextField getjTextFieldrg() {
-        return jTextFieldrg;
-    }
-
-    public void setjTextFieldrg(JTextField jTextFieldrg) {
-        this.jTextFieldrg = jTextFieldrg;
-    }
-
-    public JTextField getjTextFieldtelefone() {
-        return jTextFieldtelefone;
-    }
-
-    public void setjTextFieldtelefone(JTextField jTextFieldtelefone) {
-        this.jTextFieldtelefone = jTextFieldtelefone;
-    }
-
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -268,7 +44,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jTextFieldtelefone = new javax.swing.JTextField();
 
         setClosable(true);
-        setIconifiable(true);
         setTitle("CadastroCliente");
 
         jButtonsalvar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
@@ -291,6 +66,11 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jButtoneditar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoneditar.setText("Editar");
         jButtoneditar.setEnabled(false);
+        jButtoneditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtoneditarActionPerformed(evt);
+            }
+        });
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Status", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
         jPanel4.setEnabled(false);
@@ -529,6 +309,10 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jButtonnovoActionPerformed
 
+    private void jButtoneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoneditarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtoneditarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
@@ -558,4 +342,33 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextFieldrg;
     private javax.swing.JTextField jTextFieldtelefone;
     // End of variables declaration//GEN-END:variables
+public void SetaEnable(){
+    JOptionPane.showMessageDialog(null, "teste");
+    jButtoncancelar.setEnabled(true);
+    jButtoneditar.setEnabled(true);
+    jButtonexcluir.setEnabled(true);
+    //jButtonpesquisa.setEnabled(true);
+    jButtonsair.setEnabled(true);
+    jButtonsalvar.setEnabled(true);
+    /*jLabelcod.setEnabled(true);
+    jLabelcpf.setEnabled(true);
+    jLabelnome.setEnabled(true);
+    jLabelrg.setEnabled(true);
+    jLabeltelefone.setEnabled(true);
+    jPanel1.setEnabled(true);
+    jPanel2.setEnabled(true);
+    jPanel3.setEnabled(true);
+    jPanel4.setEnabled(true);
+    jRadioButtonstatusativo.setEnabled(true);
+    jRadioButtonstatusinativo.setEnabled(true);
+    jScrollPane1.setEnabled(true);
+    jTextAreaendereco.setEnabled(true);
+    jTextFieldcod.setEnabled(true);
+    jTextFieldcpf.setEnabled(true);
+    jTextFieldnome.setEnabled(true);
+    jTextFieldrg.setEnabled(true);
+    jTextFieldtelefone.setEnabled(true);
+*/
+}
+
 }
