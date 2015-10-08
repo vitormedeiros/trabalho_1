@@ -10,7 +10,10 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     public CadastroClienteListener listener = new CadastroClienteListener(this);
     public CadastroClienteJIF() {
         initComponents();
-        jButtonexcluir.setEnabled(true);
+        SetaEnable(true);
+        LimpaForm();
+      
+        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -48,24 +51,23 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
         jButtonsalvar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonsalvar.setText("Salvar");
-        jButtonsalvar.setEnabled(false);
 
         jButtoncancelar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoncancelar.setText("Cancelar");
-        jButtoncancelar.setEnabled(false);
 
         jButtonnovo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonnovo.setText("Novo");
         jButtonnovo.setActionCommand("botaoNovo");
+        /*
         jButtonnovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonnovoActionPerformed(evt);
             }
         });
+        */
 
         jButtoneditar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoneditar.setText("Editar");
-        jButtoneditar.setEnabled(false);
         jButtoneditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtoneditarActionPerformed(evt);
@@ -78,12 +80,10 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         buttonGroup1.add(jRadioButtonstatusativo);
         jRadioButtonstatusativo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jRadioButtonstatusativo.setText("Ativo");
-        jRadioButtonstatusativo.setEnabled(false);
 
         buttonGroup1.add(jRadioButtonstatusinativo);
         jRadioButtonstatusinativo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jRadioButtonstatusinativo.setText("Inativo");
-        jRadioButtonstatusinativo.setEnabled(false);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -110,8 +110,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
         jLabelcod.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelcod.setText("Cod.");
-
-        jTextFieldnome.setEnabled(false);
 
         jLabelnome.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelnome.setText("Nome");
@@ -156,7 +154,15 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
         jButtonsair.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonsair.setText("Sair");
-        jButtonsair.setEnabled(false);
+        jButtonsair.setActionCommand("botaoSair");
+        /*
+        jButtonsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonsairActionPerformed(evt);
+            }
+        });
+        */
+        jButtonsair.addActionListener(listener);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Endereço", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14))); // NOI18N
         jPanel3.setEnabled(false);
@@ -186,7 +192,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jButtonexcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jButtonexcluir.setForeground(new java.awt.Color(255, 0, 51));
         jButtonexcluir.setText("Excluir");
-        jButtonexcluir.setEnabled(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.setEnabled(false);
@@ -202,12 +207,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jLabeltelefone.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabeltelefone.setText("Telefone");
         jLabeltelefone.setEnabled(false);
-
-        jTextFieldrg.setEnabled(false);
-
-        jTextFieldcpf.setEnabled(false);
-
-        jTextFieldtelefone.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -306,12 +305,16 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnovoActionPerformed
-
+        
     }//GEN-LAST:event_jButtonnovoActionPerformed
 
     private void jButtoneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoneditarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtoneditarActionPerformed
+
+    private void jButtonsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonsairActionPerformed
+        
+    }//GEN-LAST:event_jButtonsairActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -342,33 +345,44 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextFieldrg;
     private javax.swing.JTextField jTextFieldtelefone;
     // End of variables declaration//GEN-END:variables
-public void SetaEnable(){
-    JOptionPane.showMessageDialog(null, "teste");
-    jButtoncancelar.setEnabled(true);
-    jButtoneditar.setEnabled(true);
-    jButtonexcluir.setEnabled(true);
-    //jButtonpesquisa.setEnabled(true);
-    jButtonsair.setEnabled(true);
-    jButtonsalvar.setEnabled(true);
-    /*jLabelcod.setEnabled(true);
-    jLabelcpf.setEnabled(true);
-    jLabelnome.setEnabled(true);
-    jLabelrg.setEnabled(true);
-    jLabeltelefone.setEnabled(true);
-    jPanel1.setEnabled(true);
-    jPanel2.setEnabled(true);
-    jPanel3.setEnabled(true);
-    jPanel4.setEnabled(true);
-    jRadioButtonstatusativo.setEnabled(true);
-    jRadioButtonstatusinativo.setEnabled(true);
-    jScrollPane1.setEnabled(true);
-    jTextAreaendereco.setEnabled(true);
-    jTextFieldcod.setEnabled(true);
-    jTextFieldcpf.setEnabled(true);
-    jTextFieldnome.setEnabled(true);
-    jTextFieldrg.setEnabled(true);
-    jTextFieldtelefone.setEnabled(true);
-*/
+public void SetaEnable(boolean cond){
+    jButtoncancelar.setEnabled(cond);
+    jButtoneditar.setEnabled(cond);
+    jButtonexcluir.setEnabled(cond);
+    jButtonpesquisa.setEnabled(cond);
+    jButtonsair.setEnabled(cond);
+    jButtonsalvar.setEnabled(cond);
+    jLabelcod.setEnabled(cond);
+    jLabelcpf.setEnabled(cond);
+    jLabelnome.setEnabled(cond);
+    jLabelrg.setEnabled(cond);
+    jLabeltelefone.setEnabled(cond);
+    jPanel1.setEnabled(cond);
+    jPanel2.setEnabled(cond);
+    jPanel3.setEnabled(cond);
+    jPanel4.setEnabled(cond);
+    jRadioButtonstatusativo.setEnabled(cond);
+    jRadioButtonstatusinativo.setEnabled(cond);
+    jScrollPane1.setEnabled(cond);
+    jTextAreaendereco.setEnabled(cond);
+    jTextFieldcod.setEnabled(cond);
+    jTextFieldcpf.setEnabled(cond);
+    jTextFieldnome.setEnabled(cond);
+    jTextFieldrg.setEnabled(cond);
+    jTextFieldtelefone.setEnabled(cond);
+}
+public void LimpaForm(){
+    jTextAreaendereco.setText(" ");
+    jTextFieldcod.setText(" ");
+    jTextFieldcpf.setText(" ");
+    jTextFieldnome.setText(" ");
+    jTextFieldrg.setText(" ");
+    jTextFieldtelefone.setText(" ");
+}
+public void Sair(){
+    
+    JOptionPane.showMessageDialog(null,"Não esta saindo");
+   
 }
 
 }
