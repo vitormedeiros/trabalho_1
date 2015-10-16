@@ -380,7 +380,7 @@ public void LimpaForm(){
     jTextFieldtelefone.setText(" ");
 }
 public void Sair(){
-    
+    dispose();
     JOptionPane.showMessageDialog(null,"Não esta saindo");
    
 }

@@ -23,7 +23,6 @@ public PrincipalListener listener = new PrincipalListener(this);
         jLabel2 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         jButtonCadastroCliente = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jButtonCadEstoque = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -99,18 +98,6 @@ public PrincipalListener listener = new PrincipalListener(this);
         */
         jButtonCadastroCliente.addActionListener(listener);
         jToolBar1.add(jButtonCadastroCliente);
-
-        jButton4.setBackground(new java.awt.Color(153, 204, 255));
-        jButton4.setToolTipText("Estoque Teste");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(jButton4);
 
         jLabel4.setBackground(new java.awt.Color(153, 204, 255));
         jLabel4.setForeground(new java.awt.Color(153, 204, 255));
@@ -220,10 +207,6 @@ public PrincipalListener listener = new PrincipalListener(this);
         
     }//GEN-LAST:event_jButtonInformacaoActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstoqueActionPerformed
         
     }//GEN-LAST:event_jButtonEstoqueActionPerformed
@@ -276,7 +259,6 @@ public PrincipalListener listener = new PrincipalListener(this);
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonCadEstoque;
     private javax.swing.JButton jButtonCadastroCliente;
     private javax.swing.JButton jButtonEstoque;
