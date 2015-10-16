@@ -351,10 +351,10 @@ public void SetaEnable(boolean cond){
     jButtoncancelar.setEnabled(cond);
     jButtoneditar.setEnabled(cond);
     jButtonexcluir.setEnabled(cond);
-    jButtonpesquisa.setEnabled(cond);
+   // jButtonpesquisa.setEnabled(cond);
     jButtonsair.setEnabled(cond);
     jButtonsalvar.setEnabled(cond);
-    jLabelcod.setEnabled(cond);
+   // jLabelcod.setEnabled(cond);
     jLabelcpf.setEnabled(cond);
     jLabelnome.setEnabled(cond);
     jLabelrg.setEnabled(cond);
@@ -367,7 +367,7 @@ public void SetaEnable(boolean cond){
     jRadioButtonstatusinativo.setEnabled(cond);
     jScrollPane1.setEnabled(cond);
     jTextAreaendereco.setEnabled(cond);
-    jTextFieldcod.setEnabled(cond);
+    //jTextFieldcod.setEnabled(cond);
     jTextFieldcpf.setEnabled(cond);
     jTextFieldnome.setEnabled(cond);
     jTextFieldrg.setEnabled(cond);
