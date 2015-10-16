@@ -13,14 +13,18 @@ public class CadastroClienteListener implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent evento) {
-        CadastroClienteJIF c = new CadastroClienteJIF();
+        //CadastroClienteJIF c = new CadastroClienteJIF();
 
         if ("botaoNovo".equals(evento.getActionCommand())) {
 
-            c.LimpaForm();
+            frame.LimpaForm();
+            frame.SetaEnable(true);
         }
         if ("botaoSair".equals(evento.getActionCommand())) {
-            c.Sair();
+            frame.Sair();
+         }
+        if ("botaoCancelar".equals(evento.getActionCommand())) {
+            frame.SetaEnable(false);
          }
     }
 

@@ -97,7 +97,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                         .addComponent(jTextFieldquantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBoxproduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldlocal, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabellocal)))
@@ -317,7 +317,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        setBounds(160, 30, 675, 428);
+        setBounds(160, 30, 692, 428);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonpesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpesquisaActionPerformed

@@ -10,7 +10,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     public CadastroClienteListener listener = new CadastroClienteListener(this);
     public CadastroClienteJIF() {
         initComponents();
-        SetaEnable(true);
+        SetaEnable(false);
         LimpaForm();
       
         
@@ -54,6 +54,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
         jButtoncancelar.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtoncancelar.setText("Cancelar");
+        jButtoncancelar.setActionCommand("botaoCancelar");
 
         jButtonnovo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButtonnovo.setText("Novo");
@@ -299,6 +300,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                 .addGap(62, 62, 62))
         );
 
+        jButtoncancelar.addActionListener(listener);
         jButtonnovo.addActionListener(listener);
 
         setBounds(175, 5, 659, 524);
@@ -313,7 +315,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButtoneditarActionPerformed
 
     private void jButtonsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonsairActionPerformed
-        
+
     }//GEN-LAST:event_jButtonsairActionPerformed
 
 

@@ -75,7 +75,7 @@ public PrincipalListener listener = new PrincipalListener(this);
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(507, Short.MAX_VALUE)
+                .addContainerGap(504, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -93,6 +93,11 @@ public PrincipalListener listener = new PrincipalListener(this);
         jButtonCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCadastroClienteActionPerformed(evt);
+            }
+        });
+        jButtonCadastroCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonCadastroClienteKeyPressed(evt);
             }
         });
         */
@@ -218,6 +223,10 @@ public PrincipalListener listener = new PrincipalListener(this);
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonCadastroClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCadastroClienteKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCadastroClienteKeyPressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
