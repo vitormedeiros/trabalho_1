@@ -1,6 +1,6 @@
 # IMP Software 
 Observações
-* O nome dos pacotes deve ser definido com letras minúsculas.
+* O nome dos pacotes devem ser definidos com letras minúsculas.
 * >> Exemplo br.imp.controler
 * >> Exemplo br.imp.visao
 * Nome de métodos devem ser iniciados sempre em minúsculo
