@@ -15,6 +15,7 @@ public class PrincipalListener implements ActionListener {
 
     public PrincipalListener(jPrincipal frame) {
         this.frame = frame;
+        
     }
 
     public void actionPerformed(ActionEvent evento) {

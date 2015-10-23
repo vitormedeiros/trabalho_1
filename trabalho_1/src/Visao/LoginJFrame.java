@@ -1,6 +1,7 @@
 package Visao;
 
 import Controle.LoginListener;
+import Controle.UltimoUsuarioLogin;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
@@ -10,10 +11,13 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class LoginJFrame extends javax.swing.JFrame {
 
     private LoginListener listener = new LoginListener(this);
-
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    
     public LoginJFrame() {
         initComponents();
         colocarTema();
+        jTextFieldlogin.setText(ultimoLogin.lerArquivo());
+        jPasswordFieldsenha.transferFocus();
     }
 
     @SuppressWarnings("unchecked")
@@ -46,6 +50,12 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         jLabelsenha.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         jLabelsenha.setText("Senha");
+
+        jTextFieldlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldloginActionPerformed(evt);
+            }
+        });
 
         /*
         jPasswordFieldsenha.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +242,10 @@ public class LoginJFrame extends javax.swing.JFrame {
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
         dispose();
     }//GEN-LAST:event_jButtonCancelarActionPerformed
+
+    private void jTextFieldloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldloginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldloginActionPerformed
 
     private void colocarTema() {
         String lookName = com.sun.java.swing.plaf.windows.WindowsLookAndFeel.class.getName();
