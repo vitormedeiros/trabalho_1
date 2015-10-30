@@ -2,7 +2,7 @@ package Controle;
 
 import Visao.CadastroClienteJIF;
 import Visao.CadastroProdutoJIF;
-import Visao.EstoqueJIF;
+import Visao.EstoqueJIFrame;
 import Visao.SobreJInternalFrame;
 import Visao.jPrincipal;
 import java.awt.event.ActionEvent;
@@ -33,7 +33,7 @@ public class PrincipalListener implements ActionListener {
             c.setVisible(true);
             frame.getjDesktopPane1().add(c);
         } else if ("estoque".equals(evento.getActionCommand())) {
-            EstoqueJIF c = new EstoqueJIF();
+            EstoqueJIFrame c = new EstoqueJIFrame();
             c.setVisible(true);
             frame.getjDesktopPane1().add(c);
         }

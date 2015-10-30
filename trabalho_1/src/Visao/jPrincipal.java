@@ -87,8 +87,6 @@ public PrincipalListener listener = new PrincipalListener(this);
         jButtonCadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
         jButtonCadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/user_group_new.png"))); // NOI18N
         jButtonCadastroCliente.setToolTipText("Cadastro de cliente");
-        jButtonCadastroCliente.setActionCommand("cadastroCliente");
-
         /*
         jButtonCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +99,7 @@ public PrincipalListener listener = new PrincipalListener(this);
             }
         });
         */
+        jButtonCadastroCliente.setActionCommand("cadastroCliente");
         jButtonCadastroCliente.addActionListener(listener);
         jToolBar1.add(jButtonCadastroCliente);
 
