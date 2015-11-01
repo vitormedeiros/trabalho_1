@@ -1,8 +1,13 @@
 
 package Visao;
 
-public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
+import Controle.CadastroProdutoListener;
 
+
+public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
+    
+     private CadastroProdutoListener listener = new CadastroProdutoListener(this);
+    
     public CadastroProdutoJIF() {
         initComponents();
     }
@@ -123,11 +128,15 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         jBtnLimpar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnLimpar.setText("Limpar");
+        jBtnLimpar.setActionCommand("limpar");
+        jBtnLimpar.addActionListener(listener);
+        /*
         jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnLimparActionPerformed(evt);
             }
         });
+        */
 
         jBtnExcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnExcluir.setText("EXCLUIR");
