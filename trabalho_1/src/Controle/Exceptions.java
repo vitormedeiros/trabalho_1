@@ -1,10 +1,23 @@
 package Controle;
 
-public class Exceptions  extends Exception{
-    public Exceptions(){
-        super("Erro");  
+import Modelo.DataEhora;
+import Modelo.LoginControl;
+
+public class Exceptions extends Exception {
+
+   
+    LogErro logErro;
+
+
+    public Exceptions() {
+        super("Erro");
+        //  Grava o erro no log de erro
+        logErro = new LogErro("Erro");
     }
-    public Exceptions(String mensagem){
+
+    public Exceptions(String mensagem) {
         super(mensagem);
+        //  Grava o erro no log de erro
+        logErro = new LogErro(mensagem);
     }
 }

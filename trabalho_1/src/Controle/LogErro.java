@@ -1,27 +1,25 @@
 package Controle;
 
 import Modelo.DataEhora;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
-public class Log {
+public class LogErro {
 
     DataEhora dH = new DataEhora();
 
-    public Log(String textoArquivo) {
+    public LogErro(String textoArquivo) {
         FileWriter fileWriter = null;
 
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter("Log.txt", true);
+            fileWriter = new FileWriter("LogErro.txt", true);
             bufferedWriter = new BufferedWriter(fileWriter);
             PrintWriter pw = new PrintWriter(bufferedWriter);
-            pw.println(textoArquivo + dH.getDataFormatada() + " às " + dH.getHoraFormatada());
+            pw.println(textoArquivo +" "+ dH.getDataFormatada() + " às " + dH.getHoraFormatada());
             bufferedWriter.flush();
             bufferedWriter.close();
             pw.close();

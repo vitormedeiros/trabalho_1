@@ -13,8 +13,8 @@ public class LoginJFrame extends javax.swing.JFrame {
 
     private LoginListener listener = new LoginListener(this);
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
-    
-    public LoginJFrame() throws Exceptions{
+
+    public LoginJFrame() throws Exceptions {
         initComponents();
         colocarTema();
         String login = ultimoLogin.lerArquivo();
@@ -223,18 +223,18 @@ public class LoginJFrame extends javax.swing.JFrame {
     /*
     private void jPasswordFieldsenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            String usuariotxt = jTextFieldlogin.getText();
-            String senhatxt = new String(jPasswordFieldsenha.getPassword());
-            if ("".equals(usuariotxt)) {
-                if ("".equals(senhatxt)) {
-                    new jPrincipal().setVisible(true);
-                    dispose();
-                    setVisible(false);
-                }
-            } else {
-                JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
-            }
-        }
+     String usuariotxt = jTextFieldlogin.getText();
+     String senhatxt = new String(jPasswordFieldsenha.getPassword());
+     if ("".equals(usuariotxt)) {
+     if ("".equals(senhatxt)) {
+     new jPrincipal().setVisible(true);
+     dispose();
+     setVisible(false);
+     }
+     } else {
+     JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
+     }
+     }
     }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
 */
     private void jPasswordFieldsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaActionPerformed
@@ -242,7 +242,7 @@ public class LoginJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordFieldsenhaActionPerformed
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-        
+
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed

@@ -1,4 +1,3 @@
-
 package Controle;
 
 import java.io.BufferedReader;
@@ -10,26 +9,26 @@ import javax.swing.JOptionPane;
 
 public class UltimoUsuarioLogin {
 // gravando arquivo
+
     public void UltimoUsuarioLogin(String textoArquivo) {
         FileWriter fileWriter = null;
-     
+
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter("LoginUltimoAcesso.dat",false);
+            fileWriter = new FileWriter("LoginUltimoAcesso.dat", false);
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(textoArquivo);
             bufferedWriter.flush();
             bufferedWriter.close();
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             //falta criar o arquivo log para mandar as 
             //informações se esta gravando ou não o ultimo usuario
-        } 
+        }
     }
-    
+
     // lendo o arquivo e setando no campo de login do usuario
-    
-     public String lerArquivo(){
+    public String lerArquivo() {
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         try {
@@ -41,17 +40,16 @@ public class UltimoUsuarioLogin {
             }
             return sb.toString();
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
-        } 
-            if (fileReader != null) {
-                try {
-                    fileReader.close();
-                } catch (IOException e) {
-                    JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
-                }
+            JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
+        }
+        if (fileReader != null) {
+            try {
+                fileReader.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             }
+        }
         return null;
-     }
-        
-}
+    }
 
+}

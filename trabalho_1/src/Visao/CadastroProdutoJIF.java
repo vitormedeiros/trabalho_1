@@ -2,14 +2,19 @@
 package Visao;
 
 import Controle.CadastroProdutoListener;
+import Controle.Log;
+import Controle.UltimoUsuarioLogin;
 
 
 public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
-    
-     private CadastroProdutoListener listener = new CadastroProdutoListener(this);
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
+    private CadastroProdutoListener listener = new CadastroProdutoListener(this);
     
     public CadastroProdutoJIF() {
         initComponents();
+        //Log de navegação
+        log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou no Cadastro de Produto no dia ");
     }
 
     @SuppressWarnings("unchecked")

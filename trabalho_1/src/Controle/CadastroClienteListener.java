@@ -8,7 +8,9 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class CadastroClienteListener implements ActionListener {
-
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
+    
     public CadastroClienteJIF frame;
 
     public CadastroClienteListener(CadastroClienteJIF frame) {

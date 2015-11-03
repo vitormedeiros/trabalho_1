@@ -13,7 +13,10 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class PrincipalListener implements ActionListener {
-   
+
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
+
     public jPrincipal frame;
 
     public PrincipalListener(jPrincipal frame) {
@@ -22,7 +25,7 @@ public class PrincipalListener implements ActionListener {
     }
 
     public void abrirCadastroClientes() throws Exceptions {
-        
+
         CadastroClienteJIF c = new CadastroClienteJIF();
         c.setVisible(true);
         frame.getjDesktopPane1().add(c);
@@ -79,5 +82,12 @@ public class PrincipalListener implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             }
         }
+
+        if ("sair".equals(evento.getActionCommand())) {
+            // salva log
+            log = new Log("Usuario " + ultimoLogin.lerArquivo() + " Saio do sistema no dia ");
+            frame.dispose();
+        }
     }
+
 }

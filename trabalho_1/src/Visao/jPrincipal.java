@@ -1,17 +1,23 @@
 package Visao;
 
+import Controle.Log;
 import Controle.PrincipalListener;
+import Controle.UltimoUsuarioLogin;
 import javax.swing.JDesktopPane;
 
 public class jPrincipal extends javax.swing.JFrame {
-    
-public PrincipalListener listener = new PrincipalListener(this);
+
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
+    public PrincipalListener listener = new PrincipalListener(this);
 
     public jPrincipal() {
         initComponents();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setExtendedState(MAXIMIZED_BOTH);
-    } 
+        //Log de navegação
+        log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou no sistema dia ");
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -30,7 +36,7 @@ public PrincipalListener listener = new PrincipalListener(this);
         jLabel6 = new javax.swing.JLabel();
         jButtonInformacao = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jBtnSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Principal");
@@ -136,8 +142,6 @@ public PrincipalListener listener = new PrincipalListener(this);
         jButtonEstoque.setFocusable(false);
         jButtonEstoque.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEstoque.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButtonEstoque.setActionCommand("estoque");
-        jButtonEstoque.addActionListener(listener);
         /*
         jButtonEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +150,8 @@ public PrincipalListener listener = new PrincipalListener(this);
         });
         */
         jToolBar1.add(jButtonEstoque);
+        jButtonEstoque.setActionCommand("estoque");
+        jButtonEstoque.addActionListener(listener);
 
         jLabel6.setBackground(new java.awt.Color(153, 204, 255));
         jLabel6.setForeground(new java.awt.Color(153, 204, 255));
@@ -174,15 +180,19 @@ public PrincipalListener listener = new PrincipalListener(this);
         jLabel7.setText("jLabel7");
         jToolBar1.add(jLabel7);
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close2.png"))); // NOI18N
-        jButton1.setToolTipText("Fechar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBtnSair.setBackground(new java.awt.Color(153, 204, 255));
+        jBtnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close2.png"))); // NOI18N
+        jBtnSair.setToolTipText("Fechar");
+        jBtnSair.setActionCommand("sair");
+        jBtnSair.addActionListener(listener);
+        /*
+        jBtnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBtnSairActionPerformed(evt);
             }
         });
-        jToolBar1.add(jButton1);
+        */
+        jToolBar1.add(jBtnSair);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -204,24 +214,24 @@ public PrincipalListener listener = new PrincipalListener(this);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroClienteActionPerformed
-        
+
     }//GEN-LAST:event_jButtonCadastroClienteActionPerformed
 
     private void jButtonInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInformacaoActionPerformed
-        
+
     }//GEN-LAST:event_jButtonInformacaoActionPerformed
 
     private void jButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstoqueActionPerformed
-        
+
     }//GEN-LAST:event_jButtonEstoqueActionPerformed
 
     private void jButtonCadEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadEstoqueActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCadEstoqueActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jBtnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSairActionPerformed
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jBtnSairActionPerformed
 
     private void jButtonCadastroClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCadastroClienteKeyPressed
         // TODO add your handling code here:
@@ -263,10 +273,9 @@ public PrincipalListener listener = new PrincipalListener(this);
         return jDesktopPane1;
     }
 
-    
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jBtnSair;
     private javax.swing.JButton jButtonCadEstoque;
     private javax.swing.JButton jButtonCadastroCliente;
     private javax.swing.JButton jButtonEstoque;

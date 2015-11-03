@@ -2,14 +2,20 @@
 package Visao; 
 
 import Controle.EstoqListener;
+import Controle.Log;
+import Controle.UltimoUsuarioLogin;
 import java.awt.Color;
 import java.awt.Toolkit;
 
 public class EstoqueJIFrame extends javax.swing.JInternalFrame {
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
     public EstoqListener listener = new EstoqListener(this);
 
     public EstoqueJIFrame() {
-        initComponents(); 
+        initComponents();
+        //Log de navegação
+        log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou no Estoque de Produtos no dia ");
     }
 
     @SuppressWarnings("unchecked")
@@ -114,7 +120,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
             }
         });
         */
-        jBtnLimpar.setActionCommand("limparForm");
+        jBtnLimpar.setActionCommand("limpar");
         jBtnLimpar.addActionListener(listener);
 
         jTFMarca.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N

@@ -1,9 +1,8 @@
-
 package Modelo;
 
-
 public class LoginControl {
-   private String login; 
+
+    private String login;
 
     public String getLogin() {
         return login;
@@ -20,5 +19,5 @@ public class LoginControl {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-   private String senha;
+    private String senha;
 }

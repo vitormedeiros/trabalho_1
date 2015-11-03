@@ -1,14 +1,19 @@
-
 package Visao;
 
+import Controle.Log;
+import Controle.UltimoUsuarioLogin;
 
 public class SobreJInternalFrame extends javax.swing.JInternalFrame {
 
-  
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
+
     public SobreJInternalFrame() {
         initComponents();
+        //Log de navegação
+        log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou na janela sobre o sistema no dia ");
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

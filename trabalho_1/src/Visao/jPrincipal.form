@@ -205,7 +205,8 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEstoqueActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonEstoque.setActionCommand(&quot;estoque&quot;);&#xa;jButtonEstoque.addActionListener(listener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButtonEstoque.setActionCommand(&quot;estoque&quot;);&#xa;jButtonEstoque.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/*"/>
             <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
           </AuxValues>
         </Component>
@@ -253,7 +254,7 @@
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jBtnSair">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="99" type="rgb"/>
@@ -264,8 +265,12 @@
             <Property name="toolTipText" type="java.lang.String" value="Fechar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnSairActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jBtnSair.setActionCommand(&quot;sair&quot;);&#xa;jBtnSair.addActionListener(listener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

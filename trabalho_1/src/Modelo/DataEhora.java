@@ -6,8 +6,6 @@ import javax.swing.JOptionPane;
 
 public class DataEhora {
 
-
-   
     private String dataFormatada;
     private String horaFormatada;
 
@@ -25,14 +23,14 @@ public class DataEhora {
         DateFormat data = new SimpleDateFormat("dd/MM/yyyy");
         java.util.Date dataAtual = new java.util.Date();
         dataFormatada = data.format(dataAtual);
-       
+
     }
+
     public void PegarHora() {
         DateFormat hora = new SimpleDateFormat("HH:mm");
         java.util.Date horaAtual = new java.util.Date();
         horaFormatada = hora.format(horaAtual);
-       
+
     }
 
 }
-

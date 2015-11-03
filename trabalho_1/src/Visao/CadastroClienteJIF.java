@@ -1,20 +1,25 @@
-
 package Visao;
 
 import Controle.CadastroClienteListener;
+import Controle.Log;
+import Controle.UltimoUsuarioLogin;
 import javax.swing.JOptionPane;
 
-
 public class CadastroClienteJIF extends javax.swing.JInternalFrame {
-
+    UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
+    Log log;
+    
+    
     public CadastroClienteListener listener = new CadastroClienteListener(this);
+
     public CadastroClienteJIF() {
         initComponents();
         SetaEnable(false);
         LimpaForm();
-      
-        
+        //Log de navegação
+        log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou no Cadastro de Cliente no dia ");
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -307,7 +312,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnovoActionPerformed
-        
+
     }//GEN-LAST:event_jButtonnovoActionPerformed
 
     private void jButtoneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoneditarActionPerformed
@@ -347,45 +352,47 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextFieldrg;
     private javax.swing.JTextField jTextFieldtelefone;
     // End of variables declaration//GEN-END:variables
-public void SetaEnable(boolean cond){
-    jButtoncancelar.setEnabled(cond);
-    jButtoneditar.setEnabled(cond);
-    jButtonexcluir.setEnabled(cond);
-   // jButtonpesquisa.setEnabled(cond);
-    jButtonsair.setEnabled(cond);
-    jButtonsalvar.setEnabled(cond);
-   // jLabelcod.setEnabled(cond);
-    jLabelcpf.setEnabled(cond);
-    jLabelnome.setEnabled(cond);
-    jLabelrg.setEnabled(cond);
-    jLabeltelefone.setEnabled(cond);
-    jPanel1.setEnabled(cond);
-    jPanel2.setEnabled(cond);
-    jPanel3.setEnabled(cond);
-    jPanel4.setEnabled(cond);
-    jRadioButtonstatusativo.setEnabled(cond);
-    jRadioButtonstatusinativo.setEnabled(cond);
-    jScrollPane1.setEnabled(cond);
-    jTextAreaendereco.setEnabled(cond);
-    //jTextFieldcod.setEnabled(cond);
-    jTextFieldcpf.setEnabled(cond);
-    jTextFieldnome.setEnabled(cond);
-    jTextFieldrg.setEnabled(cond);
-    jTextFieldtelefone.setEnabled(cond);
-    
-}
-public void LimpaForm(){
-    jTextAreaendereco.setText(" ");
-    jTextFieldcod.setText(" ");
-    jTextFieldcpf.setText(" ");
-    jTextFieldnome.setText(" ");
-    jTextFieldrg.setText(" ");
-    jTextFieldtelefone.setText(" ");
-        
-}
-public void Sair(){
-    dispose();
-    
-}
+public void SetaEnable(boolean cond) {
+        jButtoncancelar.setEnabled(cond);
+        jButtoneditar.setEnabled(cond);
+        jButtonexcluir.setEnabled(cond);
+        // jButtonpesquisa.setEnabled(cond);
+        jButtonsair.setEnabled(cond);
+        jButtonsalvar.setEnabled(cond);
+        // jLabelcod.setEnabled(cond);
+        jLabelcpf.setEnabled(cond);
+        jLabelnome.setEnabled(cond);
+        jLabelrg.setEnabled(cond);
+        jLabeltelefone.setEnabled(cond);
+        jPanel1.setEnabled(cond);
+        jPanel2.setEnabled(cond);
+        jPanel3.setEnabled(cond);
+        jPanel4.setEnabled(cond);
+        jRadioButtonstatusativo.setEnabled(cond);
+        jRadioButtonstatusinativo.setEnabled(cond);
+        jScrollPane1.setEnabled(cond);
+        jTextAreaendereco.setEnabled(cond);
+        //jTextFieldcod.setEnabled(cond);
+        jTextFieldcpf.setEnabled(cond);
+        jTextFieldnome.setEnabled(cond);
+        jTextFieldrg.setEnabled(cond);
+        jTextFieldtelefone.setEnabled(cond);
+
+    }
+
+    public void LimpaForm() {
+        jTextAreaendereco.setText(" ");
+        jTextFieldcod.setText(" ");
+        jTextFieldcpf.setText(" ");
+        jTextFieldnome.setText(" ");
+        jTextFieldrg.setText(" ");
+        jTextFieldtelefone.setText(" ");
+
+    }
+
+    public void Sair() {
+        dispose();
+
+    }
 
 }

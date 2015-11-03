@@ -11,9 +11,8 @@ import javax.swing.JOptionPane;
 public class LoginListener implements ActionListener {
 
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
-    DataEhora dataHora = new DataEhora();
-    Log log ;
-    LoginControl lCtr = new LoginControl();
+    Log log;
+    LoginControl loginControl = new LoginControl();
     private LoginJFrame frame;
 
     public LoginListener(LoginJFrame frame) {
@@ -22,17 +21,18 @@ public class LoginListener implements ActionListener {
     }
 
     public void Valida() throws Exceptions {
-        String senha = lCtr.getSenha();
-        String login = lCtr.getLogin();
+        String senha = loginControl.getSenha();
+        String login = loginControl.getLogin();
 
         if (login.length() == 0) {
             throw new Exceptions("Informar LOGIN!");
         } else if (senha.length() == 0) {
             throw new Exceptions("Informar SENHA!");
         } else {
+
             new jPrincipal().setVisible(true);
-            //Informação de log
-            log = new Log("\nUsuario " + login + " entrou às " + dataHora.getHoraFormatada() + " do dia " + dataHora.getDataFormatada());
+
+            //grava o ultimo login
             ultimoLogin.UltimoUsuarioLogin(frame.getUsuario());
             frame.dispose();
         }
@@ -41,8 +41,8 @@ public class LoginListener implements ActionListener {
 
     public void actionPerformed(ActionEvent evento) {
         if ("entrar".equals(evento.getActionCommand())) {
-            lCtr.setSenha(frame.getSenha());
-            lCtr.setLogin(frame.getUsuario());
+            loginControl.setSenha(frame.getSenha());
+            loginControl.setLogin(frame.getUsuario());
 
             try {
                 Valida();
