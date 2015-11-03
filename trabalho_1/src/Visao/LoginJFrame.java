@@ -1,5 +1,6 @@
 package Visao;
 
+import Controle.Exceptions;
 import Controle.LoginListener;
 import Controle.UltimoUsuarioLogin;
 import java.util.logging.Level;
@@ -13,10 +14,11 @@ public class LoginJFrame extends javax.swing.JFrame {
     private LoginListener listener = new LoginListener(this);
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     
-    public LoginJFrame() {
+    public LoginJFrame() throws Exceptions{
         initComponents();
         colocarTema();
-        jTextFieldlogin.setText(ultimoLogin.lerArquivo());
+        String login = ultimoLogin.lerArquivo();
+        jTextFieldlogin.setText(login);
         jPasswordFieldsenha.transferFocus();
     }
 
@@ -85,11 +87,15 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close.png"))); // NOI18N
         jButtonCancelar.setToolTipText("Sair");
+        jButtonCancelar.setActionCommand("sair");
+        jButtonCancelar.addActionListener(listener);
+        /*
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelarActionPerformed(evt);
             }
         });
+        */
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/aguarde.gif"))); // NOI18N
 

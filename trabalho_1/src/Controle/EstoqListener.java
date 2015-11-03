@@ -18,15 +18,13 @@ public class EstoqListener implements ActionListener{
 
     public void actionPerformed(ActionEvent evento) {
         if ("limparForm".equals(evento.getActionCommand())) {
-            frame.LimparForm();
-            
-            
-        }else if("pesquisar".equals(evento.getActionCommand())){
+            frame.LimparForm();   
+        }
+        if("pesquisar".equals(evento.getActionCommand())){
         
-        }else if("qtdProdutosEstoq".equals(evento.getActionCommand())){
+        }
+        if("qtdProdutosEstoq".equals(evento.getActionCommand())){
         
-        }else {
-            JOptionPane.showMessageDialog(frame, "Usuario ou senha Incorretos !");
         }
     }
 }

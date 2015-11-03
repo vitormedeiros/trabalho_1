@@ -372,6 +372,7 @@ public void SetaEnable(boolean cond){
     jTextFieldnome.setEnabled(cond);
     jTextFieldrg.setEnabled(cond);
     jTextFieldtelefone.setEnabled(cond);
+    
 }
 public void LimpaForm(){
     jTextAreaendereco.setText(" ");
@@ -380,11 +381,11 @@ public void LimpaForm(){
     jTextFieldnome.setText(" ");
     jTextFieldrg.setText(" ");
     jTextFieldtelefone.setText(" ");
+        
 }
 public void Sair(){
     dispose();
-    JOptionPane.showMessageDialog(null,"Não esta saindo");
-   
+    
 }
 
 }

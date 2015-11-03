@@ -3,6 +3,9 @@ package Controle;
 import Visao.CadastroClienteJIF;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class CadastroClienteListener implements ActionListener {
 
@@ -12,20 +15,19 @@ public class CadastroClienteListener implements ActionListener {
         this.frame = frame;
     }
 
+
     public void actionPerformed(ActionEvent evento) {
-        //CadastroClienteJIF c = new CadastroClienteJIF();
 
         if ("botaoNovo".equals(evento.getActionCommand())) {
-
             frame.LimpaForm();
             frame.SetaEnable(true);
         }
         if ("botaoSair".equals(evento.getActionCommand())) {
             frame.Sair();
-         }
+        }
         if ("botaoCancelar".equals(evento.getActionCommand())) {
             frame.SetaEnable(false);
-         }
+        }
     }
 
 }

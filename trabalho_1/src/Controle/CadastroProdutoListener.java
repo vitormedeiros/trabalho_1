@@ -8,6 +8,8 @@ package Controle;
 import Visao.CadastroProdutoJIF;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,13 +24,24 @@ public class CadastroProdutoListener implements ActionListener{
         this.frame = frame;
     }
 
+    public void limparFormulario(){
+        
+    }
+    
+    
     @Override
     public void actionPerformed(ActionEvent evento) {
        
         if("limpar".equals(evento.getActionCommand())){
             frame.LimparForm();
         }else {
-            JOptionPane.showMessageDialog(frame, "Não foi possivel limpar o  formulario!");
+            try {
+                throw new Exceptions("Não foi possivel limpar o  formulario!");
+            } catch (Exceptions e) {
+                JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
+            }
+         
+            
         }
     }
 

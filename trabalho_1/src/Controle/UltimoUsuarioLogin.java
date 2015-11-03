@@ -18,8 +18,10 @@ public class UltimoUsuarioLogin {
             fileWriter = new FileWriter("LoginUltimoAcesso.dat",false);
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(textoArquivo);
-            bufferedWriter.flush();  
-        } catch (IOException ex) {
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
             //falta criar o arquivo log para mandar as 
             //informações se esta gravando ou não o ultimo usuario
         } 
@@ -27,7 +29,7 @@ public class UltimoUsuarioLogin {
     
     // lendo o arquivo e setando no campo de login do usuario
     
-     public String lerArquivo() {
+     public String lerArquivo(){
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         try {
@@ -38,12 +40,14 @@ public class UltimoUsuarioLogin {
                 sb.append(bufferedReader.readLine());
             }
             return sb.toString();
-        } catch (IOException ex) {
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
         } 
             if (fileReader != null) {
                 try {
                     fileReader.close();
-                } catch (IOException ex) {
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro " , JOptionPane.ERROR_MESSAGE);
                 }
             }
         return null;
