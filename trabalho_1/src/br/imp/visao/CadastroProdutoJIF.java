@@ -5,6 +5,7 @@ import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
 
 public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
+
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
     private CadastroProdutoListener listener = new CadastroProdutoListener(this);
