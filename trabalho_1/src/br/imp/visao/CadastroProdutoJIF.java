@@ -1,16 +1,14 @@
-
 package br.imp.visao;
 
 import br.imp.controle.CadastroProdutoListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
 
-
 public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
     private CadastroProdutoListener listener = new CadastroProdutoListener(this);
-    
+
     public CadastroProdutoJIF() {
         initComponents();
         //Log de navegação
@@ -338,33 +336,33 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtGravarActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_jBtGravarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
 
-      
+
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
-        
+
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
-       
-        
+
+
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
 
-        
+
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jTableProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProdutosMouseClicked
 
     }//GEN-LAST:event_jTableProdutosMouseClicked
-     public void LimparForm() {
+    public void limparForm() {
         jTFNome.setText("");
         jTFQtd.setText("");
         jTFQtdCritica.setText("");
@@ -375,7 +373,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         jTFFornecedor.setText("");
         jTextPaneDescricao.setText("");
     }
-     
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtGravar;

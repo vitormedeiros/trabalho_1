@@ -19,7 +19,7 @@ public class LogErro {
             fileWriter = new FileWriter("LogErro.txt", true);
             bufferedWriter = new BufferedWriter(fileWriter);
             PrintWriter pw = new PrintWriter(bufferedWriter);
-            pw.println(textoArquivo +" "+ dH.getDataFormatada() + " às " + dH.getHoraFormatada());
+            pw.println(textoArquivo + " " + dH.getDataFormatada() + " às " + dH.getHoraFormatada());
             bufferedWriter.flush();
             bufferedWriter.close();
             pw.close();

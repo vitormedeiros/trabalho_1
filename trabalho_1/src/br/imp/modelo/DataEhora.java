@@ -2,7 +2,6 @@ package br.imp.modelo;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import javax.swing.JOptionPane;
 
 public class DataEhora {
 
@@ -10,23 +9,23 @@ public class DataEhora {
     private String horaFormatada;
 
     public String getDataFormatada() {
-        PegarData();
+        pegarData();
         return dataFormatada;
     }
 
     public String getHoraFormatada() {
-        PegarHora();
+        pegarHora();
         return horaFormatada;
     }
 
-    public void PegarData() {
+    public void pegarData() {
         DateFormat data = new SimpleDateFormat("dd/MM/yyyy");
         java.util.Date dataAtual = new java.util.Date();
         dataFormatada = data.format(dataAtual);
 
     }
 
-    public void PegarHora() {
+    public void pegarHora() {
         DateFormat hora = new SimpleDateFormat("HH:mm");
         java.util.Date horaAtual = new java.util.Date();
         horaFormatada = hora.format(horaAtual);
