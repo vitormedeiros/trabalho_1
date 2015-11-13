@@ -1,7 +1,7 @@
-package PacoteMain;
+package br.imp.main;
 
-import Controle.Exceptions;
-import Visao.LoginJFrame;
+import br.imp.controle.Exceptions;
+import br.imp.visao.LoginJFrame;
 
 public class Main {
 

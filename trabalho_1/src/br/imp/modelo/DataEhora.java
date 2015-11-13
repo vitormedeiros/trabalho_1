@@ -1,4 +1,4 @@
-package Modelo;
+package br.imp.modelo;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

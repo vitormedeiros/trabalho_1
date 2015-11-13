@@ -1,17 +1,17 @@
-package Controle;
+package br.imp.controle;
 
-import Modelo.LoginControl;
+import br.imp.modelo.LoginModelo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import Visao.LoginJFrame;
-import Visao.jPrincipal;
+import br.imp.visao.LoginJFrame;
+import br.imp.visao.jPrincipal;
 import javax.swing.JOptionPane;
 
 public class LoginListener implements ActionListener {
 
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
-    LoginControl loginControl = new LoginControl();
+    LoginModelo loginControl = new LoginModelo();
     private LoginJFrame frame;
 
     public LoginListener(LoginJFrame frame) {

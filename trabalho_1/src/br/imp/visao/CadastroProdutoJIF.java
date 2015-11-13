@@ -1,9 +1,9 @@
 
-package Visao;
+package br.imp.visao;
 
-import Controle.CadastroProdutoListener;
-import Controle.Log;
-import Controle.UltimoUsuarioLogin;
+import br.imp.controle.CadastroProdutoListener;
+import br.imp.controle.Log;
+import br.imp.controle.UltimoUsuarioLogin;
 
 
 public class CadastroProdutoJIF extends javax.swing.JInternalFrame {

@@ -1,4 +1,4 @@
-package Controle;
+package br.imp.controle;
 
 public class Exceptions extends Exception {
 

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controle;
+package br.imp.controle;
 
-import Modelo.LoginControl;
-import Visao.CadastroProdutoJIF;
+import br.imp.modelo.LoginModelo;
+import br.imp.visao.CadastroProdutoJIF;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;

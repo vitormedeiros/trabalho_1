@@ -1,8 +1,8 @@
-package Controle;
+package br.imp.controle;
 
-import Visao.EstoqueJIFrame;
-import Visao.LoginJFrame;
-import Visao.jPrincipal;
+import br.imp.visao.EstoqueJIFrame;
+import br.imp.visao.LoginJFrame;
+import br.imp.visao.jPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;

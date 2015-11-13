@@ -1,8 +1,8 @@
-package Visao;
+package br.imp.visao;
 
-import Controle.Exceptions;
-import Controle.LoginListener;
-import Controle.UltimoUsuarioLogin;
+import br.imp.controle.Exceptions;
+import br.imp.controle.LoginListener;
+import br.imp.controle.UltimoUsuarioLogin;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;

@@ -1,8 +1,8 @@
-package Visao;
+package br.imp.visao;
 
-import Controle.CadastroClienteListener;
-import Controle.Log;
-import Controle.UltimoUsuarioLogin;
+import br.imp.controle.CadastroClienteListener;
+import br.imp.controle.Log;
+import br.imp.controle.UltimoUsuarioLogin;
 import javax.swing.JOptionPane;
 
 public class CadastroClienteJIF extends javax.swing.JInternalFrame {

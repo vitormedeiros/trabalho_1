@@ -1,9 +1,9 @@
 
-package Visao; 
+package br.imp.visao; 
 
-import Controle.EstoqListener;
-import Controle.Log;
-import Controle.UltimoUsuarioLogin;
+import br.imp.controle.EstoqListener;
+import br.imp.controle.Log;
+import br.imp.controle.UltimoUsuarioLogin;
 import java.awt.Color;
 import java.awt.Toolkit;
 

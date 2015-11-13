@@ -1,8 +1,10 @@
-package Modelo;
+package br.imp.modelo;
 
-public class LoginControl {
+public class LoginModelo {
 
     private String login;
+    private String senha;
+
 
     public String getLogin() {
         return login;
@@ -19,5 +21,5 @@ public class LoginControl {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    private String senha;
+
 }

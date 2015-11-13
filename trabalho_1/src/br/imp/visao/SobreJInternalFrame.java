@@ -1,7 +1,7 @@
-package Visao;
+package br.imp.visao;
 
-import Controle.Log;
-import Controle.UltimoUsuarioLogin;
+import br.imp.controle.Log;
+import br.imp.controle.UltimoUsuarioLogin;
 
 public class SobreJInternalFrame extends javax.swing.JInternalFrame {
 

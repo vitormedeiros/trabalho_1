@@ -1,8 +1,8 @@
-package Visao;
+package br.imp.visao;
 
-import Controle.Log;
-import Controle.PrincipalListener;
-import Controle.UltimoUsuarioLogin;
+import br.imp.controle.Log;
+import br.imp.controle.PrincipalListener;
+import br.imp.controle.UltimoUsuarioLogin;
 import javax.swing.JDesktopPane;
 
 public class jPrincipal extends javax.swing.JFrame {

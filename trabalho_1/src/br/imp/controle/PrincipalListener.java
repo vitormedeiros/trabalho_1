@@ -1,11 +1,11 @@
-package Controle;
+package br.imp.controle;
 
-import Modelo.DataEhora;
-import Visao.CadastroClienteJIF;
-import Visao.CadastroProdutoJIF;
-import Visao.EstoqueJIFrame;
-import Visao.SobreJInternalFrame;
-import Visao.jPrincipal;
+import br.imp.modelo.DataEhora;
+import br.imp.visao.CadastroClienteJIF;
+import br.imp.visao.CadastroProdutoJIF;
+import br.imp.visao.EstoqueJIFrame;
+import br.imp.visao.SobreJInternalFrame;
+import br.imp.visao.jPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
