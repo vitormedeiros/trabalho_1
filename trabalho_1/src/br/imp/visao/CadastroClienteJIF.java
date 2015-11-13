@@ -3,13 +3,12 @@ package br.imp.visao;
 import br.imp.controle.CadastroClienteListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
-import javax.swing.JOptionPane;
 
 public class CadastroClienteJIF extends javax.swing.JInternalFrame {
+
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
-    
-    
+
     public CadastroClienteListener listener = new CadastroClienteListener(this);
 
     public CadastroClienteJIF() {

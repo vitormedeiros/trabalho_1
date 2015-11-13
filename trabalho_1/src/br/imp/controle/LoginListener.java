@@ -19,7 +19,7 @@ public class LoginListener implements ActionListener {
 
     }
 
-    public void Valida() throws Exceptions {
+    public void validar() throws Exceptions {
         String senha = loginControl.getSenha();
         String login = loginControl.getLogin();
 
@@ -44,7 +44,7 @@ public class LoginListener implements ActionListener {
             loginControl.setLogin(frame.getUsuario());
 
             try {
-                Valida();
+                validar();
             } catch (Exceptions e) {
                 JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             }

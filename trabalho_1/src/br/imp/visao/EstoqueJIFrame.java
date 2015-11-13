@@ -1,13 +1,12 @@
-
-package br.imp.visao; 
+package br.imp.visao;
 
 import br.imp.controle.EstoqListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
 import java.awt.Color;
-import java.awt.Toolkit;
 
 public class EstoqueJIFrame extends javax.swing.JInternalFrame {
+
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
     public EstoqListener listener = new EstoqListener(this);
@@ -459,7 +458,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-       
+
 
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
@@ -472,11 +471,11 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jTFQtd.setBackground(Color.white);
         jTFQtdCritica.setBackground(Color.white);
         jTFUnitario.setBackground(Color.white);
-        
+
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
     private void jBtnQtdProdutosEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnQtdProdutosEstoqueActionPerformed
-       
+
     }//GEN-LAST:event_jBtnQtdProdutosEstoqueActionPerformed
 
     private void jTableProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProdutosMouseClicked
@@ -495,7 +494,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-       
+
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
@@ -549,7 +548,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jRBtnValUnitarioMouseClicked
 
     private void jRBtnValUnitarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBtnValUnitarioActionPerformed
-        
+
     }//GEN-LAST:event_jRBtnValUnitarioActionPerformed
 
     private void jRBtnQtdCriticaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBtnQtdCriticaMouseClicked
@@ -561,7 +560,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jTFQtdCritica.setBackground(Color.lightGray);
         jTFUnitario.setBackground(Color.white);
     }//GEN-LAST:event_jRBtnQtdCriticaMouseClicked
-     public void LimparForm() {
+    public void LimparForm() {
         jTFNome.setText("");
         jTFQtd.setText("");
         jTFUnitario.setText("");
@@ -612,5 +611,4 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JTextPane jTextPaneDescricao;
     // End of variables declaration//GEN-END:variables
 
-  
 }

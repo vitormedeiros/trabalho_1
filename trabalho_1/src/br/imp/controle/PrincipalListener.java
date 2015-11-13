@@ -1,6 +1,5 @@
 package br.imp.controle;
 
-import br.imp.modelo.DataEhora;
 import br.imp.visao.CadastroClienteJIF;
 import br.imp.visao.CadastroProdutoJIF;
 import br.imp.visao.EstoqueJIFrame;
@@ -8,8 +7,6 @@ import br.imp.visao.SobreJInternalFrame;
 import br.imp.visao.jPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class PrincipalListener implements ActionListener {
