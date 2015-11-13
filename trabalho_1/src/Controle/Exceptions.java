@@ -1,13 +1,8 @@
 package Controle;
 
-import Modelo.DataEhora;
-import Modelo.LoginControl;
-
 public class Exceptions extends Exception {
 
-   
     LogErro logErro;
-
 
     public Exceptions() {
         super("Erro");

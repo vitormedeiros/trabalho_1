@@ -4,3 +4,5 @@ Usuario Marcelo entrou no Cadastro de Produto no dia 03/11/2015 às 12:48
 Usuario Marcelo entrou no Estoque de Produto no dia 03/11/2015 às 12:48
 Usuario Marcelo entrou na janela sobre o sistema no dia 03/11/2015 às 12:49
 Usuario Marcelo Saio do sistema no dia 03/11/2015 às 12:49
+Usuario Marcelo entrou no sistema dia 13/11/2015 às 19:06
+Usuario Maicon Saio do sistema no dia 13/11/2015 às 19:06
