@@ -41,7 +41,7 @@ public class LoginListener implements ActionListener {
             try {
                 validar();
             } catch (Exceptions e) {
-                JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Erro : " + e.getMessage(), "Erro ", JOptionPane.ERROR_MESSAGE);
             }
         }
 

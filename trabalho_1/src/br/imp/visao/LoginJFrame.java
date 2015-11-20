@@ -72,7 +72,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         });
         */
 
-        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/next.png"))); // NOI18N
+        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/next.png"))); // NOI18N
         jButtonEntrar.setToolTipText("Logar");
         jButtonEntrar.setActionCommand("entrar");
         jButtonEntrar.addActionListener(listener);
@@ -85,7 +85,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         });
         */
 
-        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close.png"))); // NOI18N
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/close.png"))); // NOI18N
         jButtonCancelar.setToolTipText("Sair");
         jButtonCancelar.setActionCommand("sair");
         jButtonCancelar.addActionListener(listener);
@@ -97,7 +97,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         });
         */
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/aguarde.gif"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/aguarde.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPaneltelaloginLayout = new javax.swing.GroupLayout(jPaneltelalogin);
         jPaneltelalogin.setLayout(jPaneltelaloginLayout);
@@ -113,7 +113,7 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addGroup(jPaneltelaloginLayout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jButtonEntrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -133,15 +133,11 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addComponent(jLabelsenha)
                     .addComponent(jPasswordFieldsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPaneltelaloginLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(58, 58, 58))
-                    .addGroup(jPaneltelaloginLayout.createSequentialGroup()
-                        .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonEntrar))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
@@ -187,7 +183,7 @@ public class LoginJFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/usuario.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/usuario.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,9 +193,9 @@ public class LoginJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jPaneltelalogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -211,7 +207,7 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jPaneltelalogin, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPaneltelalogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -220,34 +216,34 @@ public class LoginJFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /*
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
+
+    /**/
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
+
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
+/*
     private void jPasswordFieldsenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-     String usuariotxt = jTextFieldlogin.getText();
-     String senhatxt = new String(jPasswordFieldsenha.getPassword());
-     if ("".equals(usuariotxt)) {
-     if ("".equals(senhatxt)) {
-     new jPrincipal().setVisible(true);
-     dispose();
-     setVisible(false);
-     }
-     } else {
-     JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
-     }
-     }
+            String usuariotxt = jTextFieldlogin.getText();
+            String senhatxt = new String(jPasswordFieldsenha.getPassword());
+            if ("".equals(usuariotxt)) {
+                if ("".equals(senhatxt)) {
+                    new jPrincipal().setVisible(true);
+                    dispose();
+                    setVisible(false);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "O Nome de usuário ou senha incorretos.");
+            }
+        }
     }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
 */
     private void jPasswordFieldsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldsenhaActionPerformed
-
-    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-
-    }//GEN-LAST:event_jButtonEntrarActionPerformed
-
-    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-        dispose();
-    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jTextFieldloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldloginActionPerformed
         // TODO add your handling code here:

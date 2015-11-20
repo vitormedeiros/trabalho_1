@@ -34,9 +34,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" pref="253" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jPaneltelalogin" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
       </Group>
@@ -50,7 +50,7 @@
                   <Component id="jLabel3" min="-2" pref="232" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
-                      <Component id="jPaneltelalogin" min="-2" pref="164" max="-2" attributes="0"/>
+                      <Component id="jPaneltelalogin" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -83,7 +83,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Component id="jButtonEntrar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="31" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="jButtonCancelar" min="-2" pref="65" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" pref="38" max="-2" attributes="0"/>
@@ -109,19 +109,12 @@
                       <Component id="jPasswordFieldsenha" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel4" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButtonCancelar" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jButtonEntrar" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jButtonCancelar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonEntrar" max="32767" attributes="0"/>
+                      <Component id="jLabel4" max="32767" attributes="0"/>
                   </Group>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -161,7 +154,7 @@
         <Component class="javax.swing.JButton" name="jButtonEntrar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icones/next.png"/>
+              <Image iconType="3" name="/br/imp/icones/next.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Logar"/>
           </Properties>
@@ -176,7 +169,7 @@
         <Component class="javax.swing.JButton" name="jButtonCancelar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icones/close.png"/>
+              <Image iconType="3" name="/br/imp/icones/close.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Sair"/>
           </Properties>
@@ -191,7 +184,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icones/aguarde.gif"/>
+              <Image iconType="3" name="/br/imp/icones/aguarde.gif"/>
             </Property>
           </Properties>
         </Component>
@@ -275,7 +268,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icones/usuario.png"/>
+          <Image iconType="3" name="/br/imp/icones/usuario.png"/>
         </Property>
       </Properties>
     </Component>
