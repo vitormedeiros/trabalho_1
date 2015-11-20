@@ -91,7 +91,7 @@ public class jPrincipal extends javax.swing.JFrame {
         jToolBar1.setRollover(true);
 
         jButtonCadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
-        jButtonCadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/user_group_new.png"))); // NOI18N
+        jButtonCadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/user_group_new.png"))); // NOI18N
         jButtonCadastroCliente.setToolTipText("Cadastro de cliente");
         /*
         jButtonCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class jPrincipal extends javax.swing.JFrame {
         jToolBar1.add(jLabel4);
 
         jButtonCadEstoque.setBackground(new java.awt.Color(153, 204, 255));
-        jButtonCadEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/gnome_dev_media_cf.png"))); // NOI18N
+        jButtonCadEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/gnome_dev_media_cf.png"))); // NOI18N
         jButtonCadEstoque.setToolTipText("Cadastro de produtos");
         jButtonCadEstoque.setFocusable(false);
         jButtonCadEstoque.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -137,7 +137,7 @@ public class jPrincipal extends javax.swing.JFrame {
         jToolBar1.add(jLabel5);
 
         jButtonEstoque.setBackground(new java.awt.Color(153, 204, 255));
-        jButtonEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/versao.png"))); // NOI18N
+        jButtonEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/versao.png"))); // NOI18N
         jButtonEstoque.setToolTipText("Estoque");
         jButtonEstoque.setFocusable(false);
         jButtonEstoque.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -161,7 +161,7 @@ public class jPrincipal extends javax.swing.JFrame {
         jButtonInformacao.setActionCommand("sobre");
         jButtonInformacao.addActionListener(listener);
         jButtonInformacao.setBackground(new java.awt.Color(153, 204, 255));
-        jButtonInformacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/info.png"))); // NOI18N
+        jButtonInformacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/info.png"))); // NOI18N
         jButtonInformacao.setToolTipText("Informação");
         jButtonInformacao.setFocusable(false);
         jButtonInformacao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -181,7 +181,7 @@ public class jPrincipal extends javax.swing.JFrame {
         jToolBar1.add(jLabel7);
 
         jBtnSair.setBackground(new java.awt.Color(153, 204, 255));
-        jBtnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/close2.png"))); // NOI18N
+        jBtnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/close2.png"))); // NOI18N
         jBtnSair.setToolTipText("Fechar");
         jBtnSair.setActionCommand("sair");
         jBtnSair.addActionListener(listener);

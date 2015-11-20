@@ -83,7 +83,7 @@ public class SobreJInternalFrame extends javax.swing.JInternalFrame {
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Java.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/Java.png"))); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
