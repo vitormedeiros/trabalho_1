@@ -341,6 +341,10 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtGravarActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jBtGravar.setActionCommand(&quot;gravar&quot;);&#xa;jBtGravar.addActionListener(listener);&#xa;/*"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JTextField" name="jTFCodigo">
               <Properties>

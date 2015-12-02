@@ -1,5 +1,6 @@
 package br.imp.controle;
 
+import br.imp.modelo.LoginDao;
 import br.imp.modelo.LoginModelo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +19,7 @@ public class LoginListener implements ActionListener {
         this.frame = frame;
     }
 
-    public void validar() throws Exceptions {
+    public void validar() throws Exceptions{
         String senha = loginModelo.getSenha();
         String login = loginModelo.getLogin();
 
@@ -27,9 +28,17 @@ public class LoginListener implements ActionListener {
         } else if (senha.length() == 0) {
             throw new Exceptions("Informar SENHA!");
         } else {
-            new jPrincipal().setVisible(true);
-            ultimoLogin.UltimoUsuarioLogin(frame.getUsuario());
-            frame.dispose();
+            LoginDao validaBanco = new LoginDao();
+            boolean condicao = validaBanco.exists(loginModelo);
+            if(condicao == true){
+                 
+                ultimoLogin.UltimoUsuarioLogin(frame.getUsuario());
+                frame.dispose();
+                new jPrincipal().setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(null,"USUARIO OU SENHA INVALIDO");
+            }
+           
         }
     }
 

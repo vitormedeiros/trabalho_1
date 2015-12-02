@@ -4,6 +4,7 @@ public class LoginModelo {
 
     private String login;
     private String senha;
+    private int codigo;
 
     public String getLogin() {
         return login;
@@ -19,6 +20,10 @@ public class LoginModelo {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+     public int getCodigo() {
+        codigo = 1;
+        return codigo;
     }
 
 }

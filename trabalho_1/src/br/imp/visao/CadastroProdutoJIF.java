@@ -3,12 +3,18 @@ package br.imp.visao;
 import br.imp.controle.CadastroProdutoListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
+import java.math.BigDecimal;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
     private CadastroProdutoListener listener = new CadastroProdutoListener(this);
+    
+  
+    
 
     public CadastroProdutoJIF() {
         initComponents();
@@ -103,11 +109,15 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         jBtGravar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtGravar.setText("GRAVAR");
+        jBtGravar.setActionCommand("gravar");
+        jBtGravar.addActionListener(listener);
+        /*
         jBtGravar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtGravarActionPerformed(evt);
             }
         });
+        */
 
         jTFCodigo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
 
@@ -374,7 +384,79 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         jTFFornecedor.setText("");
         jTextPaneDescricao.setText("");
     }
+    public String getCodigo() {
+        if(jTFCodigo.getText().length() == 0 || jTFCodigo.getText() == null){
+            return null;
+        }else{
+            return jTFCodigo.getText();
+        }
+    }
 
+    public Float getValCusto() {
+        if(jTFCusto.getText().length() == 0 || jTFCusto.getText() == null){
+            return null;
+        }else{
+            return Float.parseFloat(jTFCusto.getText());
+        }
+    }
+
+    public String getFornecedor() {
+        if(jTFFornecedor.getText().length() == 0 || jTFFornecedor.getText() == null){
+            return null;
+        }else{
+            return jTFFornecedor.getText();
+        }
+    }
+
+    public String getMarca() {
+        if(jTFMarca.getText().length() == 0 || jTFMarca.getText() == null){
+            return null;
+        }else{
+            return jTFMarca.getText();
+        }
+    }
+
+    public String getNome() {
+        if(jTFNome.getText().length() == 0 || jTFNome.getText() == null){
+            return null;
+        }else{
+            return jTFNome.getText();
+        }
+    }
+
+    public int getQtd() {
+
+         if(jTFQtd.getText().length() == 0 || jTFQtd.getText() == null){
+            return 0;
+        }else{
+            return Integer.parseInt(jTFQtd.getText());
+        }
+    }
+
+    public int getQtdCritica() {
+        if(jTFQtdCritica.getText().length() == 0 || jTFQtdCritica.getText() == null){
+            return 0;
+        }else{
+            return Integer.parseInt(jTFQtdCritica.getText());
+        }
+    }
+
+    public Float getValUnitario() {
+        if(jTFUnitario.getText().length() == 0 || jTFUnitario.getText() == null){
+            return null;
+        }else{
+            return Float.parseFloat(jTFUnitario.getText());
+        }
+    }
+
+    public String getjDescricao() {
+        if(jTextPaneDescricao.getText().length() == 0 || jTextPaneDescricao.getText() == null){
+            return null;
+        }else{
+            return jTextPaneDescricao.getText();
+        }
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtGravar;

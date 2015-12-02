@@ -3,6 +3,7 @@ package br.imp.controle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class Conexao {
 
@@ -10,11 +11,12 @@ public class Conexao {
         Connection conn = null;
         try {
             Class.forName("org.hsqldb.jdbcDriver");
-            conn = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/impdb", "sa", "");
+            conn = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/impsoftwaredb", "sa", "");
+            JOptionPane.showMessageDialog(null,"Conectado com sucesso!");
         } catch (SQLException e) {
-            System.out.println("Problemas ao conectar no banco de dados");
+            JOptionPane.showMessageDialog(null,"Problemas ao conectar no banco de dados");
         } catch (ClassNotFoundException e) {
-            System.out.println("O driver não foi configurado corretametne");
+            JOptionPane.showMessageDialog(null,"O driver não foi configurado corretametne");
         }
 
         return conn;

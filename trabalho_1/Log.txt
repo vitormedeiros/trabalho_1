@@ -13,3 +13,52 @@ Usuario Maicon entrou no sistema dia 20/11/2015 às 18:53
 Usuario Maicon entrou no Cadastro de Cliente no dia 20/11/2015 às 18:53
 Usuario Maicon entrou no Cadastro de Produto no dia 20/11/2015 às 18:53
 Usuario Maicon entrou no sistema dia 20/11/2015 às 19:44
+Usuario Maicon entrou no sistema dia 27/11/2015 às 20:16
+Usuario Maicon entrou no Cadastro de Cliente no dia 27/11/2015 às 20:16
+Usuario Maicon entrou no sistema dia 28/11/2015 às 14:19
+Usuario marcelo entrou no sistema dia 28/11/2015 às 14:19
+Usuario marcelo entrou no sistema dia 28/11/2015 às 14:31
+Usuario admin entrou no sistema dia 28/11/2015 às 14:32
+Usuario admin entrou no Cadastro de Cliente no dia 28/11/2015 às 14:32
+Usuario admin entrou no Cadastro de Produto no dia 28/11/2015 às 14:32
+Usuario admin entrou no sistema dia 28/11/2015 às 14:34
+Usuario admin entrou no Cadastro de Produto no dia 28/11/2015 às 14:34
+Usuario admin Saio do sistema no dia 28/11/2015 às 14:41
+Usuario admin entrou no sistema dia 01/12/2015 às 20:00
+Usuario admin entrou no Cadastro de Cliente no dia 01/12/2015 às 20:00
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 20:01
+Usuario admin entrou no Cadastro de Cliente no dia 01/12/2015 às 20:01
+Usuario admin entrou no Cadastro de Cliente no dia 01/12/2015 às 20:01
+Usuario admin entrou no sistema dia 01/12/2015 às 21:37
+Usuario admin entrou no Cadastro de Cliente no dia 01/12/2015 às 21:37
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 21:37
+admin limpou formulario01/12/2015 às 21:40
+Usuario admin entrou no sistema dia 01/12/2015 às 21:41
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 21:41
+Usuario admin entrou no sistema dia 01/12/2015 às 21:48
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 21:48
+Usuario admin entrou no sistema dia 01/12/2015 às 21:51
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 21:51
+Usuario admin entrou no sistema dia 01/12/2015 às 21:54
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 21:54
+Usuario admin entrou no sistema dia 01/12/2015 às 21:59
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 21:59
+Usuario admin entrou no sistema dia 01/12/2015 às 22:04
+Usuario admin entrou no Estoque de Produtos no dia 01/12/2015 às 22:04
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:04
+Usuario admin entrou no sistema dia 01/12/2015 às 22:08
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:08
+Usuario admin entrou no sistema dia 01/12/2015 às 22:16
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:16
+Usuario admin entrou no sistema dia 01/12/2015 às 22:22
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:22
+Usuario admin entrou no sistema dia 01/12/2015 às 22:24
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:24
+Usuario admin entrou no sistema dia 01/12/2015 às 22:52
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:52
+Usuario admin entrou no sistema dia 01/12/2015 às 22:53
+Usuario admin entrou no Cadastro de Produto no dia 01/12/2015 às 22:53
+Usuario marcelo entrou no sistema dia 01/12/2015 às 23:16
+Usuario marcelo entrou no sistema dia 01/12/2015 às 23:19
+Usuario marcelo entrou no Cadastro de Produto no dia 01/12/2015 às 23:19
+Usuario marcelo entrou no Estoque de Produtos no dia 01/12/2015 às 23:19

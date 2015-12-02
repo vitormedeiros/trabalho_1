@@ -1,5 +1,4 @@
-java -cp lib/hsqldb.jar org.hsqldb.Server -database.0 file:db\imp -dbname.0 impdb
+java -cp lib/hsqldb.jar org.hsqldb.Server -database.0 file:db\impsoftware -dbname.0 impsoftwaredb
 
-
-#imp é o nome do banco
-#impdb é o nome da conexao
+#impsoftware é o nome do banco
+#impsoftwaredb é o nome da conexao
