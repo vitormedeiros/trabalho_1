@@ -28,6 +28,19 @@ public class jPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         jButtonCadastroCliente = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jButtonCadEstoque = new javax.swing.JButton();
@@ -90,9 +103,75 @@ public class jPrincipal extends javax.swing.JFrame {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
+        jLabel9.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel9.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel9.setText("jLabel4");
+        jToolBar1.add(jLabel9);
+
+        jLabel10.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel10.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel10.setText("jLabel4");
+        jToolBar1.add(jLabel10);
+
+        jLabel8.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel8.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel8.setText("jLabel4");
+        jToolBar1.add(jLabel8);
+
+        jLabel11.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel11.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel11.setText("jLabel4");
+        jToolBar1.add(jLabel11);
+
+        jLabel12.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel12.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel12.setText("jLabel4");
+        jToolBar1.add(jLabel12);
+
+        jLabel13.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel13.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel13.setText("jLabel4");
+        jToolBar1.add(jLabel13);
+
+        jLabel14.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel14.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel14.setText("jLabel4");
+        jToolBar1.add(jLabel14);
+
+        jLabel15.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel15.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel15.setText("jLabel4");
+        jToolBar1.add(jLabel15);
+
+        jLabel16.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel16.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel16.setText("jLabel4");
+        jToolBar1.add(jLabel16);
+
+        jLabel17.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel17.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel17.setText("jLabel4");
+        jToolBar1.add(jLabel17);
+
+        jLabel19.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel19.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel19.setText("jLabel4");
+        jToolBar1.add(jLabel19);
+
+        jLabel18.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel18.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel18.setText("jLabel4");
+        jToolBar1.add(jLabel18);
+
+        jLabel20.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel20.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel20.setText("jLabel4");
+        jToolBar1.add(jLabel20);
+
         jButtonCadastroCliente.setBackground(new java.awt.Color(153, 204, 255));
         jButtonCadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/user_group_new.png"))); // NOI18N
         jButtonCadastroCliente.setToolTipText("Cadastro de cliente");
+        jButtonCadastroCliente.setBorder(null);
         /*
         jButtonCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,11 +361,24 @@ public class jPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonInformacao;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables

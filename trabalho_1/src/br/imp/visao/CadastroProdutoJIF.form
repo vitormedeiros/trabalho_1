@@ -212,9 +212,9 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTFCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTFNome" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTFMarca" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTFCodigo" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -255,11 +255,11 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jBtnLimpar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="jBtnPesquisar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="jBtnAlterar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="jBtGravar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="jBtnExcluir" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="jBtnLimpar" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="38" max="32767" attributes="0"/>
                   </Group>

@@ -7,5 +7,8 @@ SET WRITE_DELAY 10
 SET SCHEMA PUBLIC
 INSERT INTO LOGIN_USER VALUES('marcelo','marc')
 INSERT INTO PRODUTOS VALUES('456789','Uno','Fiate','Fiate','10','2',15000.0,15000.0,'Fiate Uno soco no s\u00f3io')
-INSERT INTO PRODUTOS VALUES('123','ghjkhjkh','jkhjk','hjkhjk','10','10',10.0,10.0,'aabbccdd')
 INSERT INTO PRODUTOS VALUES('123654','Palio','Fiat','Fiat','10','10',10.0,10.0,'Carro')
+INSERT INTO PRODUTOS VALUES('159753','bala','dori','dorisa','100','20',5.0,10.0,'bala salgada')
+INSERT INTO PRODUTOS VALUES('123','Bloco','Concretar','Robinho','20000','500',1.5,3.5,'Bloco de concreto')
+INSERT INTO PRODUTOS VALUES('123','Bloco','Concretar','Robinho','20000','500',1.5,3.5,'Bloco de concreto')
+INSERT INTO PRODUTOS VALUES('165475','Arroz','KiArroz','Ki','10','10',10.0,10.0,'10101011')
