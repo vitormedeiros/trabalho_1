@@ -14,10 +14,11 @@ public class LoginDao {
     LoginModelo logMod = new LoginModelo();
 
     public void delete(LoginModelo l) throws Exception {
+        Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
         try {
-            conn = Conexao.getConnection();
+            conn = conex.getConnection();
             String sql = "delete from produtos where LOGIN = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, logMod.getLogin());
@@ -54,10 +55,11 @@ public class LoginDao {
     }
 
     public void insert(LoginModelo login) throws Exception {
+         Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
         try {
-            conn = Conexao.getConnection();
+            conn = conex.getConnection();
             String sql = "insert into LOGIN (ID_LOGION, LOGIN, SENHA) values(?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, login.getCodigo());
@@ -97,10 +99,11 @@ public class LoginDao {
     }
 
     public void update(LoginModelo login) {
+        Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
         try {
-            conn = Conexao.getConnection();
+            conn = conex.getConnection();
             String sql = "update LOGIN set LOGIN = ?, SENHA = ? where ID_LOGIN = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, login.getLogin());
@@ -140,12 +143,12 @@ public class LoginDao {
 
     public boolean exists(LoginModelo login) throws Exceptions {
         boolean condicao = false;
-
+        Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
 
         try {
-            conn = Conexao.getConnection();
+            conn = conex.getConnection();
             String sql = "select nome_acesso from login_user where senha = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, login.getSenha());

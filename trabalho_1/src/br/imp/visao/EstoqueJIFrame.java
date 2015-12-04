@@ -1,15 +1,22 @@
 package br.imp.visao;
 
+import br.imp.controle.Conexao;
 import br.imp.controle.EstoqListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
+import br.imp.modelo.ModeloTabela;
 import java.awt.Color;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
 
 public class EstoqueJIFrame extends javax.swing.JInternalFrame {
-
+    ModeloTabela modTable = new ModeloTabela();
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
     public EstoqListener listener = new EstoqListener(this);
+    Conexao con = new Conexao();
 
     public EstoqueJIFrame() {
         initComponents();
@@ -50,14 +57,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jLabel45 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableProdutos = new javax.swing.JTable();
-        jPanelPesquisa = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRBtnQtd = new javax.swing.JRadioButton();
-        jRBtnValUnitario = new javax.swing.JRadioButton();
-        jRBtnQtdCritica = new javax.swing.JRadioButton();
 
         setClosable(true);
         setTitle("Estoque");
@@ -107,8 +106,8 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
             }
         });
         */
-        jBtnLimpar.setActionCommand("pesquisar");
-        jBtnLimpar.addActionListener(listener);
+        jBtnPesquisar.setActionCommand("pesquisar");
+        jBtnPesquisar.addActionListener(listener);
 
         jBtnLimpar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnLimpar.setText("Limpar");
@@ -251,7 +250,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
                     .addComponent(jBtnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnQtdProdutosEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTableProdutos.setModel(new javax.swing.table.DefaultTableModel(
@@ -272,133 +271,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(jTableProdutos);
 
-        jPanelPesquisa.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelPesquisa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Perquisar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 18))); // NOI18N
-
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Codigo");
-        jRadioButton1.setActionCommand("codigo");
-        jRadioButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRadioButton1MouseClicked(evt);
-            }
-        });
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRadioButton2.setText("Nome");
-        jRadioButton2.setActionCommand("nome");
-        jRadioButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRadioButton2MouseClicked(evt);
-            }
-        });
-
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRadioButton3.setText("Marca");
-        jRadioButton3.setActionCommand("marca");
-        jRadioButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRadioButton3MouseClicked(evt);
-            }
-        });
-
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRadioButton4.setText("Fornecedor");
-        jRadioButton4.setActionCommand("fornecedor");
-        jRadioButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRadioButton4MouseClicked(evt);
-            }
-        });
-
-        jRBtnQtd.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRBtnQtd);
-        jRBtnQtd.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRBtnQtd.setText("Quantidade");
-        jRBtnQtd.setActionCommand("quantidade");
-        jRBtnQtd.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRBtnQtdMouseClicked(evt);
-            }
-        });
-
-        jRBtnValUnitario.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRBtnValUnitario);
-        jRBtnValUnitario.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRBtnValUnitario.setText("Valor Unitario");
-        jRBtnValUnitario.setActionCommand("valorUnitario");
-        jRBtnValUnitario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRBtnValUnitarioMouseClicked(evt);
-            }
-        });
-        jRBtnValUnitario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRBtnValUnitarioActionPerformed(evt);
-            }
-        });
-
-        jRBtnQtdCritica.setBackground(new java.awt.Color(255, 255, 255));
-        btnGPesquisa.add(jRBtnQtdCritica);
-        jRBtnQtdCritica.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRBtnQtdCritica.setText("Quantidade Critica");
-        jRBtnQtdCritica.setActionCommand("qtdCritica");
-        jRBtnQtdCritica.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRBtnQtdCriticaMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelPesquisaLayout = new javax.swing.GroupLayout(jPanelPesquisa);
-        jPanelPesquisa.setLayout(jPanelPesquisaLayout);
-        jPanelPesquisaLayout.setHorizontalGroup(
-            jPanelPesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPesquisaLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jRadioButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton4)
-                .addGap(18, 18, 18)
-                .addComponent(jRBtnQtd)
-                .addGap(18, 18, 18)
-                .addComponent(jRBtnQtdCritica)
-                .addGap(18, 18, 18)
-                .addComponent(jRBtnValUnitario)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelPesquisaLayout.setVerticalGroup(
-            jPanelPesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPesquisaLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(jPanelPesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRBtnQtd)
-                    .addComponent(jRBtnValUnitario)
-                    .addComponent(jRBtnQtdCritica))
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -407,7 +279,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1)
-                    .addComponent(jPanelPesquisa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -416,10 +287,8 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -481,85 +350,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private void jTableProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProdutosMouseClicked
 
     }//GEN-LAST:event_jTableProdutosMouseClicked
-
-    private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
-        jTFCodigo.setBackground(Color.lightGray);
-        jTFNome.setBackground(Color.white);
-        jTFMarca.setBackground(Color.white);
-        jTFFornecedor.setBackground(Color.white);
-        jTFQtd.setBackground(Color.white);
-        jTFQtdCritica.setBackground(Color.white);
-        jTFUnitario.setBackground(Color.white);
-
-    }//GEN-LAST:event_jRadioButton1MouseClicked
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
-        jTFCodigo.setBackground(Color.white);
-        jTFNome.setBackground(Color.lightGray);
-        jTFMarca.setBackground(Color.white);
-        jTFFornecedor.setBackground(Color.white);
-        jTFQtd.setBackground(Color.white);
-        jTFQtdCritica.setBackground(Color.white);
-        jTFUnitario.setBackground(Color.white);
-    }//GEN-LAST:event_jRadioButton2MouseClicked
-
-    private void jRadioButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
-        jTFCodigo.setBackground(Color.white);
-        jTFNome.setBackground(Color.white);
-        jTFMarca.setBackground(Color.lightGray);
-        jTFFornecedor.setBackground(Color.white);
-        jTFQtd.setBackground(Color.white);
-        jTFQtdCritica.setBackground(Color.white);
-        jTFUnitario.setBackground(Color.white);
-    }//GEN-LAST:event_jRadioButton3MouseClicked
-
-    private void jRadioButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton4MouseClicked
-        jTFCodigo.setBackground(Color.white);
-        jTFNome.setBackground(Color.white);
-        jTFMarca.setBackground(Color.white);
-        jTFFornecedor.setBackground(Color.lightGray);
-        jTFQtd.setBackground(Color.white);
-        jTFQtdCritica.setBackground(Color.white);
-        jTFUnitario.setBackground(Color.white);
-    }//GEN-LAST:event_jRadioButton4MouseClicked
-
-    private void jRBtnQtdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBtnQtdMouseClicked
-        jTFCodigo.setBackground(Color.white);
-        jTFNome.setBackground(Color.white);
-        jTFMarca.setBackground(Color.white);
-        jTFFornecedor.setBackground(Color.white);
-        jTFQtd.setBackground(Color.lightGray);
-        jTFQtdCritica.setBackground(Color.white);
-        jTFUnitario.setBackground(Color.white);
-    }//GEN-LAST:event_jRBtnQtdMouseClicked
-
-    private void jRBtnValUnitarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBtnValUnitarioMouseClicked
-        jTFCodigo.setBackground(Color.white);
-        jTFNome.setBackground(Color.white);
-        jTFMarca.setBackground(Color.white);
-        jTFFornecedor.setBackground(Color.white);
-        jTFQtd.setBackground(Color.white);
-        jTFQtdCritica.setBackground(Color.white);
-        jTFUnitario.setBackground(Color.lightGray);
-    }//GEN-LAST:event_jRBtnValUnitarioMouseClicked
-
-    private void jRBtnValUnitarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBtnValUnitarioActionPerformed
-
-    }//GEN-LAST:event_jRBtnValUnitarioActionPerformed
-
-    private void jRBtnQtdCriticaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBtnQtdCriticaMouseClicked
-        jTFCodigo.setBackground(Color.white);
-        jTFNome.setBackground(Color.white);
-        jTFMarca.setBackground(Color.white);
-        jTFFornecedor.setBackground(Color.white);
-        jTFQtd.setBackground(Color.white);
-        jTFQtdCritica.setBackground(Color.lightGray);
-        jTFUnitario.setBackground(Color.white);
-    }//GEN-LAST:event_jRBtnQtdCriticaMouseClicked
     public void LimparForm() {
         jTFNome.setText("");
         jTFQtd.setText("");
@@ -569,6 +359,152 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jTFMarca.setText("");
         jTFFornecedor.setText("");
         jTextPaneDescricao.setText("");
+    }
+    public String getCodigo() {
+        if(jTFCodigo.getText().length() == 0 || jTFCodigo.getText() == null){
+            return null;
+        }else{
+            return jTFCodigo.getText();
+        }
+    }
+
+    public Float getValCusto() {
+        if(jTFCusto.getText().length() == 0 || jTFCusto.getText() == null){
+            return null;
+        }else{
+            return Float.parseFloat(jTFCusto.getText());
+        }
+    }
+
+    public String getFornecedor() {
+        if(jTFFornecedor.getText().length() == 0 || jTFFornecedor.getText() == null){
+            return null;
+        }else{
+            return jTFFornecedor.getText();
+        }
+    }
+
+    public String getMarca() {
+        if(jTFMarca.getText().length() == 0 || jTFMarca.getText() == null){
+            return null;
+        }else{
+            return jTFMarca.getText();
+        }
+    }
+
+    public String getNome() {
+        if(jTFNome.getText().length() == 0 || jTFNome.getText() == null){
+            return null;
+        }else{
+            return jTFNome.getText();
+        }
+    }
+
+    public int getQtd() {
+
+         if(jTFQtd.getText().length() == 0 || jTFQtd.getText() == null){
+            return 0;
+        }else{
+            return Integer.parseInt(jTFQtd.getText());
+        }
+    }
+
+    public int getQtdCritica() {
+        if(jTFQtdCritica.getText().length() == 0 || jTFQtdCritica.getText() == null){
+            return 0;
+        }else{
+            return Integer.parseInt(jTFQtdCritica.getText());
+        }
+    }
+
+    public Float getValUnitario() {
+        if(jTFUnitario.getText().length() == 0 || jTFUnitario.getText() == null){
+            return null;
+        }else{
+            return Float.parseFloat(jTFUnitario.getText());
+        }
+    }
+
+    public String getjDescricao() {
+        if(jTextPaneDescricao.getText().length() == 0 || jTextPaneDescricao.getText() == null){
+            return null;
+        }else{
+            return jTextPaneDescricao.getText();
+        }
+    }
+
+    public void setjTFCodigo(String recebido,EstoqueJIFrame  classe) {
+        classe.jTFCodigo.setText(recebido) ;
+    }
+
+    public void setjTFCusto(Float recebido,EstoqueJIFrame  classe) {
+        classe.jTFCusto.setText(String.valueOf(recebido));
+    }
+
+    public void setjTFFornecedor(String recebido, EstoqueJIFrame  classe) {
+        classe.jTFFornecedor.setText(recebido);
+    }
+
+    public void setjTFMarca(String recebido, EstoqueJIFrame  classe) {
+        classe.jTFMarca.setText(recebido);
+    }
+
+    public void setjTFNome(String recebido, EstoqueJIFrame  classe) {
+        classe.jTFNome.setText(recebido);
+    }
+
+    public void setjTFQtd(int recebido, EstoqueJIFrame  classe) {
+        classe.jTFQtd.setText(String.valueOf(recebido));
+    }
+
+    public void setjTFQtdCritica(int recebido, EstoqueJIFrame  classe) {
+        classe.jTFQtdCritica.setText(String.valueOf(recebido));
+    }
+
+    public void setjTFUnitario(Float recebido, EstoqueJIFrame  classe) {
+        classe.jTFUnitario.setText(String.valueOf(recebido));
+    }
+
+    public void setjTPDescricao(String recebido, EstoqueJIFrame  classe) {
+        classe.jTextPaneDescricao.setText(recebido);
+    }
+    public void preencherTabela(String SQL) {
+        con.getConnection();
+        ArrayList dados = new ArrayList();
+        String[] Colunas = new String[]{"CODIGO", "NOME", "QUANTIDADE", "PREÇO CUSTO", "PREÇO VENDA", "MARCA", "FORNECEDOR", "DESCR."};
+
+        con.executaSQL(SQL);
+        try {
+            con.rs.first();
+            do {
+                dados.add(new Object[]{con.rs.getString("codigo"), con.rs.getString("nome"), con.rs.getInt("quantidade"), con.rs.getFloat("val_custo"),
+                    con.rs.getFloat("val_unitario"), con.rs.getString("marca"), con.rs.getString("fornecedor"), con.rs.getString("descricao")});
+            } while (con.rs.next());// Em quanto tiver dados
+
+        } catch (SQLException ex) {
+            //JOptionPane.showMessageDialog(rootPane, "ERRO AO PREENCHER O ARRAYLIST! \n ERRO " + ex);
+        }
+
+        ModeloTabela modelo = new ModeloTabela(dados, Colunas);
+        //logo abaixo é setado as configuraçoes visuais da tabela
+        jTableProdutos.setModel(modelo);
+        jTableProdutos.getColumnModel().getColumn(0).setPreferredWidth(40);
+        jTableProdutos.getColumnModel().getColumn(0).setResizable(true);
+        jTableProdutos.getColumnModel().getColumn(1).setPreferredWidth(80);
+        jTableProdutos.getColumnModel().getColumn(1).setResizable(true);
+        jTableProdutos.getColumnModel().getColumn(2).setPreferredWidth(50);
+        jTableProdutos.getColumnModel().getColumn(2).setResizable(true);
+        jTableProdutos.getColumnModel().getColumn(3).setPreferredWidth(50);
+        jTableProdutos.getColumnModel().getColumn(3).setResizable(true);
+        jTableProdutos.getColumnModel().getColumn(4).setPreferredWidth(35);
+        jTableProdutos.getColumnModel().getColumn(4).setResizable(true);
+        jTableProdutos.getColumnModel().getColumn(4).setPreferredWidth(35);
+        jTableProdutos.getColumnModel().getColumn(4).setResizable(true);
+        jTableProdutos.getColumnModel().getColumn(4).setPreferredWidth(50);
+        jTableProdutos.getColumnModel().getColumn(4).setResizable(true);
+        jTableProdutos.getTableHeader().setReorderingAllowed(false);
+        jTableProdutos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        con.desconecta(); // desconecta a conexão com o banco de dados
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -589,14 +525,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanelPesquisa;
-    private javax.swing.JRadioButton jRBtnQtd;
-    private javax.swing.JRadioButton jRBtnQtdCritica;
-    private javax.swing.JRadioButton jRBtnValUnitario;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTFCodigo;

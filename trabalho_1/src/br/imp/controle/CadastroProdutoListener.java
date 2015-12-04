@@ -25,33 +25,67 @@ public class CadastroProdutoListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent evento) {
 
-       /* if ("limpar".equals(evento.getActionCommand())) {
+        if ("limpar".equals(evento.getActionCommand())) {
             frame.limparForm();
             // salva log
             lG = new Log(ultimoLogin.lerArquivo() + " limpou formulario");
 
-        } else {
-            try {
-                throw new Exceptions("Não foi possivel limpar o  formulario!");
-            } catch (Exceptions e) {
-                JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
-            }
-        }*/
-        
-        if ("gravar".equals(evento.getActionCommand())) {
-            JOptionPane.showMessageDialog(null, "evento correto");
-                    CadastroProdutoControl ct = new CadastroProdutoControl(frame);
-                    CadProdutoModelo retorno = ct.getStanceCadmodelo();
-                    CadastroProdutoDao incereBanco = new CadastroProdutoDao();
-                    JOptionPane.showMessageDialog(null,"descrição do prod: " + retorno.getDescricaoProd() );
-                    incereBanco.insert(retorno);
-        } else {
-            try {
-                throw new Exceptions("Não foi possivel gravar!");
-            } catch (Exceptions e) {
-                JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
-            }
         }
+
+        if ("gravar".equals(evento.getActionCommand())) {
+            CadastroProdutoControl ct = new CadastroProdutoControl(frame);
+            CadProdutoModelo retorno = ct.getStanceCadmodelo();
+            CadastroProdutoDao incereBanco = new CadastroProdutoDao();
+            JOptionPane.showMessageDialog(null, "descrição do prod: " + retorno.getDescricaoProd());
+            incereBanco.insert(retorno);
+        }
+
+        if ("excluir".equals(evento.getActionCommand())) {
+            CadastroProdutoDao exclui = new CadastroProdutoDao();
+            //valida codigo
+            if (frame.getCodigo().length() == 0 || frame.getCodigo() == null) {
+                JOptionPane.showMessageDialog(null, "Codigo invalido");
+                return;
+            } else {
+                exclui.delete(frame.getCodigo());
+            }
+
+        }
+
+        if ("alterar".equals(evento.getActionCommand())) {
+            CadastroProdutoDao altera = new CadastroProdutoDao();
+
+            CadastroProdutoControl ct = new CadastroProdutoControl(frame);
+            CadProdutoModelo retorno = ct.getStanceCadmodelo();
+            
+            altera.atualizar(retorno);
+                    
+        }
+        
+        if ("pesquisar".equals(evento.getActionCommand())) {
+            CadastroProdutoDao pesquisar = new CadastroProdutoDao();
+
+            CadastroProdutoControl ct = new CadastroProdutoControl(frame);
+            CadProdutoModelo retorno = ct.getStanceCadmodelo();
+            //retorna uma nova instanci do produtosModelo para atualizar os campos
+            retorno = pesquisar.getProduto(retorno , null);
+            CadastroProdutoJIF c = new CadastroProdutoJIF();
+            //seta os valores nos campos
+              c.setjTFCodigo(retorno.getCodigo(), frame);
+              c.setjTFNome(retorno.getNome() , frame);
+              c.setjTFMarca(retorno.getMarca(), frame);
+              c.setjTFFornecedor(retorno.getFornecedor(), frame);
+              c.setjTFQtd(retorno.getQtd(), frame);
+              c.setjTFQtdCritica(retorno.getQtdCritica(), frame);
+              c.setjTFCusto(retorno.getValorCusto(), frame);
+              c.setjTFUnitario(retorno.getValorUnitario(), frame);
+              c.setjTPDescricao(retorno.getDescricaoProd(), frame);
+              /*JOptionPane.showMessageDialog(null,retorno.getCodigo()+ " \n "+ retorno.getNome()+ " \n "+ 
+              retorno.getMarca() +" \n " +retorno.getFornecedor()+ " \n " +retorno.getQtd() +" \n " +retorno.getQtdCritica()
+              +" \n "+ retorno.getValorCusto() +" \n "+ retorno.getValorUnitario() + " \n " +retorno.getDescricaoProd()
+              );*/
+        }
+
     }
 
 }

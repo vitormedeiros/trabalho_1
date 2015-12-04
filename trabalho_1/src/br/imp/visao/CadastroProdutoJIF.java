@@ -3,7 +3,8 @@ package br.imp.visao;
 import br.imp.controle.CadastroProdutoListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
-import java.math.BigDecimal;
+import br.imp.modelo.CadProdutoModelo;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
@@ -54,8 +55,6 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
         jLabel44 = new javax.swing.JLabel();
         jTFQtdCritica = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableProdutos = new javax.swing.JTable();
 
         setClosable(true);
         setTitle("CadastroProduto");
@@ -126,19 +125,27 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         jBtnPesquisar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnPesquisar.setText("Pesquisar");
+        /*
         jBtnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnPesquisarActionPerformed(evt);
             }
         });
+        */
+        jBtnPesquisar.setActionCommand("pesquisar");
+        jBtnPesquisar.addActionListener(listener);
 
         jBtnAlterar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnAlterar.setText("Alterar");
+        /*
         jBtnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnAlterarActionPerformed(evt);
             }
         });
+        */
+        jBtnAlterar.setActionCommand("alterar");
+        jBtnAlterar.addActionListener(listener);
 
         jBtnLimpar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnLimpar.setText("Limpar");
@@ -154,11 +161,15 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
         jBtnExcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnExcluir.setText("EXCLUIR");
+        /*
         jBtnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnExcluirActionPerformed(evt);
             }
         });
+        */
+        jBtnExcluir.setActionCommand("excluir");
+        jBtnExcluir.addActionListener(listener);
 
         jTFMarca.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
 
@@ -237,7 +248,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel44)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,26 +297,8 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
                     .addComponent(jBtnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
-
-        jTableProdutos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        jTableProdutos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableProdutosMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(jTableProdutos);
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -313,9 +306,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -323,9 +314,7 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -340,10 +329,11 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        setBounds(160, 30, 978, 392);
+        setBounds(160, 30, 978, 364);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtGravarActionPerformed
@@ -369,10 +359,6 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
 
 
     }//GEN-LAST:event_jBtnExcluirActionPerformed
-
-    private void jTableProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProdutosMouseClicked
-
-    }//GEN-LAST:event_jTableProdutosMouseClicked
     public void limparForm() {
         jTFNome.setText("");
         jTFQtd.setText("");
@@ -456,6 +442,42 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
             return jTextPaneDescricao.getText();
         }
     }
+
+    public void setjTFCodigo(String recebido,CadastroProdutoJIF  classe) {
+        classe.jTFCodigo.setText(recebido) ;
+    }
+
+    public void setjTFCusto(Float recebido,CadastroProdutoJIF  classe) {
+        classe.jTFCusto.setText(String.valueOf(recebido));
+    }
+
+    public void setjTFFornecedor(String recebido, CadastroProdutoJIF  classe) {
+        classe.jTFFornecedor.setText(recebido);
+    }
+
+    public void setjTFMarca(String recebido, CadastroProdutoJIF  classe) {
+        classe.jTFMarca.setText(recebido);
+    }
+
+    public void setjTFNome(String recebido, CadastroProdutoJIF  classe) {
+        classe.jTFNome.setText(recebido);
+    }
+
+    public void setjTFQtd(int recebido, CadastroProdutoJIF  classe) {
+        classe.jTFQtd.setText(String.valueOf(recebido));
+    }
+
+    public void setjTFQtdCritica(int recebido, CadastroProdutoJIF  classe) {
+        classe.jTFQtdCritica.setText(String.valueOf(recebido));
+    }
+
+    public void setjTFUnitario(Float recebido, CadastroProdutoJIF  classe) {
+        classe.jTFUnitario.setText(String.valueOf(recebido));
+    }
+
+    public void setjTPDescricao(String recebido, CadastroProdutoJIF  classe) {
+        classe.jTextPaneDescricao.setText(recebido);
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -477,7 +499,6 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTFCodigo;
     private javax.swing.JTextField jTFCusto;
@@ -487,7 +508,6 @@ public class CadastroProdutoJIF extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTFQtd;
     private javax.swing.JTextField jTFQtdCritica;
     private javax.swing.JTextField jTFUnitario;
-    private javax.swing.JTable jTableProdutos;
     private javax.swing.JTextPane jTextPaneDescricao;
     // End of variables declaration//GEN-END:variables
 }
