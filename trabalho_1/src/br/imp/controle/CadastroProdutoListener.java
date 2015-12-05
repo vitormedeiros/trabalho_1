@@ -36,7 +36,6 @@ public class CadastroProdutoListener implements ActionListener {
             CadastroProdutoControl ct = new CadastroProdutoControl(frame);
             CadProdutoModelo retorno = ct.getStanceCadmodelo();
             CadastroProdutoDao incereBanco = new CadastroProdutoDao();
-            JOptionPane.showMessageDialog(null, "descrição do prod: " + retorno.getDescricaoProd());
             incereBanco.insert(retorno);
         }
 

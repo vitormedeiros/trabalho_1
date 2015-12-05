@@ -63,9 +63,9 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButtoneditar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButtonsalvar" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnGravar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButtonexcluir" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnExcluir" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPanel3" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
@@ -88,8 +88,8 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtoneditar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButtonnovo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButtonsalvar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButtonexcluir" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="jBtnGravar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBtnExcluir" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -108,8 +108,8 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonnovoActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButtonnovo.addActionListener(listener);"/>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonnovo.setActionCommand(&quot;botaoNovo&quot;);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButtonnovo.setActionCommand(&quot;botaoNovo&quot;);&#xa;jButtonnovo.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/*"/>
             <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
           </AuxValues>
         </Component>
@@ -124,15 +124,18 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtoneditarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonsalvar">
+        <Component class="javax.swing.JButton" name="jBtnGravar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Light" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Salvar"/>
+            <Property name="text" type="java.lang.String" value="Gravar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jBtnGravar.setActionCommand(&quot;gravar&quot;);&#xa;jBtnGravar.addActionListener(listener);"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonexcluir">
+        <Component class="javax.swing.JButton" name="jBtnExcluir">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Light" size="18" style="0"/>
@@ -142,6 +145,12 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Excluir"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnExcluirActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jBtnExcluir.setActionCommand(&quot;excluir&quot;);&#xa;jBtnExcluir.addActionListener(listener);"/>
+          </AuxValues>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>

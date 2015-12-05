@@ -3,6 +3,8 @@ package br.imp.visao;
 import br.imp.controle.CadastroClienteListener;
 import br.imp.controle.Log;
 import br.imp.controle.UltimoUsuarioLogin;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
@@ -27,8 +29,8 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonnovo = new javax.swing.JButton();
         jButtoneditar = new javax.swing.JButton();
-        jButtonsalvar = new javax.swing.JButton();
-        jButtonexcluir = new javax.swing.JButton();
+        jBtnGravar = new javax.swing.JButton();
+        jBtnExcluir = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaendereco = new javax.swing.JTextArea();
@@ -51,7 +53,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
         jButtonnovo.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jButtonnovo.setText("Novo");
-        jButtonnovo.setActionCommand("botaoNovo");
         /*
         jButtonnovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,12 +69,21 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
             }
         });
 
-        jButtonsalvar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
-        jButtonsalvar.setText("Salvar");
+        jBtnGravar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
+        jBtnGravar.setText("Gravar");
+        jBtnGravar.setActionCommand("gravar");
+        jBtnGravar.addActionListener(listener);
 
-        jButtonexcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
-        jButtonexcluir.setForeground(new java.awt.Color(255, 0, 51));
-        jButtonexcluir.setText("Excluir");
+        jBtnExcluir.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
+        jBtnExcluir.setForeground(new java.awt.Color(255, 0, 51));
+        jBtnExcluir.setText("Excluir");
+        jBtnExcluir.setActionCommand("excluir");
+        jBtnExcluir.addActionListener(listener);
+        jBtnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnExcluirActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Endereço", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 18))); // NOI18N
@@ -197,9 +207,9 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButtoneditar)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonsalvar)
+                        .addComponent(jBtnGravar)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonexcluir))
+                        .addComponent(jBtnExcluir))
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -217,11 +227,12 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtoneditar)
                     .addComponent(jButtonnovo)
-                    .addComponent(jButtonsalvar)
-                    .addComponent(jButtonexcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnGravar)
+                    .addComponent(jBtnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButtonnovo.setActionCommand("botaoNovo");
         jButtonnovo.addActionListener(listener);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -248,13 +259,100 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtoneditarActionPerformed
 
+    private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnExcluirActionPerformed
+
+    public String getEndereco() {
+        String conteudo = jTextAreaendereco.getText();
+        if(conteudo.length() != 0 || conteudo != null ){
+            return conteudo;
+        }else{
+            return conteudo="";
+        }
+        
+    }
+
+    public void setEndereco(String dado , CadastroClienteJIF stance) {
+        stance.jTextAreaendereco.setText(dado);
+    }
+
+    public String getCod() {
+        String conteudo = jTextFieldcod.getText();
+        if(conteudo.length() != 0 || conteudo != null ){
+            return conteudo;
+        }else{
+            return conteudo="";
+        }
+    }
+
+    public void setCod(String dado , CadastroClienteJIF stance) {
+         stance.jTextFieldcod.setText(dado);
+        
+    }
+
+    public String getCpf() {
+        String conteudo = jTextFieldcpf.getText();
+        if(conteudo.length() != 0 || conteudo != null ){
+            return conteudo;
+        }else{
+            return conteudo="";
+        }
+
+        
+    }
+
+    public void setCpf(String dado , CadastroClienteJIF stance) {
+        stance.jTextFieldcpf.setText(dado);
+    }
+
+    public String getNome() {
+        String conteudo = jTextFieldnome.getText();
+        if(conteudo.length() != 0 || conteudo != null ){
+            return conteudo;
+        }else{
+            return conteudo="";
+        }
+
+    }
+
+    public void setNome(String dado , CadastroClienteJIF stance) {
+        stance.jTextFieldnome.setText(dado);
+    }
+
+    public String getRg() {
+        String conteudo = jTextFieldrg.getText();
+        if(conteudo.length() != 0 || conteudo != null ){
+            return conteudo;
+        }else{
+            return conteudo="";
+        }
+    }
+
+    public void setRg(String dado , CadastroClienteJIF stance) {
+        stance.jTextFieldrg.setText(dado);
+    }
+
+    public String getTelefone() {
+        String conteudo = jTextFieldtelefone.getText();
+        if(conteudo.length() != 0 || conteudo != null ){
+            return conteudo;
+        }else{
+            return conteudo="";
+        }
+    }
+
+    public void setTelefone(String dado , CadastroClienteJIF stance) {
+        stance.jTextFieldtelefone.setText(dado);
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jBtnExcluir;
+    private javax.swing.JButton jBtnGravar;
     private javax.swing.JButton jButtoneditar;
-    private javax.swing.JButton jButtonexcluir;
     private javax.swing.JButton jButtonnovo;
-    private javax.swing.JButton jButtonsalvar;
     private javax.swing.JLabel jLabelcod;
     private javax.swing.JLabel jLabelcpf;
     private javax.swing.JLabel jLabelnome;
@@ -274,10 +372,10 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 public void SetaEnable(boolean cond) {
      
         jButtoneditar.setEnabled(cond);
-        jButtonexcluir.setEnabled(cond);
+        jBtnExcluir.setEnabled(cond);
         // jButtonpesquisa.setEnabled(cond);
       
-        jButtonsalvar.setEnabled(cond);
+       
         // jLabelcod.setEnabled(cond);
         jLabelcpf.setEnabled(cond);
         jLabelnome.setEnabled(cond);

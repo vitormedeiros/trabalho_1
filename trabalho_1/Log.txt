@@ -240,3 +240,23 @@ Usuario marcelo entrou no sistema dia 04/12/2015 às 21:30
 Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 21:30
 Usuario marcelo entrou no sistema dia 04/12/2015 às 21:31
 Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 21:31
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:14
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:14
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:25
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:25
+Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:26
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:27
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:27
+Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:27
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:27
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:27
+Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:31
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:32
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:32
+Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:33
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:37
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:37
+Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:39
+Usuario marcelo entrou no sistema dia 04/12/2015 às 23:41
+Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:41
+Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:43
