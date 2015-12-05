@@ -20,11 +20,13 @@ public class EstoqListener implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent evento) {
+       // String opcao;
         if ("pesquisar".equals(evento.getActionCommand())) {
             CadastroProdutoDao pesquisar = new CadastroProdutoDao();
 
             CadastroProdutoControl ct = new CadastroProdutoControl(frame);
             CadProdutoModelo retorno = ct.getStanceCadmodelo();
+          
             //retorna uma nova instanci do produtosModelo para atualizar os campos
             retorno = pesquisar.getProduto(retorno, frame);
             EstoqueJIFrame c = new EstoqueJIFrame();
@@ -41,10 +43,7 @@ public class EstoqListener implements ActionListener {
               
               
                log = new Log(ultimoLogin.lerArquivo() + " perquisou produto no estoque");
-              /*JOptionPane.showMessageDialog(null,retorno.getCodigo()+ " \n "+ retorno.getNome()+ " \n "+ 
-              retorno.getMarca() +" \n " +retorno.getFornecedor()+ " \n " +retorno.getQtd() +" \n " +retorno.getQtdCritica()
-              +" \n "+ retorno.getValorCusto() +" \n "+ retorno.getValorUnitario() + " \n " +retorno.getDescricaoProd()
-              );*/
+             
         }
 
     

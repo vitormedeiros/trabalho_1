@@ -57,6 +57,14 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jLabel45 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableProdutos = new javax.swing.JTable();
+        jPanelPesquisa2 = new javax.swing.JPanel();
+        jRBCodigo = new javax.swing.JRadioButton();
+        jRBNome = new javax.swing.JRadioButton();
+        jRBMarca = new javax.swing.JRadioButton();
+        jRBFornecedor = new javax.swing.JRadioButton();
+        jRBQuantidade = new javax.swing.JRadioButton();
+        jRBValUnitario = new javax.swing.JRadioButton();
+        jRBQtdCritica = new javax.swing.JRadioButton();
 
         setClosable(true);
         setTitle("Estoque");
@@ -271,15 +279,143 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(jTableProdutos);
 
+        jPanelPesquisa2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelPesquisa2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Perquisar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 18))); // NOI18N
+
+        jRBCodigo.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBCodigo);
+        jRBCodigo.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBCodigo.setSelected(true);
+        jRBCodigo.setText("Codigo");
+        jRBCodigo.setActionCommand("codigo");
+        jRBCodigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBCodigoMouseClicked(evt);
+            }
+        });
+        jRBCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRBCodigoActionPerformed(evt);
+            }
+        });
+
+        jRBNome.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBNome);
+        jRBNome.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBNome.setText("Nome");
+        jRBNome.setActionCommand("nome");
+        jRBNome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBNomeMouseClicked(evt);
+            }
+        });
+
+        jRBMarca.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBMarca);
+        jRBMarca.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBMarca.setText("Marca");
+        jRBMarca.setActionCommand("marca");
+        jRBMarca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBMarcaMouseClicked(evt);
+            }
+        });
+
+        jRBFornecedor.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBFornecedor);
+        jRBFornecedor.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBFornecedor.setText("Fornecedor");
+        jRBFornecedor.setActionCommand("fornecedor");
+        jRBFornecedor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBFornecedorMouseClicked(evt);
+            }
+        });
+
+        jRBQuantidade.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBQuantidade);
+        jRBQuantidade.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBQuantidade.setText("Quantidade");
+        jRBQuantidade.setActionCommand("quantidade");
+        jRBQuantidade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBQuantidadeMouseClicked(evt);
+            }
+        });
+
+        jRBValUnitario.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBValUnitario);
+        jRBValUnitario.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBValUnitario.setText("Valor Unitario");
+        jRBValUnitario.setActionCommand("valorUnitario");
+        jRBValUnitario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBValUnitarioMouseClicked(evt);
+            }
+        });
+        jRBValUnitario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRBValUnitarioActionPerformed(evt);
+            }
+        });
+
+        jRBQtdCritica.setBackground(new java.awt.Color(255, 255, 255));
+        btnGPesquisa.add(jRBQtdCritica);
+        jRBQtdCritica.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jRBQtdCritica.setText("Quantidade Critica");
+        jRBQtdCritica.setActionCommand("qtdCritica");
+        jRBQtdCritica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRBQtdCriticaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelPesquisa2Layout = new javax.swing.GroupLayout(jPanelPesquisa2);
+        jPanelPesquisa2.setLayout(jPanelPesquisa2Layout);
+        jPanelPesquisa2Layout.setHorizontalGroup(
+            jPanelPesquisa2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPesquisa2Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jRBCodigo)
+                .addGap(18, 18, 18)
+                .addComponent(jRBNome)
+                .addGap(18, 18, 18)
+                .addComponent(jRBMarca)
+                .addGap(18, 18, 18)
+                .addComponent(jRBFornecedor)
+                .addGap(18, 18, 18)
+                .addComponent(jRBQuantidade)
+                .addGap(18, 18, 18)
+                .addComponent(jRBQtdCritica)
+                .addGap(18, 18, 18)
+                .addComponent(jRBValUnitario)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelPesquisa2Layout.setVerticalGroup(
+            jPanelPesquisa2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPesquisa2Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(jPanelPesquisa2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRBCodigo)
+                    .addComponent(jRBNome)
+                    .addComponent(jRBMarca)
+                    .addComponent(jRBFornecedor)
+                    .addComponent(jRBQuantidade)
+                    .addComponent(jRBValUnitario)
+                    .addComponent(jRBQtdCritica))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+            .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelPesquisa2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -287,8 +423,10 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jPanelPesquisa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -350,6 +488,85 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private void jTableProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProdutosMouseClicked
 
     }//GEN-LAST:event_jTableProdutosMouseClicked
+
+    private void jRBCodigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBCodigoMouseClicked
+        jTFCodigo.setBackground(Color.lightGray);
+        jTFNome.setBackground(Color.white);
+        jTFMarca.setBackground(Color.white);
+        jTFFornecedor.setBackground(Color.white);
+        jTFQtd.setBackground(Color.white);
+        jTFQtdCritica.setBackground(Color.white);
+        jTFUnitario.setBackground(Color.white);
+
+    }//GEN-LAST:event_jRBCodigoMouseClicked
+
+    private void jRBCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRBCodigoActionPerformed
+
+    private void jRBNomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBNomeMouseClicked
+        jTFCodigo.setBackground(Color.white);
+        jTFNome.setBackground(Color.lightGray);
+        jTFMarca.setBackground(Color.white);
+        jTFFornecedor.setBackground(Color.white);
+        jTFQtd.setBackground(Color.white);
+        jTFQtdCritica.setBackground(Color.white);
+        jTFUnitario.setBackground(Color.white);
+    }//GEN-LAST:event_jRBNomeMouseClicked
+
+    private void jRBMarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBMarcaMouseClicked
+        jTFCodigo.setBackground(Color.white);
+        jTFNome.setBackground(Color.white);
+        jTFMarca.setBackground(Color.lightGray);
+        jTFFornecedor.setBackground(Color.white);
+        jTFQtd.setBackground(Color.white);
+        jTFQtdCritica.setBackground(Color.white);
+        jTFUnitario.setBackground(Color.white);
+    }//GEN-LAST:event_jRBMarcaMouseClicked
+
+    private void jRBFornecedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBFornecedorMouseClicked
+        jTFCodigo.setBackground(Color.white);
+        jTFNome.setBackground(Color.white);
+        jTFMarca.setBackground(Color.white);
+        jTFFornecedor.setBackground(Color.lightGray);
+        jTFQtd.setBackground(Color.white);
+        jTFQtdCritica.setBackground(Color.white);
+        jTFUnitario.setBackground(Color.white);
+    }//GEN-LAST:event_jRBFornecedorMouseClicked
+
+    private void jRBQuantidadeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBQuantidadeMouseClicked
+        jTFCodigo.setBackground(Color.white);
+        jTFNome.setBackground(Color.white);
+        jTFMarca.setBackground(Color.white);
+        jTFFornecedor.setBackground(Color.white);
+        jTFQtd.setBackground(Color.lightGray);
+        jTFQtdCritica.setBackground(Color.white);
+        jTFUnitario.setBackground(Color.white);
+    }//GEN-LAST:event_jRBQuantidadeMouseClicked
+
+    private void jRBValUnitarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBValUnitarioMouseClicked
+        jTFCodigo.setBackground(Color.white);
+        jTFNome.setBackground(Color.white);
+        jTFMarca.setBackground(Color.white);
+        jTFFornecedor.setBackground(Color.white);
+        jTFQtd.setBackground(Color.white);
+        jTFQtdCritica.setBackground(Color.white);
+        jTFUnitario.setBackground(Color.lightGray);
+    }//GEN-LAST:event_jRBValUnitarioMouseClicked
+
+    private void jRBValUnitarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBValUnitarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRBValUnitarioActionPerformed
+
+    private void jRBQtdCriticaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRBQtdCriticaMouseClicked
+        jTFCodigo.setBackground(Color.white);
+        jTFNome.setBackground(Color.white);
+        jTFMarca.setBackground(Color.white);
+        jTFFornecedor.setBackground(Color.white);
+        jTFQtd.setBackground(Color.white);
+        jTFQtdCritica.setBackground(Color.lightGray);
+        jTFUnitario.setBackground(Color.white);
+    }//GEN-LAST:event_jRBQtdCriticaMouseClicked
     public void LimparForm() {
         jTFNome.setText("");
         jTFQtd.setText("");
@@ -360,6 +577,12 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jTFFornecedor.setText("");
         jTextPaneDescricao.setText("");
     }
+    
+    public String getOpcao(){
+        String opcao = btnGPesquisa.getSelection().getActionCommand();
+        return opcao;
+    }
+    
     public String getCodigo() {
         if(jTFCodigo.getText().length() == 0 || jTFCodigo.getText() == null){
             return null;
@@ -525,6 +748,18 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanelPesquisa;
+    private javax.swing.JPanel jPanelPesquisa1;
+    private javax.swing.JPanel jPanelPesquisa2;
+    private javax.swing.JRadioButton jRBCodigo;
+    private javax.swing.JRadioButton jRBFornecedor;
+    private javax.swing.JRadioButton jRBMarca;
+    private javax.swing.JRadioButton jRBNome;
+    private javax.swing.JRadioButton jRBQtdCritica;
+    private javax.swing.JRadioButton jRBQuantidade;
+    private javax.swing.JRadioButton jRBValUnitario;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTFCodigo;

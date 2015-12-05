@@ -260,3 +260,22 @@ Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:39
 Usuario marcelo entrou no sistema dia 04/12/2015 às 23:41
 Usuario marcelo entrou no Cadastro de Cliente no dia 04/12/2015 às 23:41
 Usuario marcelo Saio do sistema no dia 04/12/2015 às 23:43
+Usuario marcelo entrou no sistema dia 05/12/2015 às 21:10
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:10
+Usuario marcelo entrou no Cadastro de Produto no dia 05/12/2015 às 21:11
+Usuario marcelo entrou no Cadastro de Produto no dia 05/12/2015 às 21:11
+Usuario marcelo entrou no Cadastro de Produto no dia 05/12/2015 às 21:11
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:12
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:13
+marcelo perquisou produto no estoque05/12/2015 às 21:13
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:13
+marcelo perquisou produto no estoque05/12/2015 às 21:13
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:15
+marcelo perquisou produto no estoque05/12/2015 às 21:15
+Usuario marcelo entrou no sistema dia 05/12/2015 às 21:20
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:20
+Usuario marcelo entrou no sistema dia 05/12/2015 às 21:21
+Usuario marcelo entrou no Cadastro de Cliente no dia 05/12/2015 às 21:21
+Usuario marcelo entrou no Cadastro de Produto no dia 05/12/2015 às 21:21
+Usuario marcelo entrou no Estoque de Produtos no dia 05/12/2015 às 21:21
+Usuario marcelo Saio do sistema no dia 05/12/2015 às 21:21
