@@ -20,6 +20,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         String login = ultimoLogin.lerArquivo();
         jTextFieldlogin.setText(login);
         jPasswordFieldsenha.transferFocus();
+        jAguardando.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -33,7 +34,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         jPasswordFieldsenha = new javax.swing.JPasswordField();
         jButtonEntrar = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        jAguardando = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -44,6 +45,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         setTitle("Tela de Login");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
+        setType(java.awt.Window.Type.UTILITY);
 
         jPaneltelalogin.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -97,7 +99,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         });
         */
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/aguarde.gif"))); // NOI18N
+        jAguardando.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/imp/icones/aguarde.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPaneltelaloginLayout = new javax.swing.GroupLayout(jPaneltelalogin);
         jPaneltelalogin.setLayout(jPaneltelaloginLayout);
@@ -111,12 +113,12 @@ public class LoginJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPaneltelaloginLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addComponent(jButtonEntrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jAguardando, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPasswordFieldsenha)
                     .addComponent(jTextFieldlogin))
                 .addGap(24, 24, 24))
@@ -136,7 +138,7 @@ public class LoginJFrame extends javax.swing.JFrame {
                 .addGroup(jPaneltelaloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jAguardando, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -267,12 +269,12 @@ public class LoginJFrame extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jAguardando;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabellogin;
     private javax.swing.JLabel jLabelsenha;
     private javax.swing.JPanel jPanel1;
@@ -288,6 +290,10 @@ public class LoginJFrame extends javax.swing.JFrame {
 
     public String getSenha() {
         return new String(jPasswordFieldsenha.getPassword());
+    }
+
+    public void aguarda() {
+        jAguardando.setVisible(true);
     }
 
 }

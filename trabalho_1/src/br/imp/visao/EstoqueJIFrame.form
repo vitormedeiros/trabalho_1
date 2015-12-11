@@ -142,8 +142,6 @@
                                   <Component id="jBtnLimpar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jBtnPesquisar" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jBtnQtdProdutosEstoque" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -252,7 +250,6 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBtnLimpar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="jBtnPesquisar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="jBtnQtdProdutosEstoque" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="25" max="32767" attributes="0"/>
                       </Group>
@@ -418,21 +415,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o do produto"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jBtnQtdProdutosEstoque">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI Light" size="18" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Qtd produtos estoque"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnQtdProdutosEstoqueActionPerformed"/>
-                  </Events>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/*"/>
-                    <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/&#xa;jBtnLimpar.setActionCommand(&quot;qtdProdutosEstoq&quot;);&#xa;jBtnLimpar.addActionListener(listener);"/>
-                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTFQtdCritica">
                   <Properties>

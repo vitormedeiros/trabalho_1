@@ -19,9 +19,11 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     Conexao con = new Conexao();
 
     public EstoqueJIFrame() {
+      
         initComponents();
         //Log de navegação
         log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou no Estoque de Produtos no dia ");
+        jTFCodigo.setBackground(Color.lightGray);
     }
 
     @SuppressWarnings("unchecked")
@@ -52,7 +54,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPaneDescricao = new javax.swing.JTextPane();
         jLabel44 = new javax.swing.JLabel();
-        jBtnQtdProdutosEstoque = new javax.swing.JButton();
         jTFQtdCritica = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -145,18 +146,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jLabel44.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel44.setText("Descrição do produto");
 
-        jBtnQtdProdutosEstoque.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
-        jBtnQtdProdutosEstoque.setText("Qtd produtos estoque");
-        /*
-        jBtnQtdProdutosEstoque.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnQtdProdutosEstoqueActionPerformed(evt);
-            }
-        });
-        */
-        jBtnLimpar.setActionCommand("qtdProdutosEstoq");
-        jBtnLimpar.addActionListener(listener);
-
         jTFQtdCritica.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
 
         jLabel45.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
@@ -172,9 +161,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(jBtnLimpar)
                         .addGap(18, 18, 18)
-                        .addComponent(jBtnPesquisar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBtnQtdProdutosEstoque))
+                        .addComponent(jBtnPesquisar))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel41)
@@ -256,8 +243,7 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnQtdProdutosEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -480,10 +466,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
         jTFUnitario.setBackground(Color.white);
 
     }//GEN-LAST:event_jBtnLimparActionPerformed
-
-    private void jBtnQtdProdutosEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnQtdProdutosEstoqueActionPerformed
-
-    }//GEN-LAST:event_jBtnQtdProdutosEstoqueActionPerformed
 
     private void jTableProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProdutosMouseClicked
 
@@ -734,7 +716,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup btnGPesquisa;
     private javax.swing.JButton jBtnLimpar;
     private javax.swing.JButton jBtnPesquisar;
-    private javax.swing.JButton jBtnQtdProdutosEstoque;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -748,8 +729,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanelPesquisa;
-    private javax.swing.JPanel jPanelPesquisa1;
     private javax.swing.JPanel jPanelPesquisa2;
     private javax.swing.JRadioButton jRBCodigo;
     private javax.swing.JRadioButton jRBFornecedor;
@@ -758,8 +737,6 @@ public class EstoqueJIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRBQtdCritica;
     private javax.swing.JRadioButton jRBQuantidade;
     private javax.swing.JRadioButton jRBValUnitario;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTFCodigo;

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 public class CadastroProdutoDao {
 
-    public void delete(String codigo) {
+    public void delete(String codigo) throws Exceptions{
         Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
@@ -25,8 +25,8 @@ public class CadastroProdutoDao {
             ps.execute();
 
             conn.commit();
+            JOptionPane.showMessageDialog(null, "Ecluido com sucesso!");
         } catch (SQLException e) {
-            System.out.println("ERRO: " + e.getMessage());
             JOptionPane.showMessageDialog(null, "Codigo inesistente!");
 
             if (conn != null) {
@@ -36,7 +36,7 @@ public class CadastroProdutoDao {
                     JOptionPane.showMessageDialog(null, "Codigo inesistente!");
                 }
             }
-
+            throw new Exceptions("Não foi pocivel excluir o produto!\n     Erro: " + e.getMessage());
         } finally {
             if (ps != null) {
                 try {
@@ -55,7 +55,7 @@ public class CadastroProdutoDao {
         }
     }
 
-    public void insert(CadProdutoModelo produto) {
+    public void insert(CadProdutoModelo produto) throws Exceptions{
         Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
@@ -76,10 +76,9 @@ public class CadastroProdutoDao {
             ps.execute();
 
             conn.commit();
-
+            JOptionPane.showMessageDialog(null, "Produto gravado com sucesso!");
         } catch (SQLException e) {
-
-            JOptionPane.showMessageDialog(null, "erro " + e.getMessage());
+            
             if (conn != null) {
                 try {
                     conn.rollback();
@@ -87,7 +86,7 @@ public class CadastroProdutoDao {
                     JOptionPane.showMessageDialog(null, "ERRO: " + ex.getMessage());
                 }
             }
-
+            throw new Exceptions("Não foi pocivel incerir o produto!\n     Erro: " + e.getMessage());
         } finally {
             if (ps != null) {
                 try {
@@ -106,7 +105,7 @@ public class CadastroProdutoDao {
         }
     }
 
-    public void atualizar(CadProdutoModelo produto) {
+    public void atualizar(CadProdutoModelo produto) throws Exceptions{
         Connection conn = null;
         Conexao conex = new Conexao();
         PreparedStatement ps = null;
@@ -127,6 +126,7 @@ public class CadastroProdutoDao {
             ps.execute();
 
             conn.commit();
+            JOptionPane.showMessageDialog(null,"Alterado com sucesso!");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "ERRO: " + e.getMessage());
 
@@ -156,43 +156,49 @@ public class CadastroProdutoDao {
         }
     }
 
-    public CadProdutoModelo getProduto(CadProdutoModelo produto, EstoqueJIFrame instance) {
+    public CadProdutoModelo getProduto(CadProdutoModelo produto, EstoqueJIFrame instance) throws Exceptions{
         Conexao conex = new Conexao();
         Connection conn = null;
         PreparedStatement ps = null;
         String sql = null;
-        try {
-        switch (instance.getOpcao()) {
-            case "codigo": 
-               sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where codigo = '" + produto.getCodigo() + "'";
-            break;
-                
-            case "nome":
-                sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where nome = '" + produto.getNome()+ "'";
-            break;
-            case "marca":
-                sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where marca = '" + produto.getMarca()+ "'";
-            break;
-            case "fornecedor":
-               sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where fornecedor = '" + produto.getFornecedor()+ "'"; 
-            break;
-            case "quantidade":
-                sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where quantidade = " + produto.getQtd()+ "";
-            break;
-            case "qtdCritica":
-                sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where qtd_critica = " + produto.getQtdCritica()+ "";
-            break;
-            case "valorUnitario": 
-                sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where val_unitario = " + produto.getValorUnitario()+ "";
-            break;
-            default: JOptionPane.showMessageDialog(null, "Opção invalida!");
-        }
 
-        
+        try {
+            if (instance == null) {
+                sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where codigo = '" + produto.getCodigo() + "'";
+            } else {
+                switch (instance.getOpcao()) {
+                    case "codigo":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where codigo = '" + produto.getCodigo() + "'";
+                        break;
+
+                    case "nome":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where nome = '" + produto.getNome() + "'";
+                        break;
+                    case "marca":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where marca = '" + produto.getMarca() + "'";
+                        break;
+                    case "fornecedor":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where fornecedor = '" + produto.getFornecedor() + "'";
+                        break;
+                    case "quantidade":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where quantidade = " + produto.getQtd() + "";
+                        break;
+                    case "qtdCritica":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where qtd_critica = " + produto.getQtdCritica() + "";
+                        break;
+                    case "valorUnitario":
+                        sql = "select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where val_unitario = " + produto.getValorUnitario() + "";
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Opção invalida!");
+                }
+                //Preenche tabela
+                instance.preencherTabela(sql);
+            }
             conn = conex.getConnection();
+
             
-            //Preenche tabela
-            instance.preencherTabela(sql);
+
             ps = conn.prepareStatement(sql);
             //ps.setString(1, produto.getCodigo());
             ResultSet rs = ps.executeQuery();
@@ -210,14 +216,15 @@ public class CadastroProdutoDao {
 
                 return newProdModelo;
             }
+
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "ERRO: " + e.getMessage());
+            throw new Exceptions("Não foi pocivel selecionar produtos!\n     Erro: " + e.getMessage());
         } finally {
             if (ps != null) {
                 try {
                     ps.close();
                 } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(null, "ERRO: " + ex.getMessage());
+                    throw new Exceptions("Não foi pocivel fechar a conexao!\n     Erro: " + ex.getMessage());
                 }
             }
             if (conn != null) {

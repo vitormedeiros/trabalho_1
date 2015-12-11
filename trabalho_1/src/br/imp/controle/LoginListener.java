@@ -28,6 +28,10 @@ public class LoginListener implements ActionListener {
         } else if (senha.length() == 0) {
             throw new Exceptions("Informar SENHA!");
         } else {
+            
+       
+                frame.aguarda();
+     
             LoginDao validaBanco = new LoginDao();
             boolean condicao = validaBanco.exists(loginModelo);
             if(condicao == true){

@@ -24,13 +24,9 @@ public class CadastroClienteListener implements ActionListener {
 
         if ("botaoNovo".equals(evento.getActionCommand())) {
             frame.LimpaForm();
-            frame.SetaEnable(true);
         }
         if ("botaoSair".equals(evento.getActionCommand())) {
             frame.Sair();
-        }
-        if ("botaoCancelar".equals(evento.getActionCommand())) {
-            frame.SetaEnable(false);
         }
         if ("excluir".equals(evento.getActionCommand())) {
             CadastroClienteDao exclui = new CadastroClienteDao();
@@ -40,6 +36,7 @@ public class CadastroClienteListener implements ActionListener {
                 return;
             } else {
                 exclui.delete(frame.getCod());
+                log = new Log(ultimoLogin.lerArquivo() + "Excluiu um cliente");
             }
 
         }
@@ -49,6 +46,7 @@ public class CadastroClienteListener implements ActionListener {
             CadastroClienteModelo retorno = ct.getStanceCadmodelo();
             CadastroClienteDao incereBanco = new CadastroClienteDao();
             incereBanco.insert(retorno);
+            log = new Log(ultimoLogin.lerArquivo() + "Cadastrou um cliente");
         }
     }
 

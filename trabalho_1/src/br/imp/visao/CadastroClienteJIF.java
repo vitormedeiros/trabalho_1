@@ -15,7 +15,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
 
     public CadastroClienteJIF() {
         initComponents();
-        SetaEnable(false);
+        SetaEnable(true);
         LimpaForm();
         //Log de navegação
         log = new Log("Usuario " + ultimoLogin.lerArquivo() + " entrou no Cadastro de Cliente no dia ");
@@ -28,7 +28,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jButtonnovo = new javax.swing.JButton();
-        jButtoneditar = new javax.swing.JButton();
         jBtnGravar = new javax.swing.JButton();
         jBtnExcluir = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -60,14 +59,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
             }
         });
         */
-
-        jButtoneditar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
-        jButtoneditar.setText("Editar");
-        jButtoneditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtoneditarActionPerformed(evt);
-            }
-        });
 
         jBtnGravar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jBtnGravar.setText("Gravar");
@@ -117,7 +108,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jLabelcod.setText("Cod.");
 
         jTextFieldcod.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jTextFieldcod.setPreferredSize(new java.awt.Dimension(6, 26));
 
         jTextFieldnome.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
 
@@ -125,10 +115,11 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
         jLabelnome.setText("Nome");
 
         jTextFieldrg.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jTextFieldrg.setPreferredSize(new java.awt.Dimension(6, 26));
 
         jLabelrg.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabelrg.setText("RG");
+
+        jTextFieldcpf.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
 
         jTextFieldtelefone.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
 
@@ -188,7 +179,7 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                     .addComponent(jLabeltelefone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextFieldrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextFieldrg)
                     .addComponent(jTextFieldcpf)
                     .addComponent(jTextFieldtelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(33, Short.MAX_VALUE))
@@ -204,8 +195,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonnovo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtoneditar)
                         .addGap(18, 18, 18)
                         .addComponent(jBtnGravar)
                         .addGap(18, 18, 18)
@@ -225,7 +214,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtoneditar)
                     .addComponent(jButtonnovo)
                     .addComponent(jBtnGravar)
                     .addComponent(jBtnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -248,16 +236,12 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        setBounds(175, 5, 673, 429);
+        setBounds(400, 100, 673, 429);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnovoActionPerformed
 
     }//GEN-LAST:event_jButtonnovoActionPerformed
-
-    private void jButtoneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoneditarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtoneditarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
@@ -351,7 +335,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jBtnExcluir;
     private javax.swing.JButton jBtnGravar;
-    private javax.swing.JButton jButtoneditar;
     private javax.swing.JButton jButtonnovo;
     private javax.swing.JLabel jLabelcod;
     private javax.swing.JLabel jLabelcpf;
@@ -371,7 +354,6 @@ public class CadastroClienteJIF extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 public void SetaEnable(boolean cond) {
      
-        jButtoneditar.setEnabled(cond);
         jBtnExcluir.setEnabled(cond);
         // jButtonpesquisa.setEnabled(cond);
       

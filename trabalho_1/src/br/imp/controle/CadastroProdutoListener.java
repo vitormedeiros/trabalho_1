@@ -5,6 +5,8 @@ import br.imp.modelo.CadastroProdutoDao;
 import br.imp.visao.CadastroProdutoJIF;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,7 +38,12 @@ public class CadastroProdutoListener implements ActionListener {
             CadastroProdutoControl ct = new CadastroProdutoControl(frame);
             CadProdutoModelo retorno = ct.getStanceCadmodelo();
             CadastroProdutoDao incereBanco = new CadastroProdutoDao();
-            incereBanco.insert(retorno);
+            try {
+                incereBanco.insert(retorno);
+                lG = new Log(ultimoLogin.lerArquivo() + " Cadastrou um produto");
+            } catch (Exceptions ex) {
+                 new Exceptions("Erro ao gravar registro" + ex);
+            }
         }
 
         if ("excluir".equals(evento.getActionCommand())) {
@@ -46,7 +53,12 @@ public class CadastroProdutoListener implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Codigo invalido");
                 return;
             } else {
-                exclui.delete(frame.getCodigo());
+                try {
+                    exclui.delete(frame.getCodigo());
+                    lG = new Log(ultimoLogin.lerArquivo() + " Excluiu um produto");
+                } catch (Exceptions ex) {
+                     new Exceptions("Erro ao excluir registro" + ex);
+                }
             }
 
         }
@@ -57,7 +69,12 @@ public class CadastroProdutoListener implements ActionListener {
             CadastroProdutoControl ct = new CadastroProdutoControl(frame);
             CadProdutoModelo retorno = ct.getStanceCadmodelo();
             
-            altera.atualizar(retorno);
+            try {
+                altera.atualizar(retorno);
+                lG = new Log(ultimoLogin.lerArquivo() + " Alteropu um produto");
+            } catch (Exceptions ex) {
+                new Exceptions("Erro ao alterar registro" + ex);
+            }
                     
         }
         
@@ -66,8 +83,13 @@ public class CadastroProdutoListener implements ActionListener {
 
             CadastroProdutoControl ct = new CadastroProdutoControl(frame);
             CadProdutoModelo retorno = ct.getStanceCadmodelo();
-            //retorna uma nova instanci do produtosModelo para atualizar os campos
-            retorno = pesquisar.getProduto(retorno , null);
+            try {
+                //retorna uma nova instanci do produtosModelo para atualizar os campos
+                retorno = pesquisar.getProduto(retorno , null);
+                lG = new Log(ultimoLogin.lerArquivo() + " pesquisou um produto");
+            } catch (Exceptions ex) {
+                new Exceptions("Erro ao pesquisar produto"+ ex);
+            }
             CadastroProdutoJIF c = new CadastroProdutoJIF();
             //seta os valores nos campos
               c.setjTFCodigo(retorno.getCodigo(), frame);
@@ -79,10 +101,6 @@ public class CadastroProdutoListener implements ActionListener {
               c.setjTFCusto(retorno.getValorCusto(), frame);
               c.setjTFUnitario(retorno.getValorUnitario(), frame);
               c.setjTPDescricao(retorno.getDescricaoProd(), frame);
-              /*JOptionPane.showMessageDialog(null,retorno.getCodigo()+ " \n "+ retorno.getNome()+ " \n "+ 
-              retorno.getMarca() +" \n " +retorno.getFornecedor()+ " \n " +retorno.getQtd() +" \n " +retorno.getQtdCritica()
-              +" \n "+ retorno.getValorCusto() +" \n "+ retorno.getValorUnitario() + " \n " +retorno.getDescricaoProd()
-              );*/
         }
 
     }

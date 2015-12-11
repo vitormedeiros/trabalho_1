@@ -13,7 +13,10 @@ public class PrincipalListener implements ActionListener {
 
     UltimoUsuarioLogin ultimoLogin = new UltimoUsuarioLogin();
     Log log;
-
+    Boolean cadCliAberta = false;
+    Boolean cadProdAberta = false;
+    Boolean sobreAberta = false;
+    Boolean estoqueAberta = false;
     public jPrincipal frame;
 
     public PrincipalListener(jPrincipal frame) {
@@ -21,44 +24,61 @@ public class PrincipalListener implements ActionListener {
 
     }
 
-    public void abrirCadastroClientes() throws Exceptions {
+    public void abrirCadastroClientes(CadastroClienteJIF c, Boolean abreFecha) throws Exceptions {
 
-        CadastroClienteJIF c = new CadastroClienteJIF();
-        c.setVisible(true);
+        c.setVisible(abreFecha);
+        if (abreFecha == false) {
+            c.dispose();
+        }
         frame.getjDesktopPane1().add(c);
     }
 
-    public void abrirSorbe() throws Exceptions {
-        SobreJInternalFrame c = new SobreJInternalFrame();
-        c.setVisible(true);
+    public void abrirSorbe(SobreJInternalFrame c, Boolean abreFecha) throws Exceptions {
+
+        c.setVisible(abreFecha);
+        if (abreFecha == false) {
+            c.dispose();
+        }
         frame.getjDesktopPane1().add(c);
     }
 
-    public void abrirCadastroProduto() throws Exceptions {
-        CadastroProdutoJIF c = new CadastroProdutoJIF();
-        c.setVisible(true);
+    public void abrirCadastroProduto(CadastroProdutoJIF c, Boolean abreFecha) throws Exceptions {
+
+        c.setVisible(abreFecha);
+        if (abreFecha == false) {
+            c.dispose();
+        }
         frame.getjDesktopPane1().add(c);
     }
 
-    public void abrirEstoque() throws Exceptions {
-        EstoqueJIFrame c = new EstoqueJIFrame();
-        c.setVisible(true);
+    public void abrirEstoque(EstoqueJIFrame c, Boolean abreFecha) throws Exceptions {
+
+        c.setVisible(abreFecha);
+        if (abreFecha == false) {
+            c.dispose();
+        }
         frame.getjDesktopPane1().add(c);
     }
 
     public void actionPerformed(ActionEvent evento) {
-
+        CadastroClienteJIF cadCli = new CadastroClienteJIF();
+        SobreJInternalFrame sobre = new SobreJInternalFrame();
+        CadastroProdutoJIF cadPod = new CadastroProdutoJIF();
+        EstoqueJIFrame estoq = new EstoqueJIFrame();
         if ("cadastroCliente".equals(evento.getActionCommand())) {
-            try {
-                abrirCadastroClientes();
-            } catch (Exceptions e) {
-                JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
-            }
+           
+                try {
+                    abrirCadastroClientes(cadCli, true);
+                } catch (Exceptions e) {
+                    JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
+                }
+              
+            
         }
 
         if ("sobre".equals(evento.getActionCommand())) {
             try {
-                abrirSorbe();
+                abrirSorbe(sobre, true);
             } catch (Exceptions e) {
                 JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             }
@@ -66,7 +86,7 @@ public class PrincipalListener implements ActionListener {
 
         if ("cadastroProduto".equals(evento.getActionCommand())) {
             try {
-                abrirCadastroProduto();
+                abrirCadastroProduto(cadPod, true);
             } catch (Exceptions e) {
                 JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             }
@@ -74,7 +94,7 @@ public class PrincipalListener implements ActionListener {
 
         if ("estoque".equals(evento.getActionCommand())) {
             try {
-                abrirEstoque();
+                abrirEstoque(estoq, true);
             } catch (Exceptions e) {
                 JOptionPane.showMessageDialog(null, "Erro : " + e, "Erro ", JOptionPane.ERROR_MESSAGE);
             }

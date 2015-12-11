@@ -1,6 +1,7 @@
 package br.imp.modelo;
 
 import br.imp.controle.Conexao;
+import br.imp.controle.Exceptions;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +11,7 @@ import javax.swing.JOptionPane;
 public class EstoqueDao {
     Conexao conex = new Conexao();
     
-   public CadProdutoModelo getProduto(CadProdutoModelo produto) {
+   public CadProdutoModelo getProduto(CadProdutoModelo produto) throws Exceptions{
         Connection conn = null;
         PreparedStatement ps = null;
         try {
@@ -33,7 +34,7 @@ public class EstoqueDao {
                 return newProdModelo;
             }
         } catch(SQLException e) {
-            JOptionPane.showMessageDialog(null,"ERRO: " + e.getMessage());
+             throw new Exceptions("Não foi selecionar os produto!\n     Erro: " + e.getMessage());
         } finally {
             if( ps != null) {
                 try {

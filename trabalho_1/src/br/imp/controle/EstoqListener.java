@@ -6,6 +6,8 @@ import br.imp.visao.CadastroProdutoJIF;
 import br.imp.visao.EstoqueJIFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class EstoqListener implements ActionListener {
@@ -27,8 +29,12 @@ public class EstoqListener implements ActionListener {
             CadastroProdutoControl ct = new CadastroProdutoControl(frame);
             CadProdutoModelo retorno = ct.getStanceCadmodelo();
           
-            //retorna uma nova instanci do produtosModelo para atualizar os campos
-            retorno = pesquisar.getProduto(retorno, frame);
+            try {
+                //retorna uma nova instanci do produtosModelo para atualizar os campos
+                retorno = pesquisar.getProduto(retorno, frame);
+            } catch (Exceptions ex) {
+                 new Exceptions("Erro ao pesquisar produtos" + ex);
+            }
             EstoqueJIFrame c = new EstoqueJIFrame();
             //seta os valores nos campos
               c.setjTFCodigo(retorno.getCodigo(), frame);
@@ -45,16 +51,9 @@ public class EstoqListener implements ActionListener {
                log = new Log(ultimoLogin.lerArquivo() + " perquisou produto no estoque");
              
         }
-
-    
-        
-        if ("qtdProdutosEstoq".equals(evento.getActionCommand())) {
-            //Grava log de navegação
-            log = new Log(ultimoLogin.lerArquivo() + " perquisou quantidade produto no estoque");
-        }
-
         if ("limpar".equals(evento.getActionCommand())) {
             frame.LimparForm();
+            frame.preencherTabela("select codigo, nome, marca, fornecedor, quantidade, qtd_critica, val_custo, val_unitario, descricao from produtos where codigo = '"+0+"'");
             //Grava log de navegação
             log = new Log(ultimoLogin.lerArquivo() + " limpou formulario no estoque");
         } 

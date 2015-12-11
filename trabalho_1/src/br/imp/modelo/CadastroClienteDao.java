@@ -16,7 +16,6 @@ public void delete(String codigo) {
         try {
             conn = conex.getConnection();
             String sql = "delete from clientes where codigo = ?";
-            JOptionPane.showMessageDialog(null, codigo);
             ps = conn.prepareStatement(sql);
             ps.setString(1, codigo);
             ps.execute();
